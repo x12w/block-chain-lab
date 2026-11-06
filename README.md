@@ -146,5 +146,8 @@ curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA7
 
 ## 提交前
 
+等待卖家争议时可先整理 [报告草稿](docs/报告草稿.md)、[解释题与答辩准备](docs/成员1解释题准备.md)
+及 [28张已有截图索引](docs/截图索引.md)。已验证数据与待补项均已区分，不能作为全流程已完成报告直接提交。
+
 运行 `python3 scripts/check-secrets.py`；确认没有运行时密钥或 .env 入库。
 协作仓库：https://github.com/x12w/block-chain-lab 。报告模板和截止日期仍需按教师通知补齐。
