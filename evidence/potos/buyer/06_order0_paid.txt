@@ -1,0 +1,1 @@
+getOrder(uint256)CallCalldataParamsAuto-Fill with AI Samples0:tuple(address,address,address,uint256,uint256,uint8,string): 0x5a435c43Ca006bE1688d0D7B95194327528EAB26,0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2,0xB7dA837F93A5448ca0762B80862d053daf9715B3,30000000000000000000,1793973724,1,route A normal order

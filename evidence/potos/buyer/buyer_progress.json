@@ -1,0 +1,171 @@
+{
+  "network": "POTOS Testnet",
+  "chainId": 60600,
+  "rpc_supplied_by_user": "https://rpc-testnet.potos.hk",
+  "explorer": "https://scan-testnet.potos.hk",
+  "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+  "escrow": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "arbiter_observed": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+  "preflight": {
+    "orderCount": "0",
+    "buyer_balance_base_units": "70000000000000000000",
+    "buyer_balance_tokens": "70",
+    "allowance_base_units": "0",
+    "remix_value_wei": "0",
+    "native_balance_ui_rounded": "0.001 POT"
+  },
+  "first_create_request": {
+    "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+    "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+    "amount": "30000000000000000000",
+    "deadline": 1793973724,
+    "deadline_Asia_Shanghai": "2026-11-06T22:02:04+08:00",
+    "description": "route A normal order",
+    "status": "Confirmed, receipt status 1",
+    "transaction_hash": "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+    "order_id": 0,
+    "block_number": 2822499
+  },
+  "blocker": null,
+  "completed_chain_writes_observed": [
+    "create_order_0",
+    "create_order_1",
+    "approve_60",
+    "deposit_order_0",
+    "deposit_order_1"
+  ],
+  "not_completed": [],
+  "evidence": {
+    "arbiter_check.jpg": "Remix arbiter/network/account preflight",
+    "01_create_normal_success.jpg": "Remix normal-order creation parameters and success receipt",
+    "02_create_disputed_success.jpg": "Remix disputed-order creation parameters and success receipt",
+    "03_approve_success.jpg": "Explorer approval transaction success",
+    "03_approval_event.jpg": "Explorer decoded Approval(owner, spender, 60000000000000000000)",
+    "04_deposit_order0_success.jpg": "Explorer order 0 deposit success and 30-token transfer",
+    "05_deposit_order1_success.jpg": "Explorer order 1 deposit success and 30-token transfer",
+    "06_order0_paid.jpg": "Final Remix getOrder(0) showing status 1",
+    "07_order1_paid.jpg": "Remix getOrder(1) showing status 1",
+    "00_transaction_receipts.json": "Five complete raw receipts fetched through the connected Remix provider"
+  },
+  "storage_note": "Requested /home/x12w/projects/block-chain/大作业/route-a-member1/evidence/potos/buyer/ was not accessible in this execution environment; provided as downloadable attachments.",
+  "orders": [
+    {
+      "id": 0,
+      "description": "route A normal order",
+      "deadline": 1793973724,
+      "amount": "30000000000000000000",
+      "last_observed_status": 1,
+      "create_tx": "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+      "create_block": 2822499,
+      "create_explorer_url": "https://scan-testnet.potos.hk/tx/0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "status_name": "Paid",
+      "deposit_tx": "0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5",
+      "deposit_block": 2822648,
+      "deposit_explorer_url": "https://scan-testnet.potos.hk/tx/0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5",
+      "actual_id_source": "OrderCreated event; verified by getOrder"
+    },
+    {
+      "id": 1,
+      "description": "route A disputed order",
+      "deadline": 1793973923,
+      "amount": "30000000000000000000",
+      "last_observed_status": 1,
+      "create_tx": "0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+      "create_block": 2822524,
+      "create_explorer_url": "https://scan-testnet.potos.hk/tx/0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "status_name": "Paid",
+      "deposit_tx": "0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+      "deposit_block": 2822676,
+      "deposit_explorer_url": "https://scan-testnet.potos.hk/tx/0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+      "actual_id_source": "OrderCreated event; verified by getOrder"
+    }
+  ],
+  "approval": {
+    "requested_base_units": "60000000000000000000",
+    "spender": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+    "owner": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "transaction_hash": "0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08",
+    "block_number": 2822582,
+    "status": "Confirmed, receipt status true",
+    "final_allowance_base_units": "0"
+  },
+  "record_updated_utc": "2026-11-06T14:04:38.743176+00:00",
+  "status": "completed: both orders Paid (1); chain writes stopped",
+  "transactions": [
+    {
+      "action": "create_order_0",
+      "hash": "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+      "explorer_url": "https://scan-testnet.potos.hk/tx/0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+      "receipt_status": true,
+      "block_number": 2822499,
+      "gas_used": 80508
+    },
+    {
+      "action": "create_order_1",
+      "hash": "0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+      "explorer_url": "https://scan-testnet.potos.hk/tx/0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+      "receipt_status": true,
+      "block_number": 2822524,
+      "gas_used": 80508
+    },
+    {
+      "action": "approve_60",
+      "hash": "0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08",
+      "explorer_url": "https://scan-testnet.potos.hk/tx/0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08",
+      "receipt_status": true,
+      "block_number": 2822582,
+      "gas_used": 28423
+    },
+    {
+      "action": "deposit_order_0",
+      "hash": "0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5",
+      "explorer_url": "https://scan-testnet.potos.hk/tx/0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5",
+      "receipt_status": true,
+      "block_number": 2822648,
+      "gas_used": 70205
+    },
+    {
+      "action": "deposit_order_1",
+      "hash": "0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+      "explorer_url": "https://scan-testnet.potos.hk/tx/0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+      "receipt_status": true,
+      "block_number": 2822676,
+      "gas_used": 70205
+    }
+  ],
+  "final_balances": {
+    "buyer": {
+      "address": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "base_units": "10000000000000000000",
+      "WQLToken": "10"
+    },
+    "seller": {
+      "address": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "base_units": "30000000000000000000",
+      "WQLToken": "30"
+    },
+    "escrow": {
+      "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "base_units": "60000000000000000000",
+      "WQLToken": "60"
+    }
+  },
+  "token_decimals": 18,
+  "final_allowance_base_units": "0",
+  "next_action": "No further buyer writes. Seller member 2 will later dispute order 1; leave order 0 Paid for backend demonstration.",
+  "verification_notes": [
+    "Live Remix getOrder returned the specified buyer, seller, token and amount, and state 1 for both orders.",
+    "Remix displayed _context7.t3.error.indexOf is not a function for approval and the first deposit while awaiting wallet confirmation. Transactions were not resubmitted. Success was verified from live state, explorer pages/events and all five raw on-chain receipts.",
+    "All screenshots are unmodified browser captures. No simulated or old Escrow data is used.",
+    "MetaMask confirmation was performed by the user. No private keys or seed phrases were accessed.",
+    "No confirm, refund, dispute or resolve transaction was submitted."
+  ]
+}

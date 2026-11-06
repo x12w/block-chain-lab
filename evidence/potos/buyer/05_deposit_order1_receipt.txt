@@ -1,0 +1,38 @@
+status	1 Transaction mined and execution completed
+transaction hash	0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0
+from	0x5a435c43Ca006bE1688d0D7B95194327528EAB26
+to	0xd7320d80b687766bA73997B97dAE61Ff1f9ed737
+transaction cost	70205 gas 
+decoded output	 - 
+logs	[]
+raw logs	[
+  {
+    "_type": "log",
+    "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+    "blockHash": "0x99ceb4b8f3ae4fdeeadcc157c83a9dd499fd8e134b0fb077238feb6c7d8050c2",
+    "blockNumber": 2822676,
+    "data": "0x000000000000000000000000000000000000000000000001a055690d9db80000",
+    "index": 0,
+    "topics": [
+      "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+      "0x0000000000000000000000005a435c43ca006be1688d0d7b95194327528eab26",
+      "0x000000000000000000000000d7320d80b687766ba73997b97dae61ff1f9ed737"
+    ],
+    "transactionHash": "0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+    "transactionIndex": 3176496
+  },
+  {
+    "_type": "log",
+    "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+    "blockHash": "0x99ceb4b8f3ae4fdeeadcc157c83a9dd499fd8e134b0fb077238feb6c7d8050c2",
+    "blockNumber": 2822676,
+    "data": "0x",
+    "index": 1,
+    "topics": [
+      "0x15e33efda35e5da2fb096ba49585307ba468af144aea691da964aaff1a7f3a57",
+      "0x0000000000000000000000000000000000000000000000000000000000000001"
+    ],
+    "transactionHash": "0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+    "transactionIndex": 3176496
+  }
+]

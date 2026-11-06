@@ -1,0 +1,2 @@
+["0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2"]
+balanceOf(address)CallCalldataParamsAuto-Fill with AI Samples0:uint256: 30000000000000000000

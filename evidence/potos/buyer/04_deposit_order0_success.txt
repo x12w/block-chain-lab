@@ -1,0 +1,42 @@
+Transaction details
+0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5
+Details
+Logs
+State
+Transaction hash
+0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5
+Status and method
+Success
+deposit
+Block
+2822648
+|
+8 Block confirmations
+Timestamp
+1m ago
+|
+Nov 06 2026 21:51:13 PM (+08:00 UTC)
+|
+Confirmed within <= 7.556 secs
+From
+0x5a435c43Ca006bE1688d0D7B95194327528EAB26
+Interacted with contract
+0xd7320d80b687766bA73997B97dAE61Ff1f9ed737
+Tokens transferred
+0x5a...AB26
+0xd7...d737
+for
+30
+WQL202430332012
+Gas usage & limit by txn
+70,205
+|
+70,205
+100%
+Gas fees (Gwei)
+Base: 0|
+Max: 0.000021|
+Max priority: 0.000021
+View details
+getOrder(uint256)CallCalldataParamsAuto-Fill with AI Samples0:tuple(address,address,address,uint256,uint256,uint8,string): 0x5a435c43Ca006bE1688d0D7B95194327528EAB26,0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2,0xB7dA837F93A5448ca0762B80862d053daf9715B3,30000000000000000000,1793973923,0,route A disputed order
+allowance(address, address)CallCalldataParamsAuto-Fill with AI Samples0:uint256: 30000000000000000000

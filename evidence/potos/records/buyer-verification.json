@@ -207,6 +207,8 @@
   "originalRemixScreenshots": {
     "sourceConversation": "6aedd0e7-c6d0-83e8-b116-0d73d84996bf",
     "remoteArtifactName": "route_a_buyer_progress.zip",
-    "importedIntoRepository": false
+    "importedIntoRepository": true,
+    "repositoryDirectory": "evidence/potos/buyer",
+    "importNote": "9 unchanged JPEGs and 11 record files; source manifest verified; receipts matched independently saved RPC data."
   }
 }

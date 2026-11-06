@@ -1,0 +1,57 @@
+{
+  "classification": "POTOS_TESTNET_SELLER_DISPUTE_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-06T14:59:31.435Z",
+  "rpc": "https://rpc-testnet.potos.hk",
+  "chainId": 60600,
+  "escrow": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "arbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "observedBlock": 2823202,
+  "transactionHash": "0x38f57adcfd17adba8849eb8e66985bbefb38000ffe221b8ac1105cd991a90494",
+  "from": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+  "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "method": "dispute",
+  "orderId": 1,
+  "blockNumber": 2823067,
+  "blockTime": "2026-11-06T14:41:56.000Z",
+  "receiptStatus": "0x1",
+  "gasUsed": "36385",
+  "events": [
+    {
+      "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "name": "OrderDisputed",
+      "args": {
+        "id": "1",
+        "by": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2"
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": 0,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "30000000000000000000",
+      "deadline": "1793973724",
+      "statusCode": 1,
+      "status": "Paid",
+      "description": "route A normal order"
+    },
+    {
+      "id": 1,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "30000000000000000000",
+      "deadline": "1793973923",
+      "statusCode": 4,
+      "status": "Disputed",
+      "description": "route A disputed order"
+    }
+  ],
+  "tokenBalances": {
+    "buyer": "10.0",
+    "seller": "30.0",
+    "escrow": "60.0"
+  }
+}

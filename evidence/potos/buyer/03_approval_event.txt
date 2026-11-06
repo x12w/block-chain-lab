@@ -1,0 +1,46 @@
+Transaction details
+0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08
+Details
+Logs
+State
+Address
+WQLToken
+0
+Decode input data
+Method id
+8c5be1e5
+Call
+Approval(address indexed owner, address indexed spender, uint256 value)
+Name
+Type
+Indexed?
+Data
+owner
+address
+true
+0x5a435c43Ca006bE1688d0D7B95194327528EAB26
+spender
+address
+true
+0xd7320d80b687766bA73997B97dAE61Ff1f9ed737
+value
+uint256
+false
+60000000000000000000
+Topics
+0
+0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+1
+Hex
+Address
+Text
+Number
+0x0000000000000000000000005a435c43ca006be1688d0d7b95194327528eab26
+2
+Hex
+Address
+Text
+Number
+0x000000000000000000000000d7320d80b687766ba73997b97dae61ff1f9ed737
+Data
+0x00000000000000000000000000000000000000000000000340aad21b3b700000

@@ -1,0 +1,47 @@
+路线 A 买家操作完成记录
+
+结果：两笔订单均为 Paid（枚举 1），已停止链上写操作。
+网络：POTOS Testnet，chainId=60600
+RPC：https://rpc-testnet.potos.hk
+买家：0x5a435c43Ca006bE1688d0D7B95194327528EAB26
+卖家：0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2
+新 Escrow：0xd7320d80b687766bA73997B97dAE61Ff1f9ed737
+Arbiter：0x4c688b060912faf95324a43C0190C59E7cE8aB3c
+代币：0xB7dA837F93A5448ca0762B80862d053daf9715B3（18 位精度）
+Value：0 wei
+
+实时前置检查：orderCount=0，买家 70 WQLToken，allowance=0。
+
+订单 0：route A normal order
+amount=30000000000000000000，deadline=1793973724，最终状态=Paid（1）
+订单 1：route A disputed order
+amount=30000000000000000000，deadline=1793973923，最终状态=Paid（1）
+
+五笔成功交易：
+create_order_0 | block=2822499 | receipt.status=true
+0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099
+https://scan-testnet.potos.hk/tx/0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099
+create_order_1 | block=2822524 | receipt.status=true
+0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e
+https://scan-testnet.potos.hk/tx/0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e
+approve_60 | block=2822582 | receipt.status=true
+0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08
+https://scan-testnet.potos.hk/tx/0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08
+deposit_order_0 | block=2822648 | receipt.status=true
+0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5
+https://scan-testnet.potos.hk/tx/0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5
+deposit_order_1 | block=2822676 | receipt.status=true
+0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0
+https://scan-testnet.potos.hk/tx/0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0
+
+最终代币余额：买家 10、卖家 30、Escrow 60 WQLToken。
+最终 allowance=0。
+两笔订单的 buyer/seller/token/amount 均与指定参数一致。
+
+证据：00_transaction_receipts.json 包含五笔原始链上回执；01—07 编号图片及文本保存创建、授权、付款和 Paid 查询结果。
+Remix 曾对授权和首笔付款显示 _context7.t3.error.indexOf is not a function。未重复提交，已用链上成功回执、实时状态和区块浏览器核验实际成功。
+未执行 confirm、refund、dispute 或 resolve；订单 0 和 1 保持 Paid。
+所有浏览器截图未经修改。未查看或保存私钥、助记词。
+
+指定本机目录在本执行环境中不可访问，因此交付可下载附件；未声称已写入该目录。
+未完成步骤：无。

@@ -1,0 +1,77 @@
+{
+  "classification": "POTOS_TESTNET_PAID_DISPUTED_HTTP_RECORDS",
+  "records": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/address",
+      "startedAt": "2026-11-06T14:59:25.910381+00:00",
+      "elapsedSeconds": 0.513,
+      "httpStatus": 200,
+      "body": {
+        "contractAddress": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+        "arbiter": "0x4c688b060912faf95324a43c0190c59e7ce8ab3c"
+      },
+      "rawBody": "{\"contractAddress\":\"0xd7320d80b687766bA73997B97dAE61Ff1f9ed737\",\"arbiter\":\"0x4c688b060912faf95324a43c0190c59e7ce8ab3c\"}"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/orders/0",
+      "startedAt": "2026-11-06T14:59:26.423363+00:00",
+      "elapsedSeconds": 0.384,
+      "httpStatus": 200,
+      "body": {
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "description": "route A normal order",
+        "deadline": "1793973724",
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "amount": "30000000000000000000",
+        "status": "Paid"
+      },
+      "rawBody": "{\"seller\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\",\"token\":\"0xb7da837f93a5448ca0762b80862d053daf9715b3\",\"description\":\"route A normal order\",\"deadline\":\"1793973724\",\"buyer\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\",\"amount\":\"30000000000000000000\",\"status\":\"Paid\"}"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/orders/1",
+      "startedAt": "2026-11-06T14:59:26.808022+00:00",
+      "elapsedSeconds": 0.409,
+      "httpStatus": 200,
+      "body": {
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "description": "route A disputed order",
+        "deadline": "1793973923",
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "amount": "30000000000000000000",
+        "status": "Disputed"
+      },
+      "rawBody": "{\"seller\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\",\"token\":\"0xb7da837f93a5448ca0762b80862d053daf9715b3\",\"description\":\"route A disputed order\",\"deadline\":\"1793973923\",\"buyer\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\",\"amount\":\"30000000000000000000\",\"status\":\"Disputed\"}"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/orders",
+      "startedAt": "2026-11-06T14:59:27.216969+00:00",
+      "elapsedSeconds": 59.495,
+      "httpStatus": 200,
+      "body": [
+        {
+          "amount": "30000000000000000000",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "id": "0",
+          "blockNumber": "2822499",
+          "transactionHash": "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26"
+        },
+        {
+          "amount": "30000000000000000000",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "id": "1",
+          "blockNumber": "2822524",
+          "transactionHash": "0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26"
+        }
+      ],
+      "rawBody": "[{\"amount\":\"30000000000000000000\",\"seller\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\",\"id\":\"0\",\"blockNumber\":\"2822499\",\"transactionHash\":\"0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099\",\"buyer\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\"},{\"amount\":\"30000000000000000000\",\"seller\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\",\"id\":\"1\",\"blockNumber\":\"2822524\",\"transactionHash\":\"0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e\",\"buyer\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\"}]"
+    }
+  ]
+}
