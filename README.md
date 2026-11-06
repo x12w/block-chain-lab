@@ -3,7 +3,7 @@
 成员 1：魏琪霖，学号 202430332012，第 15 组。日期：2026-11-06。
 
 本仓库完成合约 Java 封装、EscrowService、环境变量配置和本地自动化验证。
-EscrowController 由成员 2 接入；测试网上的新 Escrow、三人协作验收和正式交易表仍待完成。
+EscrowController 已由成员 2 接入；测试网上的新 Escrow、三人协作验收和正式交易表仍待完成。
 原实验项目不受影响。本项目基于课程 spring-boot-web3j 示例，合约复制自组长实验 3 源码。
 
 ## 已完成
@@ -52,8 +52,9 @@ bash scripts/run-backend.sh
 需要宿主机浏览器连接时，在启动前设置 SERVER_ADDRESS=0.0.0.0；
 该课程容器的 8080 端口仅映射到宿主机 127.0.0.1。不要把无认证接口公开到互联网。
 
-当前保留示例 SimpleStorageController。新增的六个 `/api/escrow` 接口尚待成员 2 实现；
-不要把启动成功当作这六个接口已经存在。接口对接见 [docs/成员2接口对接.md](docs/成员2接口对接.md)。
+当前保留示例 SimpleStorageController。六个 `/api/escrow` 接口已由成员 2 在
+`EscrowController.java` 中实现，并有本地单元测试覆盖状态码与失败回执；仍需在测试网完成
+curl 验收并保存 4A-4～4A-8 截图。接口对接见 [docs/成员2接口对接.md](docs/成员2接口对接.md)。
 
 ## 本地集成测试
 
