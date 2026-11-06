@@ -1,0 +1,16 @@
+{
+  "source": "Remix Solidity Editor conversation; hashes independently checked by verify-potos-buyer.cjs",
+  "rpc": "https://rpc-testnet.potos.hk",
+  "escrow": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+  "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+  "arbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "transactions": [
+    {"label":"createOrder0","method":"createOrder","orderId":0,"description":"route A normal order","hash":"0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099"},
+    {"label":"createOrder1","method":"createOrder","orderId":1,"description":"route A disputed order","hash":"0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e"},
+    {"label":"approve60","method":"approve","hash":"0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08"},
+    {"label":"deposit0","method":"deposit","orderId":0,"hash":"0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5"},
+    {"label":"deposit1","method":"deposit","orderId":1,"hash":"0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0"}
+  ]
+}

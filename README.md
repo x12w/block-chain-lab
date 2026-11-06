@@ -4,7 +4,8 @@
 
 本仓库完成合约 Java 封装、EscrowService、环境变量配置和本地自动化验证。
 EscrowController 已由成员 2 接入，合并后联调通过；已在 POTOS 部署新 Escrow 并完成
-SimpleStorage 验证。三人订单验收和剩余正式交易表仍待完成。
+SimpleStorage 验证。买家两笔创建、授权 60 个与两笔付款均已独立核验，当前两笔 Paid。
+下一步由成员 2 卖家执行 dispute(1)，再完成后端仲裁与买家确认。
 原实验项目不受影响。本项目基于课程 spring-boot-web3j 示例，合约复制自组长实验 3 源码。
 
 ## 已完成
@@ -101,15 +102,26 @@ curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA7
 | 操作 | 交易哈希 | 区块浏览器链接 | 发起账户 |
 |---|---|---|---|
 | 部署新 Escrow | 0xdd1e95f4a34a0298e2051c47e049cc49a3f654585510465950dd9a444cc034aa | [交易详情](https://scan-testnet.potos.hk/tx/0xdd1e95f4a34a0298e2051c47e049cc49a3f654585510465950dd9a444cc034aa) | 后端 BE |
-| createOrder 订单 0 | 待协作 | 待协作 | 买家 A |
-| approve | 待协作 | 待协作 | 买家 A |
-| deposit 订单 0 | 待协作 | 待协作 | 买家 A |
+| createOrder 订单 0 | 0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099 | [交易详情](https://scan-testnet.potos.hk/tx/0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099) | 买家 A |
+| approve | 0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08 | [交易详情](https://scan-testnet.potos.hk/tx/0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08) | 买家 A |
+| deposit 订单 0 | 0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5 | [交易详情](https://scan-testnet.potos.hk/tx/0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5) | 买家 A |
 | dispute 订单 1 | 待协作 | 待协作 | 卖家 B |
 | resolve 订单 1 | 待协作 | 待协作 | 后端 BE |
 | confirm 订单 0 | 待协作 | 待协作 | 买家 A |
 | resolve 订单 0 失败 | 待协作 | 待协作 | 后端 BE |
 
-另外保存订单 1 的创建、付款交易，便于核对完整流程。
+额外保存订单 1 的创建、付款交易：
+
+| 操作 | 交易哈希/浏览器 | 发起账户 |
+|---|---|---|
+| createOrder 订单 1 | [0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e](https://scan-testnet.potos.hk/tx/0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e) | 买家 A |
+| deposit 订单 1 | [0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0](https://scan-testnet.potos.hk/tx/0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0) | 买家 A |
+
+五笔买家交易的回执/参数/事件已独立核验。付款后买家 10、卖家 30、Escrow 60，allowance=0；
+卖家原有的 30 个应与本次收入区分。原始 Remix 截图在另一对话，尚未导入本地仓库。
+
+成员 2 可直接照 [卖家争议操作说明](docs/成员2卖家争议操作说明.md) 执行 dispute(1)。
+
 正式交易应附区块浏览器中的交易页；本地哈希不能填入本表充数。
 
 ## 分工（成员 2、3 的具体姓名和领取任务仍需组内确认）

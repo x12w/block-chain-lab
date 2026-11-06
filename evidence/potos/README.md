@@ -7,7 +7,7 @@
 - SimpleStorage：0x2EB79Bf8A18EBF0518501eFa0b6DB9D48075D786，set(100) 成功，get 返回 100。
 - 新 Escrow：0xd7320d80b687766bA73997B97dAE61Ff1f9ed737，部署区块 2821876。
 - GET address 与链上 arbiter 均匹配 0x4c688b060912faf95324a43C0190C59E7cE8aB3c。
-- /load 已验证；部署后的订单列表为空，尚未开展买家/卖家协作。
+- /load 已验证；07-escrow-empty-orders.json 是部署初期的历史空列表，不代表当前状态。
 - verified-receipts.json 来自 RPC eth_getTransactionReceipt，验证 status、from、目标合约和部署区块。
 - verification-summary.json 为上述只读核验摘要；08-token-preflight.json 为组长代币只读核验摘要。
   本次合约部署信息以 docs/route-a-deployment.json 为准。
@@ -16,6 +16,15 @@
 终端响应截图使用 show-potos-evidence.py 展示已保存的实际 curl 输出，并明确标注为已保存记录；
 没有为截图重复部署或修改响应。Controller 的九张完整代码截图在 evidence/pr1-integration/screenshots/。
 
-尚缺：两笔订单创建、approve、deposit、卖家 dispute、三条订单 GET、
+买家创建/授权/付款已完成。buyer-verified-receipts.json 为五笔实际 RPC 回执；
+buyer-verification.json 为参数、事件和同一区块快照，当前两笔 Paid，余额为买家 10、卖家 30、Escrow 60。
+buyer-paid-http-precheck.json 为实际后端 GET 预检，Paid/Paid 不能替代正式 Paid/Disputed。
+
+两张买家核验终端截图由 show-buyer-evidence.py 展示保存的真实记录，不冒充 Remix 界面。
+原 Remix 截图包在另一对话，尚未导入本仓库。verify-potos-buyer.cjs 使用 ethers 解码，
+可通过 ETHERS_MODULE 指向已有安装，使用生成的 build ABI。一次只读查询遇到 TLS 错误后，
+已使用 TLS 1.2 和有限重试完成读取，未关闭证书校验。
+
+尚缺：原 Remix 截图导入、卖家 dispute、正式 Paid/Disputed 三条 GET、
 失败 resolve、退款 resolve、买家 confirm，以及退款交易 From/Logs 截图。
 不能将部署成功等同于完成整组验收。

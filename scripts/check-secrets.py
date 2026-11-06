@@ -17,9 +17,8 @@ integration_hashes = set()
 for record_file in (integration_evidence / 'records').glob('*integration.json'):
     integration_hashes.update(tx['hash'] for tx in json.loads(record_file.read_text())['transactions'])
 potos_evidence = root / 'evidence/potos'
-potos_receipts = potos_evidence / 'records/verified-receipts.json'
 potos_public_values = set()
-if potos_receipts.exists():
+for potos_receipts in (potos_evidence / 'records').glob('*verified-receipts.json'):
     for receipt in json.loads(potos_receipts.read_text()).values():
         potos_public_values.update(receipt[field] for field in ('transactionHash', 'blockHash'))
         for log in receipt.get('logs', []):
@@ -59,7 +58,7 @@ print(f'Source files checked: {checked}')
 print('Public historical transaction hashes: explicitly classified in docs/lab3-reference.json')
 print('Local transaction hashes: explicitly classified in evidence/member1/records/06-local-integration.json')
 print('PR integration hashes: explicitly classified in evidence/pr1-integration/records/*integration.json')
-print('POTOS public receipt fields: explicitly classified in evidence/potos/records/verified-receipts.json')
+print('POTOS public receipt fields: explicitly classified in evidence/potos/records/*verified-receipts.json')
 if findings:
     print('\n'.join(findings))
     sys.exit(1)

@@ -1,0 +1,61 @@
+{
+  "classification": "POTOS_TESTNET_BUYER_PAID_STAGE_HTTP_PRECHECK",
+  "startedAt": "2026-11-06T14:11:37.548925+00:00",
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/orders/0",
+      "httpStatus": 200,
+      "body": {
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "description": "route A normal order",
+        "deadline": "1793973724",
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "amount": "30000000000000000000",
+        "status": "Paid"
+      },
+      "receivedAt": "2026-11-06T14:11:37.978127+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/orders/1",
+      "httpStatus": 200,
+      "body": {
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "description": "route A disputed order",
+        "deadline": "1793973923",
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "amount": "30000000000000000000",
+        "status": "Paid"
+      },
+      "receivedAt": "2026-11-06T14:11:38.377875+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/escrow/orders",
+      "httpStatus": 200,
+      "body": [
+        {
+          "amount": "30000000000000000000",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "id": "0",
+          "blockNumber": "2822499",
+          "transactionHash": "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26"
+        },
+        {
+          "amount": "30000000000000000000",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "id": "1",
+          "blockNumber": "2822524",
+          "transactionHash": "0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26"
+        }
+      ],
+      "receivedAt": "2026-11-06T14:12:16.179149+00:00"
+    }
+  ],
+  "note": "This is a Paid/Paid precheck, not the required Paid/Disputed 4A-6 evidence."
+}

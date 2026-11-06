@@ -1,0 +1,212 @@
+{
+  "classification": "POTOS_TESTNET_BUYER_TRANSACTIONS_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-06T14:14:26.304Z",
+  "rpc": "https://rpc-testnet.potos.hk",
+  "chainId": 60600,
+  "observedBlock": 2822836,
+  "observedBlockTime": "2026-11-06T14:13:54.000Z",
+  "escrow": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+  "arbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "orderCount": 2,
+  "orders": [
+    {
+      "id": 0,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "30000000000000000000",
+      "deadline": "1793973724",
+      "deadlineBeijing": "2026-11-06 22:02:04",
+      "statusCode": 1,
+      "status": "Paid",
+      "description": "route A normal order"
+    },
+    {
+      "id": 1,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "30000000000000000000",
+      "deadline": "1793973923",
+      "deadlineBeijing": "2026-11-06 22:05:23",
+      "statusCode": 1,
+      "status": "Paid",
+      "description": "route A disputed order"
+    }
+  ],
+  "tokenBalances": {
+    "buyer": "10.0",
+    "seller": "30.0",
+    "escrow": "60.0"
+  },
+  "buyerAllowanceTokens": "0.0",
+  "transactions": [
+    {
+      "label": "createOrder0",
+      "transactionHash": "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+      "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "method": "createOrder",
+      "arguments": {
+        "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "amount": "30000000000000000000",
+        "deadline": "1793973724",
+        "description": "route A normal order"
+      },
+      "blockNumber": 2822499,
+      "blockTime": "2026-11-06T13:33:44.000Z",
+      "receiptStatus": "0x1",
+      "gasUsed": "80508",
+      "events": [
+        {
+          "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+          "name": "OrderCreated",
+          "args": {
+            "id": "0",
+            "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+            "amount": "30000000000000000000",
+            "deadline": "1793973724"
+          }
+        }
+      ]
+    },
+    {
+      "label": "createOrder1",
+      "transactionHash": "0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+      "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "method": "createOrder",
+      "arguments": {
+        "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "amount": "30000000000000000000",
+        "deadline": "1793973923",
+        "description": "route A disputed order"
+      },
+      "blockNumber": 2822524,
+      "blockTime": "2026-11-06T13:36:25.000Z",
+      "receiptStatus": "0x1",
+      "gasUsed": "80508",
+      "events": [
+        {
+          "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+          "name": "OrderCreated",
+          "args": {
+            "id": "1",
+            "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+            "amount": "30000000000000000000",
+            "deadline": "1793973923"
+          }
+        }
+      ]
+    },
+    {
+      "label": "approve60",
+      "transactionHash": "0xc8769e7a8fe9ad68c7c3730bd0c5d0238c9410a9d0415dca7e7a90a6cee53d08",
+      "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "to": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "method": "approve",
+      "arguments": {
+        "spender": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+        "value": "60000000000000000000"
+      },
+      "blockNumber": 2822582,
+      "blockTime": "2026-11-06T13:43:20.000Z",
+      "receiptStatus": "0x1",
+      "gasUsed": "28423",
+      "events": [
+        {
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "name": "Approval",
+          "args": {
+            "owner": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "spender": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+            "value": "60000000000000000000"
+          }
+        }
+      ]
+    },
+    {
+      "label": "deposit0",
+      "transactionHash": "0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5",
+      "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "method": "deposit",
+      "arguments": {
+        "id": "0"
+      },
+      "blockNumber": 2822648,
+      "blockTime": "2026-11-06T13:51:13.000Z",
+      "receiptStatus": "0x1",
+      "gasUsed": "70205",
+      "events": [
+        {
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "name": "Transfer",
+          "args": {
+            "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+            "value": "30000000000000000000"
+          }
+        },
+        {
+          "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+          "name": "OrderPaid",
+          "args": {
+            "id": "0"
+          }
+        }
+      ]
+    },
+    {
+      "label": "deposit1",
+      "transactionHash": "0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+      "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "method": "deposit",
+      "arguments": {
+        "id": "1"
+      },
+      "blockNumber": 2822676,
+      "blockTime": "2026-11-06T13:54:41.000Z",
+      "receiptStatus": "0x1",
+      "gasUsed": "70205",
+      "events": [
+        {
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "name": "Transfer",
+          "args": {
+            "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+            "value": "30000000000000000000"
+          }
+        },
+        {
+          "address": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+          "name": "OrderPaid",
+          "args": {
+            "id": "1"
+          }
+        }
+      ]
+    }
+  ],
+  "pending": [
+    "seller_dispute_order_1",
+    "REST_Paid_Disputed_queries",
+    "backend_failed_resolve_order_0",
+    "backend_refund_order_1",
+    "buyer_confirm_order_0"
+  ],
+  "originalRemixScreenshots": {
+    "sourceConversation": "6aedd0e7-c6d0-83e8-b116-0d73d84996bf",
+    "remoteArtifactName": "route_a_buyer_progress.zip",
+    "importedIntoRepository": false
+  }
+}
