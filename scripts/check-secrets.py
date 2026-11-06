@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Conservative source scan. Print locations, never potential secret values."""
 import json
+import hashlib
 from pathlib import Path
 import re
 import sys
@@ -25,6 +26,16 @@ for potos_receipts in (potos_evidence / 'records').glob('*verified-receipts.json
             potos_public_values.update(log['topics'])
             potos_public_values.update(log[field] for field in ('transactionHash', 'blockHash', 'data'))
 hex_value = re.compile(r'(?<![a-zA-Z0-9])(?:0x)?[0-9a-fA-F]{64}(?![a-zA-Z0-9])')
+verified_manifest_digests = {}
+for manifest in potos_evidence.rglob('source-manifest.json'):
+    digests = set()
+    for entry in json.loads(manifest.read_text()).get('files', []):
+        source = (manifest.parent / entry['file']).resolve()
+        if source.is_relative_to(manifest.parent.resolve()) and source.is_file():
+            digest = hashlib.sha256(source.read_bytes()).hexdigest()
+            if digest == entry.get('sha256'):
+                digests.add(digest)
+    verified_manifest_digests[manifest] = digests
 findings = []
 checked = 0
 for path in sorted(root.rglob('*')):
@@ -40,6 +51,8 @@ for path in sorted(root.rglob('*')):
     checked += 1
     for line_no, line in enumerate(text.splitlines(), 1):
         for match in hex_value.finditer(line):
+            if match.group() in verified_manifest_digests.get(path, set()):
+                continue  # Recomputed file digest, not an arbitrary manifest exemption.
             if path == reference and match.group() in public_hashes:
                 continue  # Independently documented public transaction hashes, not credentials.
             if path.is_relative_to(evidence) and match.group() in local_transaction_hashes:

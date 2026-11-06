@@ -1,0 +1,23 @@
+{
+  "source": "User-supplied member 3 completion report, received 2026-11-07 Asia/Shanghai",
+  "transactions": [
+    {
+      "label": "failedResolve0",
+      "hash": "0x6b6157111ef72bcacf69ab031d15ccaebd11cde978fa73637eebde039117f4c3",
+      "id": 0,
+      "sellerWins": true,
+      "status": "0x0",
+      "block": 2823579,
+      "gas": 25884
+    },
+    {
+      "label": "refund1",
+      "hash": "0x41346bdd3a5ce73aa5bf86cb2436fd0c149338f94d1a00cf23d161313e130a7f",
+      "id": 1,
+      "sellerWins": false,
+      "status": "0x1",
+      "block": 2823583,
+      "gas": 62892
+    }
+  ]
+}

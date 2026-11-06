@@ -1,0 +1,35 @@
+{
+  "source": "User attachments received 2026-11-07 Asia/Shanghai; images preserved byte-for-byte",
+  "files": [
+    {
+      "file": "01-failed-resolve-terminal.png",
+      "source": "codex-clipboard-368ba7db-86a8-4b39-b3dd-9be952b7804f.png",
+      "sha256": "871e8671c23e79e559925494da073657c6bafac72b658b636735e66bdf22d59b",
+      "bytes": 114844
+    },
+    {
+      "file": "02-refund-terminal.png",
+      "source": "codex-clipboard-27d2b508-59ec-4d58-8d2f-e35f567d1590.png",
+      "sha256": "e8f42dc3d7782706452b3388fee103e61c21ed3e241fae558f89b3543c174776",
+      "bytes": 106862
+    },
+    {
+      "file": "03-failed-resolve-explorer.png",
+      "source": "codex-clipboard-4251799b-1c62-410b-abc2-4799c511674a.png",
+      "sha256": "0535a22eb8f4a1b46504d879b7de49236084d9abd27d8033a3806e84728832bd",
+      "bytes": 99241
+    },
+    {
+      "file": "04-refund-explorer.png",
+      "source": "codex-clipboard-7aa53f6e-1c91-4a79-af14-11df586c4737.png",
+      "sha256": "1d3179f0d94a75fdd5b3ef082de63a41efffc55e66640fb40b73878cd2be9e8d",
+      "bytes": 110722
+    },
+    {
+      "file": "05-refund-logs.png",
+      "source": "codex-clipboard-edcfe710-ea56-4ae8-a2aa-0da35304668b.png",
+      "sha256": "aca6b95482a0c9cc3536ed704856935db9d0867db1ca83f7dd255a9a59aa85a5",
+      "bytes": 146252
+    }
+  ]
+}
