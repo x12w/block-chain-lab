@@ -11,8 +11,10 @@ reports = sorted((root / 'build/test-results').glob('*/TEST-*.xml'))
 if not reports:
     raise SystemExit('No test reports: run test and integrationTest first')
 total = failures = errors = skipped = 0
+suites = set()
 for path in reports:
     suite = ET.parse(path).getroot()
+    suites.add(suite.attrib['name'])
     total += int(suite.attrib['tests'])
     failures += int(suite.attrib['failures'])
     errors += int(suite.attrib['errors'])
@@ -28,6 +30,15 @@ for tx in evidence['transactions']:
     if tx['status'] == '0x0' or tx['operation'] in {'resolve 1 refund', 'confirm 0'}:
         print(f"{tx['operation']} | block={tx['block']} status={tx['status']} gas={tx['gasUsed']}")
         print('tx=' + tx['hash'])
-if failures or errors or skipped or total != 7:
+required_suites = {
+    'com.wetech.demo.web3j.service.EscrowServiceTest',
+    'com.wetech.demo.web3j.controller.EscrowControllerTest',
+    'com.wetech.demo.web3j.service.EscrowServiceIntegrationTest',
+    'com.wetech.demo.web3j.controller.EscrowHttpIntegrationTest',
+}
+http = json.loads((root / 'build/local-evidence/http-integration.json').read_text())
+print('HTTP exchanges:', len(http['httpExchanges']))
+print('HTTP final state:', json.dumps(http['finalState']))
+if failures or errors or skipped or not required_suites.issubset(suites):
     raise SystemExit('Validation is incomplete or failed')
 print('PASS: all expected tests completed; raw receipts are preserved in build/local-evidence/')

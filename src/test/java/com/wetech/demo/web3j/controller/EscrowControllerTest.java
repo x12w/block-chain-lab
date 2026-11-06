@@ -4,11 +4,13 @@ import com.wetech.demo.web3j.service.EscrowService;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
 import org.web3j.crypto.Credentials;
+import org.web3j.crypto.Keys;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.protocol.exceptions.TransactionException;
 import org.web3j.protocol.http.HttpService;
 import org.web3j.tx.gas.StaticGasProvider;
+import org.web3j.tx.exceptions.ContractCallException;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -92,7 +94,7 @@ class EscrowControllerTest {
     private static final class StubService extends EscrowService {
         StubService() {
             super(Web3j.build(new HttpService("http://127.0.0.1:1")),
-                    Credentials.create("0x" + "11".repeat(32)),
+                    ephemeralCredentials(),
                     new StaticGasProvider(BigInteger.ONE, BigInteger.ONE), 31337);
         }
 
@@ -105,8 +107,8 @@ class EscrowControllerTest {
         @Override
         public CompletableFuture<Map<String, String>> getOrder(BigInteger id) {
             if (id.equals(BigInteger.valueOf(99))) {
-                return failed(new IOException(
-                        "Error sending request: execution reverted: Escrow: order does not exist"));
+                return failed(new ContractCallException(
+                        "Contract Call has been reverted by the EVM: Escrow: order does not exist"));
             }
             return CompletableFuture.completedFuture(Map.of(
                     "buyer", BUYER, "seller", SELLER, "token", TOKEN,
@@ -128,6 +130,14 @@ class EscrowControllerTest {
         @Override
         public void load(String address, BigInteger fromBlock) {
             throw new IllegalArgumentException("address must be a nonzero 20-byte hex address");
+        }
+    }
+
+    private static Credentials ephemeralCredentials() {
+        try {
+            return Credentials.create(Keys.createEcKeyPair());
+        } catch (Exception error) {
+            throw new IllegalStateException("Unable to create temporary test credentials", error);
         }
     }
 

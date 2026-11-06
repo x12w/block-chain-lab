@@ -12,6 +12,19 @@ evidence = root / 'evidence/member1'
 local_records = evidence / 'records/06-local-integration.json'
 local_transaction_hashes = ({tx['hash'] for tx in json.loads(local_records.read_text())['transactions']}
                             if local_records.exists() else set())
+integration_evidence = root / 'evidence/pr1-integration'
+integration_hashes = set()
+for record_file in (integration_evidence / 'records').glob('*integration.json'):
+    integration_hashes.update(tx['hash'] for tx in json.loads(record_file.read_text())['transactions'])
+potos_evidence = root / 'evidence/potos'
+potos_receipts = potos_evidence / 'records/verified-receipts.json'
+potos_public_values = set()
+if potos_receipts.exists():
+    for receipt in json.loads(potos_receipts.read_text()).values():
+        potos_public_values.update(receipt[field] for field in ('transactionHash', 'blockHash'))
+        for log in receipt.get('logs', []):
+            potos_public_values.update(log['topics'])
+            potos_public_values.update(log[field] for field in ('transactionHash', 'blockHash', 'data'))
 hex_value = re.compile(r'(?<![a-zA-Z0-9])(?:0x)?[0-9a-fA-F]{64}(?![a-zA-Z0-9])')
 findings = []
 checked = 0
@@ -32,6 +45,11 @@ for path in sorted(root.rglob('*')):
                 continue  # Independently documented public transaction hashes, not credentials.
             if path.is_relative_to(evidence) and match.group() in local_transaction_hashes:
                 continue  # Actual local-chain receipt hashes, also present in the test output.
+            if path.is_relative_to(integration_evidence) and match.group() in integration_hashes:
+                continue  # Recorded HTTP/service local-chain transaction receipts.
+            if (path.is_relative_to(potos_evidence) or path.is_relative_to(root / 'docs')
+                    or path == root / 'README.md') and match.group() in potos_public_values:
+                continue  # Public RPC receipt fields; exact values, not a blanket JSON exemption.
             findings.append(f'{path.relative_to(root)}:{line_no}: potential key (value omitted)')
         if path.suffix == '.properties' and re.match(r'\s*web3j\.private-key\s*=', line):
             if line.split('=', 1)[1].strip() != '${WEB3J_PRIVATE_KEY}':
@@ -40,6 +58,8 @@ for path in sorted(root.rglob('*')):
 print(f'Source files checked: {checked}')
 print('Public historical transaction hashes: explicitly classified in docs/lab3-reference.json')
 print('Local transaction hashes: explicitly classified in evidence/member1/records/06-local-integration.json')
+print('PR integration hashes: explicitly classified in evidence/pr1-integration/records/*integration.json')
+print('POTOS public receipt fields: explicitly classified in evidence/potos/records/verified-receipts.json')
 if findings:
     print('\n'.join(findings))
     sys.exit(1)

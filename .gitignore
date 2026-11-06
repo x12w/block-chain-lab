@@ -44,3 +44,5 @@ bin/
 *.pem
 *.key
 logs/
+__pycache__/
+*.py[cod]

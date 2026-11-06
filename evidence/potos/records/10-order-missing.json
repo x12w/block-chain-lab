@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-11-06T12:24:56.760114+00:00",
+  "method": "GET",
+  "path": "/api/escrow/orders/99",
+  "httpStatus": 409,
+  "body": {
+    "message": "On-chain call reverted: Contract Call has been reverted by the EVM with the reason: ''."
+  },
+  "classification": "POTOS_READ_ONLY_MISSING_ORDER_REVERT_NO_TRANSACTION"
+}

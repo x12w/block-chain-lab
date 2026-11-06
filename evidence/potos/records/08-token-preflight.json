@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-11-06T20:20:41.071144+08:00",
+  "rpc": "https://rpc-testnet.potos.hk",
+  "chainId": 60600,
+  "observedBlock": 2821897,
+  "token": {
+    "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+    "owner": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+    "decimals": 18,
+    "ownerBalanceUnits": "70000000000000000000"
+  },
+  "classification": "READ_ONLY_TOKEN_CHECK_NOT_GROUP_ORDER_ACCEPTANCE"
+}

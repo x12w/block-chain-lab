@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.protocol.exceptions.TransactionException;
+import org.web3j.tx.exceptions.ContractCallException;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -167,6 +168,9 @@ public class EscrowController {
             // The receipt (if any) is attached below; a timeout may have none.
             status = HttpStatus.CONFLICT;
             message = cause.getMessage();
+        } else if (cause instanceof ContractCallException && isRevert(cause.getMessage())) {
+            status = HttpStatus.CONFLICT;
+            message = "On-chain call reverted: " + cause.getMessage();
         } else if (cause instanceof IOException) {
             if (isRevert(cause.getMessage())) {
                 status = HttpStatus.CONFLICT;

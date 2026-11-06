@@ -1,0 +1,130 @@
+> Task :extractSolidityImports UP-TO-DATE
+> Task :nodeSetup UP-TO-DATE
+> Task :npmSetup SKIPPED
+> Task :npmInstall UP-TO-DATE
+> Task :resolveSolidity UP-TO-DATE
+> Task :compileSolidity UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :generateContractWrappers UP-TO-DATE
+> Task :compileJava
+> Task :classes
+> Task :resolveMainClassName
+> Task :bootJar
+> Task :compileTestSolidity NO-SOURCE
+> Task :generateTestContractWrappers NO-SOURCE
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test
+
+EscrowControllerTest > unloadedContractReturnsConflict() PASSED
+
+EscrowControllerTest > missingOrderRevertReturnsConflict() PASSED
+
+EscrowControllerTest > invalidLoadParameterReturnsBadRequest() PASSED
+
+EscrowControllerTest > orderDetailKeepsDecimalStringsAndStatusName() PASSED
+
+EscrowControllerTest > eventQueryFailureIsAnErrorNotAnEmptyArray() PASSED
+
+EscrowControllerTest > failedArbitrationKeepsReceiptAndGasUsage() PASSED
+
+EscrowServiceTest > futureDeploymentBlockIsRejected() PASSED
+
+EscrowServiceTest > eventQueryUsesInclusiveTenBlockBatchesAndDecodesEveryOrder() PASSED
+
+EscrowServiceTest > wrongChainIsRejected() PASSED
+
+EscrowServiceTest > rpcFailureIsAnErrorInsteadOfAnEmptyOrderList() PASSED
+
+EscrowServiceTest > invalidAddressAndNegativeBlockAreRejectedBeforeRpc() PASSED
+
+EscrowServiceTest > unloadedServiceExplainsWhatToDoNext() PASSED
+
+> Task :integrationTest
+
+EscrowHttpIntegrationTest > sixEndpointsWorkThroughRealHttpAndPreserveFailedReceipts() STANDARD_OUT
+
+      .   ____          _            __ _ _
+     /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+    ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+     \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+      '  |____| .__|_| |_|_| |_\__, | / / / /
+     =========|_|==============|___/=/_/_/_/
+     :: Spring Boot ::                (v3.2.3)
+
+    2026-11-06T20:15:38.910+08:00  INFO 18576 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+    2026-11-06T20:15:38.918+08:00  INFO 18576 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+    2026-11-06T20:15:38.919+08:00  INFO 18576 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+    2026-11-06T20:15:38.956+08:00  INFO 18576 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+    2026-11-06T20:15:38.956+08:00  INFO 18576 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 661 ms
+    2026-11-06T20:15:39.047+08:00  INFO 18576 --- [    Test worker] c.wetech.demo.web3j.config.Web3jConfig   : Connecting to Ethereum client: http://127.0.0.1:18545
+    2026-11-06T20:15:39.293+08:00  INFO 18576 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+    2026-11-06T20:15:39.330+08:00  INFO 18576 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 41947 (http) with context path ''
+    2026-11-06T20:15:39.435+08:00  INFO 18576 --- [1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+    2026-11-06T20:15:39.436+08:00  INFO 18576 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+    2026-11-06T20:15:39.436+08:00  INFO 18576 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+    GET /api/escrow/address -> 409
+    GET /api/escrow/orders -> 409
+    GET /api/escrow/orders/not-a-number -> 400
+    GET /api/escrow/orders/-1 -> 400
+    POST /api/escrow/load?address=bad&fromBlock=0 -> 400
+    POST /api/escrow/load?address=bad -> 400
+    POST /api/escrow/orders/0/resolve -> 400
+    POST /api/escrow/orders/0/resolve?sellerWins=invalid -> 400
+    POST /api/escrow/deploy -> 200
+    GET /api/escrow/address -> 200
+    GET /api/escrow/orders -> 200
+    GET /api/escrow/orders/99 -> 409
+    GET /api/escrow/orders -> 200
+    GET /api/escrow/orders/0 -> 200
+    GET /api/escrow/orders/1 -> 200
+    POST /api/escrow/orders/0/resolve?sellerWins=true -> 409
+    GET /api/escrow/orders/0 -> 200
+    POST /api/escrow/orders/1/resolve?sellerWins=false -> 200
+    GET /api/escrow/orders/1 -> 200
+    GET /api/escrow/orders/0 -> 200
+    POST /api/escrow/deploy -> 200
+    GET /api/escrow/orders -> 200
+    POST /api/escrow/load?address=0xe3f02ec253437025d16f4cc126058a52f0383061&fromBlock=32 -> 200
+    GET /api/escrow/orders -> 200
+    GET /api/escrow/orders/1 -> 200
+    PASS: six real HTTP endpoints; parameter conversion; >10-block events; failed receipt/gas; refund; confirmation; load
+
+EscrowHttpIntegrationTest > sixEndpointsWorkThroughRealHttpAndPreserveFailedReceipts() PASSED
+
+EscrowServiceIntegrationTest > completeEscrowLifecycleAndReceiptFailuresOnLocalChain() STANDARD_OUT
+    LOCAL ONLY | chainId=31337 | all three roles simulated by one test process
+    backend=0xe029c869f7529ce9d9ca3e396cda339d15f5004e
+    buyer=0xbd370ccc0659cda1dd8dd6f9e2ead31113559618
+    seller=0xd54a0517a0532fcaae3cc2db6eb683f6752742ed
+    deploy token (local only) | block=54 status=0x1 gas=630003 tx=0xe84a9e3dd59976d8f20e28cc03232965d620f6c997b4c09ae317382f37460bdb
+    mint 100 tokens | block=55 status=0x1 gas=70607 tx=0x306ee8e4f9c553b1a647d6740179427b0ed781e0297cde29602c6020de96a059
+    deploy Escrow | block=56 status=0x1 gas=1112938 tx=0xd9c29074241ed135747a52b74ecbfe50370c49ea9b3f61919ef6b4f131016b0b
+    createOrder 0 | block=57 status=0x1 gas=184716 tx=0x3667a6b271f9a212c19b7764b62604254d279ae8810a5ed2b1c57277290b05da
+    createOrder 1 | block=69 status=0x1 gas=167640 tx=0xa171d0400c395ce952ae09d4afb676fa534eef9271e3808eb5ec6f2ac88bfc3a
+    approve 60 tokens | block=70 status=0x1 gas=46163 tx=0x56f85a9770b845f1775a807a364193075124f1e9a18781196db59eabc6529db8
+    deposit 0 | block=71 status=0x1 gas=90188 tx=0x3d78bcf1653e528e396376a44ab728274d3e282e991cd1391caa02806dc41a0d
+    deposit 1 | block=72 status=0x1 gas=68300 tx=0x266c3040228e410ca9a032a416864bad9e6e58659df28c71e3744a33b046acdc
+    seller dispute 1 | block=73 status=0x1 gas=32489 tx=0x291e651f6f9141bf4ceb20845ca6d4ac263fb9e87456bdd1dad4c9758e0a7134
+    resolve 0 rejected: wrong status | block=74 status=0x0 gas=26216 tx=0x41abc71112abdb4ffc03874dd9bbaa168993dea50edf22195c1c6534283b5036
+    seller resolve 1 rejected: not arbiter | block=75 status=0x0 gas=23981 tx=0xf65c4e7763e25ae76699eee27aecc5a49e760d12d3e8f2132dc1f45d7989f382
+    resolve 1 refund | block=76 status=0x1 gas=52913 tx=0x1a025711c0fe27debba9f2e7ee7b3e80b096693bd08cf05e0825e8c3726f25c2
+    confirm 0 | block=77 status=0x1 gas=64722 tx=0x43c39bcc33ef2eb4e028d04b2885096c26bf762934b8537af85481403008b680
+    SimpleStorage deploy (local only) | block=78 status=0x1 gas=101643 tx=0xaa08f1b7817c0c48dbd957fc2d8e9db6924a13d5fef186abf99a3f02e9a5ea1d
+    SimpleStorage set 100 (local only) | block=79 status=0x1 gas=44568 tx=0x7c7b312ac0f3b656bda7028de645f78f3b89b1ebdc8bfb3c4158e58480ef65bf
+    PASS: real local transactions, >10-block event scan, state/role failures, refunds, settlement, reload, SimpleStorage=100
+
+EscrowServiceIntegrationTest > completeEscrowLifecycleAndReceiptFailuresOnLocalChain() PASSED
+
+[Incubating] Problems report is available at: file:///home/x12w/projects/block-chain/%E5%A4%A7%E4%BD%9C%E4%B8%9A/route-a-member1/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 6s
+13 actionable tasks: 6 executed, 7 up-to-date

@@ -3,7 +3,8 @@
 成员 1：魏琪霖，学号 202430332012，第 15 组。日期：2026-11-06。
 
 本仓库完成合约 Java 封装、EscrowService、环境变量配置和本地自动化验证。
-EscrowController 已由成员 2 接入；测试网上的新 Escrow、三人协作验收和正式交易表仍待完成。
+EscrowController 已由成员 2 接入，合并后联调通过；已在 POTOS 部署新 Escrow 并完成
+SimpleStorage 验证。三人订单验收和剩余正式交易表仍待完成。
 原实验项目不受影响。本项目基于课程 spring-boot-web3j 示例，合约复制自组长实验 3 源码。
 
 ## 已完成
@@ -13,7 +14,9 @@ EscrowController 已由成员 2 接入；测试网上的新 Escrow、三人协�
 - OrderCreated 按闭区间每批最多 10 个区块查询，RPC 失败会报错，不伪装为空列表。
 - 以文字返回订单状态；仲裁的角色与状态检查由合约执行；失败回执保留给 Controller。
 - 私钥由 WEB3J_PRIVATE_KEY 注入，配置类无硬编码后备私钥，链 ID 默认 60600。
-- 6 个单元测试和 1 个本地链集成测试已通过（详见 [evidence/member1](evidence/member1)）。
+- 12 个单元测试和 2 个本地链集成测试已通过；其中 HTTP 集成测试实际启动 Spring 服务，
+  验证 25 次请求、六个接口、参数转换、失败回执、退款、结算和重新加载。
+  本次合并联调证据见 [evidence/pr1-integration](evidence/pr1-integration)，早期成员 1 材料见 [evidence/member1](evidence/member1)。
 
 ## 环境与运行
 
@@ -71,7 +74,8 @@ bash gradlew integrationTest
 ```
 
 无需重新安装已有前端项目。本地链不会加载旧项目的部署脚本或钱包配置。
-结果见 build/reports/tests/ 与 build/local-evidence/local-integration.json。
+结果见 build/reports/tests/、build/local-evidence/local-integration.json 和 http-integration.json。
+执行 `python3 scripts/summarize-validation.py` 汇总四个测试类与真实回执。
 如本机 Java 下载依赖偶发 TLS 错误，可重试时使用 `-Dhttps.protocols=TLSv1.2`；不要关闭证书校验。
 
 ## 合约资料与交易记录
@@ -82,14 +86,21 @@ bash gradlew integrationTest
 路线 A 必须由专用后端账户重新部署，不能把旧 Escrow 当成本次新部署。
 只读核验命令：`python3 scripts/potos-preflight.py`（不读取密钥、不发送交易）。
 
-路线 A 新 Escrow 地址：待部署。后端账户：`0x4c688b060912faf95324a43C0190C59E7cE8aB3c`。部署区块：待记录。
+路线 A 新 Escrow：`0xd7320d80b687766bA73997B97dAE61Ff1f9ed737`，部署区块 `2821876`。
+后端/仲裁账户：`0x4c688b060912faf95324a43C0190C59E7cE8aB3c`。
+正式部署信息见 [docs/route-a-deployment.json](docs/route-a-deployment.json)，
+响应、链上回执、截图见 [evidence/potos](evidence/potos)。
 
-后端账户已创建并领取测试币；最新只读核验记录见 [docs/backend-account.json](docs/backend-account.json)。
-私钥尚待运行时在本机注入，当前没有发起本次测试网部署。
+后端已由用户在本机隐藏输入私钥并启动；本仓库不保存密钥。
+应用重启后必须加载现有合约，避免误部署新的订单空间：
+
+```bash
+curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA73997B97dAE61Ff1f9ed737&fromBlock=2821876'
+```
 
 | 操作 | 交易哈希 | 区块浏览器链接 | 发起账户 |
 |---|---|---|---|
-| 部署新 Escrow | 待完成 | 待完成 | 后端 BE |
+| 部署新 Escrow | 0xdd1e95f4a34a0298e2051c47e049cc49a3f654585510465950dd9a444cc034aa | [交易详情](https://scan-testnet.potos.hk/tx/0xdd1e95f4a34a0298e2051c47e049cc49a3f654585510465950dd9a444cc034aa) | 后端 BE |
 | createOrder 订单 0 | 待协作 | 待协作 | 买家 A |
 | approve | 待协作 | 待协作 | 买家 A |
 | deposit 订单 0 | 待协作 | 待协作 | 买家 A |
@@ -105,12 +116,13 @@ bash gradlew integrationTest
 
 | 成员 | 章节 | 文件/工作 |
 |---|---|---|
-| 魏琪霖（成员 1） | 4.2、4.3、4.5 Service；联调支持 | contracts/、EscrowService.java、Web3jConfig.java、application.properties、测试及运行脚本 |
-| 成员 2 | 4.5 Controller；4.6 REST 验收 | 新建 EscrowController.java，参数校验、异常映射，接入事件列表，配合 curl 记录 |
+| 魏琪霖（成员 1） | 4.2、4.3、4.5 Service；后端及买家操作 | contracts/、EscrowService.java、Web3jConfig.java、application.properties、测试及运行脚本 |
+| 成员 2 | 4.5 Controller；4.6 REST 验收及卖家操作 | 已实现 EscrowController.java，参数校验、异常映射，接入事件列表，配合 curl 记录 |
 | 成员 3 | 4.6 买卖家操作、7 提交整理 | 配合两位真实钱包持有人完成 Remix 操作，收集截图与交易记录，汇总报告 |
 
 开发分工与链上角色独立。路线 A 的仲裁人是后端账户 BE，不默认是成员 3 的个人钱包。
 协作步骤见 [docs/协作验收清单.md](docs/协作验收清单.md)。
+当前买卖家分配、新合约地址、可复制的操作参数见 [docs/当前协作交接.md](docs/当前协作交接.md)。
 
 ## AI 使用说明（准备阶段）
 

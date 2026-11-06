@@ -1,0 +1,23 @@
+{
+  "classification": "POTOS_TESTNET_DEPLOYED_GROUP_ORDER_ACCEPTANCE_PENDING",
+  "chainId": 60600,
+  "rpc": "https://rpc-testnet.potos.hk",
+  "verifiedAt": "2026-11-06T20:19:46.328999+08:00",
+  "observedBlock": 2821891,
+  "backendAccount": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "backendBalanceWei": "999997147591000",
+  "escrow": {
+    "contractAddress": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+    "transactionHash": "0xdd1e95f4a34a0298e2051c47e049cc49a3f654585510465950dd9a444cc034aa",
+    "deployBlock": "2821876"
+  },
+  "simpleStorage": {
+    "gasUsed": "27264",
+    "blockNumber": "2821871",
+    "contractAddress": "0x2EB79Bf8A18EBF0518501eFa0b6DB9D48075D786",
+    "transactionHash": "0x4be120c4f47bfe601fa7b65d8d061151db4a027623a95294261faf0e5c32c354",
+    "status": "0x1"
+  },
+  "explorerBaseUrl": "https://scan-testnet.potos.hk",
+  "privateKeyStoredInRepository": false
+}

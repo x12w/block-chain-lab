@@ -1,0 +1,126 @@
+{
+  "transactions" : [ {
+    "operation" : "deploy token (local only)",
+    "hash" : "0xe84a9e3dd59976d8f20e28cc03232965d620f6c997b4c09ae317382f37460bdb",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "630003",
+    "block" : "54"
+  }, {
+    "operation" : "mint 100 tokens",
+    "hash" : "0x306ee8e4f9c553b1a647d6740179427b0ed781e0297cde29602c6020de96a059",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "70607",
+    "block" : "55"
+  }, {
+    "operation" : "deploy Escrow",
+    "hash" : "0xd9c29074241ed135747a52b74ecbfe50370c49ea9b3f61919ef6b4f131016b0b",
+    "status" : "0x1",
+    "from" : "0xe029c869f7529ce9d9ca3e396cda339d15f5004e",
+    "gasUsed" : "1112938",
+    "block" : "56"
+  }, {
+    "operation" : "createOrder 0",
+    "hash" : "0x3667a6b271f9a212c19b7764b62604254d279ae8810a5ed2b1c57277290b05da",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "184716",
+    "block" : "57"
+  }, {
+    "operation" : "createOrder 1",
+    "hash" : "0xa171d0400c395ce952ae09d4afb676fa534eef9271e3808eb5ec6f2ac88bfc3a",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "167640",
+    "block" : "69"
+  }, {
+    "operation" : "approve 60 tokens",
+    "hash" : "0x56f85a9770b845f1775a807a364193075124f1e9a18781196db59eabc6529db8",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "46163",
+    "block" : "70"
+  }, {
+    "operation" : "deposit 0",
+    "hash" : "0x3d78bcf1653e528e396376a44ab728274d3e282e991cd1391caa02806dc41a0d",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "90188",
+    "block" : "71"
+  }, {
+    "operation" : "deposit 1",
+    "hash" : "0x266c3040228e410ca9a032a416864bad9e6e58659df28c71e3744a33b046acdc",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "68300",
+    "block" : "72"
+  }, {
+    "operation" : "seller dispute 1",
+    "hash" : "0x291e651f6f9141bf4ceb20845ca6d4ac263fb9e87456bdd1dad4c9758e0a7134",
+    "status" : "0x1",
+    "from" : "0xd54a0517a0532fcaae3cc2db6eb683f6752742ed",
+    "gasUsed" : "32489",
+    "block" : "73"
+  }, {
+    "operation" : "resolve 0 rejected: wrong status",
+    "hash" : "0x41abc71112abdb4ffc03874dd9bbaa168993dea50edf22195c1c6534283b5036",
+    "status" : "0x0",
+    "from" : "0xe029c869f7529ce9d9ca3e396cda339d15f5004e",
+    "gasUsed" : "26216",
+    "block" : "74"
+  }, {
+    "operation" : "seller resolve 1 rejected: not arbiter",
+    "hash" : "0xf65c4e7763e25ae76699eee27aecc5a49e760d12d3e8f2132dc1f45d7989f382",
+    "status" : "0x0",
+    "from" : "0xd54a0517a0532fcaae3cc2db6eb683f6752742ed",
+    "gasUsed" : "23981",
+    "block" : "75"
+  }, {
+    "operation" : "resolve 1 refund",
+    "hash" : "0x1a025711c0fe27debba9f2e7ee7b3e80b096693bd08cf05e0825e8c3726f25c2",
+    "status" : "0x1",
+    "from" : "0xe029c869f7529ce9d9ca3e396cda339d15f5004e",
+    "gasUsed" : "52913",
+    "block" : "76"
+  }, {
+    "operation" : "confirm 0",
+    "hash" : "0x43c39bcc33ef2eb4e028d04b2885096c26bf762934b8537af85481403008b680",
+    "status" : "0x1",
+    "from" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618",
+    "gasUsed" : "64722",
+    "block" : "77"
+  }, {
+    "operation" : "SimpleStorage deploy (local only)",
+    "hash" : "0xaa08f1b7817c0c48dbd957fc2d8e9db6924a13d5fef186abf99a3f02e9a5ea1d",
+    "status" : "0x1",
+    "from" : "0xe029c869f7529ce9d9ca3e396cda339d15f5004e",
+    "gasUsed" : "101643",
+    "block" : "78"
+  }, {
+    "operation" : "SimpleStorage set 100 (local only)",
+    "hash" : "0x7c7b312ac0f3b656bda7028de645f78f3b89b1ebdc8bfb3c4158e58480ef65bf",
+    "status" : "0x1",
+    "from" : "0xe029c869f7529ce9d9ca3e396cda339d15f5004e",
+    "gasUsed" : "44568",
+    "block" : "79"
+  } ],
+  "chainId" : 31337,
+  "recordedAtUtc" : "2026-11-06T12:15:39.966332003Z",
+  "escrowAddress" : "0xdd89919e1986e235eced266f5c34675aced15a67",
+  "tokenAddress" : "0xa1ab38a091430bd41731041af444697655ce11a2",
+  "accounts" : {
+    "seller" : "0xd54a0517a0532fcaae3cc2db6eb683f6752742ed",
+    "backend" : "0xe029c869f7529ce9d9ca3e396cda339d15f5004e",
+    "buyer" : "0xbd370ccc0659cda1dd8dd6f9e2ead31113559618"
+  },
+  "classification" : "LOCAL_SIMULATION_NOT_GROUP_ACCEPTANCE",
+  "deployBlock" : "56",
+  "finalState" : {
+    "order0" : "Completed",
+    "order1" : "Refunded",
+    "sellerTokens" : "30",
+    "buyerTokens" : "70",
+    "escrowTokens" : "0"
+  }
+}

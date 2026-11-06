@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wetech.demo.web3j.controller.EscrowControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-06T12:15:36.105Z" hostname="blockchain-course.x12w-nix" time="0.038">
+  <properties/>
+  <testcase name="unloadedContractReturnsConflict()" classname="com.wetech.demo.web3j.controller.EscrowControllerTest" time="0.019"/>
+  <testcase name="missingOrderRevertReturnsConflict()" classname="com.wetech.demo.web3j.controller.EscrowControllerTest" time="0.002"/>
+  <testcase name="invalidLoadParameterReturnsBadRequest()" classname="com.wetech.demo.web3j.controller.EscrowControllerTest" time="0.001"/>
+  <testcase name="orderDetailKeepsDecimalStringsAndStatusName()" classname="com.wetech.demo.web3j.controller.EscrowControllerTest" time="0.001"/>
+  <testcase name="eventQueryFailureIsAnErrorNotAnEmptyArray()" classname="com.wetech.demo.web3j.controller.EscrowControllerTest" time="0.0"/>
+  <testcase name="failedArbitrationKeepsReceiptAndGasUsage()" classname="com.wetech.demo.web3j.controller.EscrowControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,354 @@
+{
+  "transactions" : [ {
+    "operation" : "deploy token (local only)",
+    "hash" : "0xb87af2c0133aaa3979b69b1bf40323dec402c3e29f0d2069eff9c4031dc5f255",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "630003",
+    "block" : "30"
+  }, {
+    "operation" : "mint 100 tokens",
+    "hash" : "0x38f1e23570f7b21ada40e996f92a7fc56ce1402f74c535d0348d2a6cc1e0f402",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "70595",
+    "block" : "31"
+  }, {
+    "operation" : "HTTP deploy Escrow",
+    "hash" : "0xb28f023a1a1f2d97d62ea17d61adca744bcc27991710bf0bc80e3de54b6590cb",
+    "status" : "0x1",
+    "from" : "0x956f89acaf5a155255dfba04a96fa8e952ed98da",
+    "gasUsed" : "1112950",
+    "block" : "32"
+  }, {
+    "operation" : "createOrder 0",
+    "hash" : "0x672c200876461570a507aefd5e1ad7e6eb8d61831f5818fe915efbf8e429a120",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "184608",
+    "block" : "33"
+  }, {
+    "operation" : "createOrder 1",
+    "hash" : "0x54bb6f0dc4716098f7bb1efd610fd506e412a92efcb4184b21053abb8d94442a",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "167532",
+    "block" : "45"
+  }, {
+    "operation" : "approve 60 tokens",
+    "hash" : "0x85dbda4662e013ea77c615d1caf7e94b1f23296c430a627c8b67d4bc6cf6712c",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "46163",
+    "block" : "46"
+  }, {
+    "operation" : "deposit 0",
+    "hash" : "0x5de1c4de7d2e00fddf54d45b8db7e2f8264edb32d6e5b68dd3a5919882291fd9",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "90188",
+    "block" : "47"
+  }, {
+    "operation" : "deposit 1",
+    "hash" : "0xfe39041f8086a7af4afa1de4d01ccb5f36d37964e953224f6293f7d462a216c5",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "68300",
+    "block" : "48"
+  }, {
+    "operation" : "seller dispute 1",
+    "hash" : "0x7394bfe444f6865fd9ed3731d328ef63342627d5990086cc78718707dd7ba4aa",
+    "status" : "0x1",
+    "from" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+    "gasUsed" : "32489",
+    "block" : "49"
+  }, {
+    "operation" : "HTTP resolve 0 rejected: wrong status",
+    "hash" : "0xa51b9ba4245843a7e644e205f159eb26c594a231d69636969585ea71bc710074",
+    "status" : "0x0",
+    "from" : "0x956f89acaf5a155255dfba04a96fa8e952ed98da",
+    "gasUsed" : "26216",
+    "block" : "50"
+  }, {
+    "operation" : "HTTP resolve 1 refund",
+    "hash" : "0x57562137f4bf764d8659ad76c53e219dae26fdc62e9b083e7ea78313358aeda3",
+    "status" : "0x1",
+    "from" : "0x956f89acaf5a155255dfba04a96fa8e952ed98da",
+    "gasUsed" : "52913",
+    "block" : "51"
+  }, {
+    "operation" : "buyer confirm 0",
+    "hash" : "0x687a82270c5f12efd12bbd76184d76824b0ea23d49d31378a4975859a772e885",
+    "status" : "0x1",
+    "from" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+    "gasUsed" : "64722",
+    "block" : "52"
+  }, {
+    "operation" : "HTTP deploy second Escrow for load test",
+    "hash" : "0x5a2150eacccbae794aff3ec7cabb119d46132a342f4a761bc9a592aed1ce8543",
+    "status" : "0x1",
+    "from" : "0x956f89acaf5a155255dfba04a96fa8e952ed98da",
+    "gasUsed" : "1112950",
+    "block" : "53"
+  } ],
+  "chainId" : 31337,
+  "recordedAtUtc" : "2026-11-06T12:15:39.798082038Z",
+  "escrowAddress" : "0xe3f02ec253437025d16f4cc126058a52f0383061",
+  "httpExchanges" : [ {
+    "method" : "GET",
+    "status" : 409,
+    "body" : {
+      "message" : "Contract not deployed or loaded; call /deploy or /load first"
+    },
+    "path" : "/api/escrow/address"
+  }, {
+    "method" : "GET",
+    "status" : 409,
+    "body" : {
+      "message" : "Contract not deployed or loaded; call /deploy or /load first"
+    },
+    "path" : "/api/escrow/orders"
+  }, {
+    "method" : "GET",
+    "status" : 400,
+    "body" : {
+      "message" : "Invalid request parameter: Failed to convert value of type 'java.lang.String' to required type 'java.math.BigInteger'; Illegal embedded sign character"
+    },
+    "path" : "/api/escrow/orders/not-a-number"
+  }, {
+    "method" : "GET",
+    "status" : 400,
+    "body" : {
+      "message" : "id must be nonnegative"
+    },
+    "path" : "/api/escrow/orders/-1"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "address must be a nonzero 20-byte hex address"
+    },
+    "path" : "/api/escrow/load?address=bad&fromBlock=0"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "Invalid request parameter: Required request parameter 'fromBlock' for method parameter type BigInteger is not present"
+    },
+    "path" : "/api/escrow/load?address=bad"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "Invalid request parameter: Required request parameter 'sellerWins' for method parameter type boolean is not present"
+    },
+    "path" : "/api/escrow/orders/0/resolve"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "Invalid request parameter: Failed to convert value of type 'java.lang.String' to required type 'boolean'; Invalid boolean value [invalid]"
+    },
+    "path" : "/api/escrow/orders/0/resolve?sellerWins=invalid"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "contractAddress" : "0xe3f02ec253437025d16f4cc126058a52f0383061",
+      "transactionHash" : "0xb28f023a1a1f2d97d62ea17d61adca744bcc27991710bf0bc80e3de54b6590cb",
+      "deployBlock" : "32"
+    },
+    "path" : "/api/escrow/deploy"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "arbiter" : "0x956f89acaf5a155255dfba04a96fa8e952ed98da",
+      "contractAddress" : "0xe3f02ec253437025d16f4cc126058a52f0383061"
+    },
+    "path" : "/api/escrow/address"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : [ ],
+    "path" : "/api/escrow/orders"
+  }, {
+    "method" : "GET",
+    "status" : 409,
+    "body" : {
+      "message" : "On-chain call reverted: Contract Call has been reverted by the EVM with the reason: 'Error: VM Exception while processing transaction: reverted with reason string 'Escrow: order does not exist''."
+    },
+    "path" : "/api/escrow/orders/99"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : [ {
+      "blockNumber" : "33",
+      "id" : "0",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "transactionHash" : "0x672c200876461570a507aefd5e1ad7e6eb8d61831f5818fe915efbf8e429a120"
+    }, {
+      "blockNumber" : "45",
+      "id" : "1",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "transactionHash" : "0x54bb6f0dc4716098f7bb1efd610fd506e412a92efcb4184b21053abb8d94442a"
+    } ],
+    "path" : "/api/escrow/orders"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "deadline" : "1793969167",
+      "description" : "HTTP normal order",
+      "token" : "0x73e0b79c21e82d85132ed673c22dec5fa093e8e2",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "status" : "Paid"
+    },
+    "path" : "/api/escrow/orders/0"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "deadline" : "1793969167",
+      "description" : "HTTP disputed order",
+      "token" : "0x73e0b79c21e82d85132ed673c22dec5fa093e8e2",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "status" : "Disputed"
+    },
+    "path" : "/api/escrow/orders/1"
+  }, {
+    "method" : "POST",
+    "status" : 409,
+    "body" : {
+      "message" : "Transaction 0xa51b9ba4245843a7e644e205f159eb26c594a231d69636969585ea71bc710074 has failed with status: 0x0. Gas used: 26216. Revert reason: 'Error: VM Exception while processing transaction: reverted with reason string 'Escrow: wrong status''.",
+      "transactionHash" : "0xa51b9ba4245843a7e644e205f159eb26c594a231d69636969585ea71bc710074",
+      "blockNumber" : "50",
+      "status" : "0x0",
+      "gasUsed" : "26216"
+    },
+    "path" : "/api/escrow/orders/0/resolve?sellerWins=true"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "deadline" : "1793969167",
+      "description" : "HTTP normal order",
+      "token" : "0x73e0b79c21e82d85132ed673c22dec5fa093e8e2",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "status" : "Paid"
+    },
+    "path" : "/api/escrow/orders/0"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0x57562137f4bf764d8659ad76c53e219dae26fdc62e9b083e7ea78313358aeda3",
+      "blockNumber" : "51",
+      "status" : "0x1"
+    },
+    "path" : "/api/escrow/orders/1/resolve?sellerWins=false"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "deadline" : "1793969167",
+      "description" : "HTTP disputed order",
+      "token" : "0x73e0b79c21e82d85132ed673c22dec5fa093e8e2",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "status" : "Refunded"
+    },
+    "path" : "/api/escrow/orders/1"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "deadline" : "1793969167",
+      "description" : "HTTP normal order",
+      "token" : "0x73e0b79c21e82d85132ed673c22dec5fa093e8e2",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "status" : "Completed"
+    },
+    "path" : "/api/escrow/orders/0"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "contractAddress" : "0x59d7b3be8a8fa7c97561c642f0200f760ed4ef57",
+      "transactionHash" : "0x5a2150eacccbae794aff3ec7cabb119d46132a342f4a761bc9a592aed1ce8543",
+      "deployBlock" : "53"
+    },
+    "path" : "/api/escrow/deploy"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : [ ],
+    "path" : "/api/escrow/orders"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "contractAddress" : "0xe3f02ec253437025d16f4cc126058a52f0383061"
+    },
+    "path" : "/api/escrow/load?address=0xe3f02ec253437025d16f4cc126058a52f0383061&fromBlock=32"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : [ {
+      "blockNumber" : "33",
+      "id" : "0",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "transactionHash" : "0x672c200876461570a507aefd5e1ad7e6eb8d61831f5818fe915efbf8e429a120"
+    }, {
+      "blockNumber" : "45",
+      "id" : "1",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "transactionHash" : "0x54bb6f0dc4716098f7bb1efd610fd506e412a92efcb4184b21053abb8d94442a"
+    } ],
+    "path" : "/api/escrow/orders"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "amount" : "30000000000000000000",
+      "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff",
+      "deadline" : "1793969167",
+      "description" : "HTTP disputed order",
+      "token" : "0x73e0b79c21e82d85132ed673c22dec5fa093e8e2",
+      "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+      "status" : "Refunded"
+    },
+    "path" : "/api/escrow/orders/1"
+  } ],
+  "accounts" : {
+    "seller" : "0x3d6165832d12d540c73ce3ef42d00b53a20bf529",
+    "backend" : "0x956f89acaf5a155255dfba04a96fa8e952ed98da",
+    "buyer" : "0xf97d35cdb683a60b6120bfe01b3ab800d766a0ff"
+  },
+  "classification" : "LOCAL_SIMULATION_NOT_GROUP_ACCEPTANCE",
+  "deployBlock" : "32",
+  "finalState" : {
+    "order0" : "Completed",
+    "order1" : "Refunded",
+    "sellerTokens" : "30",
+    "buyerTokens" : "70",
+    "escrowTokens" : "0"
+  }
+}
