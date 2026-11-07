@@ -1,0 +1,90 @@
+{
+  "transaction_hash": "0x44db2d985fee8be415c46c35a8422840cb463691aeef9f95d5f12b66ca23ea20",
+  "status": "0x1",
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "chain_id": 60600,
+  "block_number": 2828331,
+  "gas_used": 62541,
+  "effective_gas_price_wei": "0",
+  "execution_fee_wei": "0",
+  "execution_fee_POT": "0",
+  "value_wei": "0",
+  "function": "confirm(uint256)",
+  "arguments": {
+    "id": "0"
+  },
+  "block_timestamp_utc": "2026-11-07T01:25:25+00:00",
+  "decoded_logs": [
+    {
+      "log_index": 0,
+      "contract": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "event": "Transfer(address,address,uint256)",
+      "from": "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "to": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+      "value_raw": "30000000000000000000",
+      "value_tokens": "30"
+    },
+    {
+      "log_index": 1,
+      "contract": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "event": "OrderCompleted(uint256)",
+      "id": "0"
+    }
+  ],
+  "final_state": {
+    "rpc": "https://rpc-testnet.potos.hk",
+    "read_started_at_utc": "2026-11-07T01:26:25.555269+00:00",
+    "chain_id": 60600,
+    "addresses": {
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "escrow": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "expected_arbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c"
+    },
+    "block_tag": "latest",
+    "orders": {
+      "0": {
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "amount": "30000000000000000000",
+        "deadline": 1793973724,
+        "status": 2,
+        "description": "route A normal order",
+        "status_name": "Completed"
+      },
+      "1": {
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "amount": "30000000000000000000",
+        "deadline": 1793973923,
+        "status": 3,
+        "description": "route A disputed order",
+        "status_name": "Refunded"
+      }
+    },
+    "arbiter": "0x4c688b060912faf95324a43c0190c59e7ce8ab3c",
+    "decimals": 18,
+    "balances_raw": {
+      "buyer": "40000000000000000000",
+      "seller": "60000000000000000000",
+      "escrow": "0"
+    },
+    "balances_tokens": {
+      "buyer": "40",
+      "seller": "60",
+      "escrow": "0"
+    },
+    "allowance_buyer_to_escrow_raw": "0",
+    "query_block_range": [
+      2828341,
+      2828346
+    ],
+    "read_finished_at_utc": "2026-11-07T01:27:04.353072+00:00",
+    "consistency_note": "Separate latest reads during the recorded block range; not an atomic or historical-block snapshot."
+  },
+  "rpc_note": "Raw log transactionIndex=0x307830 differs from receipt/transaction transactionIndex=0x0; preserved without correction. Historical blockTag is not trusted; state reads are latest across a recorded range."
+}

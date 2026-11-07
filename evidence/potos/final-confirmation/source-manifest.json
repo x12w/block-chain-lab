@@ -1,0 +1,57 @@
+{
+  "source": "User-supplied route_a_final_confirmation.zip, operation conversation 确认 Remix 界面. All 23 source checksums passed. Selected original files copied byte-for-byte; full original archive retained in final delivery.",
+  "files": [
+    {
+      "file": "README.txt",
+      "sha256": "c7dd61422a3c2b5cf02e10e58be66af70d7f642830449c4608f12583a8fd8c1b"
+    },
+    {
+      "file": "before_state.json",
+      "sha256": "00d1dae5df04ceefa94d5fd829d5df03d6359edfc3bf6110703370bce372f68f"
+    },
+    {
+      "file": "after_state.json",
+      "sha256": "946938ef1958b016eb45d5387b08514d7ac36f718c5ae68a4569443c35508496"
+    },
+    {
+      "file": "verified_summary.json",
+      "sha256": "25833470d23181f1ddf542ae7d95fb16094effa225842781ef17b37343713516"
+    },
+    {
+      "file": "screenshots/01_before_order0.jpg",
+      "sha256": "f99584ac96d167e9f7ff4e9086df9591786448ddabb47f65eafad4d2ba59dc15"
+    },
+    {
+      "file": "screenshots/02_before_order1.jpg",
+      "sha256": "eb557e7acd077a8622acfd085da9d5d434884c1827cecf0a64002ef75eb26d1b"
+    },
+    {
+      "file": "screenshots/03_confirm_success.jpg",
+      "sha256": "11005298913f9c41d84d1c1ce11242b8a1850fcbcd325164419109c7dac827a7"
+    },
+    {
+      "file": "screenshots/04_receipt_and_raw_logs.jpg",
+      "sha256": "95bfd9ad2e05902acf9fc3cb1ae255094c4e325bcc3595e6bd08cf9b5982b6a0"
+    },
+    {
+      "file": "screenshots/05_final_order0_completed.jpg",
+      "sha256": "d7761368b9366f15f706c99cf9af42e26b358e474d07f92262ade4369c0863a4"
+    },
+    {
+      "file": "screenshots/06_final_order1_refunded.jpg",
+      "sha256": "1e1f380a78d79684d1e0c092480341906767d06fc732ffd9c044815a9f5dc0c8"
+    },
+    {
+      "file": "screenshots/07_final_buyer_balance_40.jpg",
+      "sha256": "ea2494ca77183b5261e8c356db3d68636a6d8aa3f7046de526f0b5dcbfe8669c"
+    },
+    {
+      "file": "screenshots/08_final_seller_balance_60.jpg",
+      "sha256": "c79c635045f8699551ab642f744fbcc380ee8778250386ba1ab5600196e464c1"
+    },
+    {
+      "file": "screenshots/09_final_escrow_balance_0.jpg",
+      "sha256": "003e7559983939280ddf31ee5c7090f455e0daea3fa661e126abb94eeee5beec"
+    }
+  ]
+}

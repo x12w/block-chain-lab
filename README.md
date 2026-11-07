@@ -5,7 +5,7 @@
 本仓库完成合约 Java 封装、EscrowService、环境变量配置和本地自动化验证。
 EscrowController 已由成员 2 接入，合并后联调通过；已在 POTOS 部署新 Escrow 并完成
 SimpleStorage 验证。买家两笔创建、授权60个、两笔付款和卖家dispute(1)均已独立核验。
-正式GET及成员3仲裁已完成：订单0=Paid、订单1=Refunded，余额40/30/30；下一步由买家confirm(0)。
+正式GET、成员3仲裁及买家confirm(0)均已完成并独立核验：订单0=Completed、订单1=Refunded，最终余额40/60/0。
 原实验项目不受影响。本项目基于课程 spring-boot-web3j 示例，合约复制自组长实验 3 源码。
 
 ## 已完成
@@ -57,8 +57,8 @@ bash scripts/run-backend.sh
 该课程容器的 8080 端口仅映射到宿主机 127.0.0.1。不要把无认证接口公开到互联网。
 
 当前保留示例 SimpleStorageController。六个 `/api/escrow` 接口已由成员 2 在
-`EscrowController.java` 中实现，并有本地单元测试覆盖状态码与失败回执；仍需在测试网完成
-curl 验收并保存 4A-4～4A-8 截图。接口对接见 [docs/成员2接口对接.md](docs/成员2接口对接.md)。
+`EscrowController.java` 中实现，并有本地单元测试覆盖状态码与失败回执；正式测试网
+curl 验收及 4A-4～4A-8 截图已保存。接口对接见 [docs/成员2接口对接.md](docs/成员2接口对接.md)。
 
 ## 本地集成测试
 
@@ -107,7 +107,7 @@ curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA7
 | deposit 订单 0 | 0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5 | [交易详情](https://scan-testnet.potos.hk/tx/0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5) | 买家 A |
 | dispute 订单 1 | 0x38f57adcfd17adba8849eb8e66985bbefb38000ffe221b8ac1105cd991a90494 | [交易详情](https://scan-testnet.potos.hk/tx/0x38f57adcfd17adba8849eb8e66985bbefb38000ffe221b8ac1105cd991a90494) | 卖家 B／张俊仁 |
 | resolve 订单 1 | 0x41346bdd3a5ce73aa5bf86cb2436fd0c149338f94d1a00cf23d161313e130a7f | [交易详情](https://scan-testnet.potos.hk/tx/0x41346bdd3a5ce73aa5bf86cb2436fd0c149338f94d1a00cf23d161313e130a7f) | 后端 BE／袁嘉骏操作 |
-| confirm 订单 0 | 待协作 | 待协作 | 买家 A |
+| confirm 订单 0 | 0x44db2d985fee8be415c46c35a8422840cb463691aeef9f95d5f12b66ca23ea20 | [交易详情](https://scan-testnet.potos.hk/tx/0x44db2d985fee8be415c46c35a8422840cb463691aeef9f95d5f12b66ca23ea20) | 买家 A |
 | resolve 订单 0 失败 | 0x6b6157111ef72bcacf69ab031d15ccaebd11cde978fa73637eebde039117f4c3 | [交易详情](https://scan-testnet.potos.hk/tx/0x6b6157111ef72bcacf69ab031d15ccaebd11cde978fa73637eebde039117f4c3) | 后端 BE／袁嘉骏操作 |
 
 额外保存订单 1 的创建、付款交易：
@@ -120,7 +120,7 @@ curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA7
 五笔买家交易的回执/参数/事件已独立核验。付款后买家 10、卖家 30、Escrow 60，allowance=0；
 卖家原有的 30 个应与本次收入区分。原始浏览器证据已从用户提供的 ZIP 校验导入 evidence/potos/buyer/，包含 9 张截图。
 
-成员2卖家争议和成员3仲裁均已完成；原图分别见 evidence/potos/seller/ 与 evidence/potos/arbitration-member3/。失败/退款两笔回执均已核验，下一步见 [买家确认及交接](docs/当前协作交接.md)。
+成员2卖家争议和成员3仲裁均已完成；原图分别见 evidence/potos/seller/ 与 evidence/potos/arbitration-member3/。失败/退款两笔回执均已核验，最终确认9张原图见 evidence/potos/final-confirmation/；[完成状态及提交检查](docs/当前协作交接.md)。
 
 正式交易应附区块浏览器中的交易页；本地哈希不能填入本表充数。
 
@@ -146,8 +146,8 @@ curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA7
 
 ## 提交前
 
-仲裁已完成，剩余买家confirm(0)与最终余额；继续核对 [报告草稿](docs/报告草稿.md)、[解释题与答辩准备](docs/成员1解释题准备.md)
-及 [46张已有截图索引](docs/截图索引.md)。已验证数据与待补项均已区分，不能作为全流程已完成报告直接提交。
+链上流程及最终余额已核验；提交前核对 [报告草稿](docs/报告草稿.md)、[解释题与答辩准备](docs/成员1解释题准备.md)
+及 [55张已有截图索引](docs/截图索引.md)。教师模板报告已补齐8行交易、六道解释题及截图；贡献比例和各成员AI说明仍需本人核对。
 
 运行 `python3 scripts/check-secrets.py`；确认没有运行时密钥或 .env 入库。
-协作仓库：https://github.com/x12w/block-chain-lab 。教师模板已收到；[Word进度稿](docs/大作业报告_待最终确认.docx)已填入现有证据，贡献比例留空，仲裁证据已补，最终确认仍待补。截止日期待教师通知。
+协作仓库：https://github.com/x12w/block-chain-lab 。教师模板已收到；[Word报告](docs/大作业报告.docx)已填入最终结算证据，贡献比例按要求留空。截止日期待教师通知。
