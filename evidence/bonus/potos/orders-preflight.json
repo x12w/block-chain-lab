@@ -1,0 +1,15 @@
+{
+  "classification": "READ_ONLY_PREFLIGHT_AFTER_SELLER_READY",
+  "checkedAt": "2026-11-07T14:09:21.867Z",
+  "chainId": 60600,
+  "blockNumber": 2834670,
+  "chainTimestamp": 1794060555,
+  "chainTimeUTC": "2026-11-07T14:09:15.000Z",
+  "enhancedContract": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "orderCount": "0",
+  "version": "2",
+  "firstArbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "secondArbiter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "allowance": "3000000000000000000",
+  "buyerTokens": "40.0"
+}

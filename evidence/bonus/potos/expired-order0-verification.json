@@ -1,0 +1,52 @@
+{
+  "classification": "REAL_POTOS_EXPIRED_ORDER_AND_FAILED_DEPOSIT_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-07T15:07:31.647Z",
+  "chainId": 60600,
+  "rpc": "https://rpc-testnet.potos.hk",
+  "contractAddress": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "create": {
+    "hash": "0x035d87ff0e40270ec1be0fd044a2cb9a2b74c407b86bf99fff6679b3ee5895e4",
+    "status": "0x1",
+    "block": 2834943,
+    "timeBeijing": "2026-11-07 22:41:57 +08:00",
+    "deadline": "1794062954",
+    "deadlineBeijing": "2026-11-07 22:49:14 +08:00",
+    "secondsRemainingWhenCreated": 437
+  },
+  "deposit": {
+    "hash": "0x82291889ac6ac463881832430a765d3e91d2498e8fab15c64de53debd7606c3f",
+    "status": "0x0",
+    "block": 2835014,
+    "timeBeijing": "2026-11-07 22:50:49 +08:00",
+    "secondsAfterDeadline": 95,
+    "gasUsed": "30143",
+    "effectiveGasPrice": "0",
+    "executionFeePOT": "0.0",
+    "eventCount": 0
+  },
+  "current": {
+    "startBlock": 2835150,
+    "finishBlock": 2835153,
+    "chainTimeBeijing": "2026-11-07 23:07:26 +08:00",
+    "orderCount": "1",
+    "order0": {
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "status": 0,
+      "statusName": "Created",
+      "expired": true,
+      "description": "bonus shipped confirm"
+    },
+    "allowance": "3000000000000000000",
+    "balances": {
+      "buyer": "40.0",
+      "seller": "60.0",
+      "escrow": "0.0"
+    },
+    "readSemantics": "Sequential latest reads, not an atomic historical snapshot"
+  },
+  "diagnosis": "The deposit block timestamp exceeded the immutable deadline; the transaction reverted with no token transfers. Preserve order 0 and never retry its deposit.",
+  "browserOriginalsReceivedLocally": false
+}
