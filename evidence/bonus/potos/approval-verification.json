@@ -1,0 +1,45 @@
+{
+  "classification": "REAL_POTOS_BONUS_APPROVAL_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-07T06:05:47.770Z",
+  "chainId": 60600,
+  "rpc": "https://rpc-testnet.potos.hk",
+  "transactionHash": "0x8849ad88eaf2dfdc94850a17c11a1cb7c9433467ce33a6f2b9af4af52b481003",
+  "blockNumber": 2830571,
+  "transactionTime": "2026-11-07T05:54:59.000Z",
+  "status": "0x1",
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+  "method": "approve",
+  "spender": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "approvedAmount": "3000000000000000000",
+  "approvedTokens": "3",
+  "gasUsed": "28423",
+  "effectiveGasPrice": "0",
+  "executionFeePOT": "0.0",
+  "approvalEvent": {
+    "owner": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "spender": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "value": "3000000000000000000"
+  },
+  "current": {
+    "startBlock": 2830657,
+    "finishBlock": 2830659,
+    "allowance": "3000000000000000000",
+    "orderCount": "0",
+    "balances": {
+      "buyer": "40.0",
+      "seller": "60.0",
+      "escrow": "0.0"
+    },
+    "readyForOrderCreation": true,
+    "readSemantics": "Sequential latest reads, not an atomic historical snapshot"
+  },
+  "browserEvidence": {
+    "thread": "确认 Remix 界面",
+    "threadId": "6aee7b95-237c-83e8-817b-09e63e643ddc",
+    "reportedArchive": "route_a_bonus_approval.zip",
+    "reportedScreenshots": 9,
+    "localOriginalArchiveReceived": false
+  },
+  "remaining": "Wait for seller readiness, then create and fund new orders; shipping and arbitration are not yet accepted"
+}

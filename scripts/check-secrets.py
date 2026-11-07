@@ -53,6 +53,11 @@ def collect_receipt_values(value):
             collect_receipt_values(item)
 
 bonus_evidence = root / 'evidence/bonus'
+for record in (bonus_evidence / 'potos').glob('*verified-receipts.json'):
+    for receipt in json.loads(record.read_text()).values():
+        for log in receipt.get('logs', []):
+            bonus_public_values.update(log['topics'])
+            bonus_public_values.add(log['data'])
 for folder in ('enhanced', 'timeline', 'potos'):
     for record in (bonus_evidence / folder).glob('*.json'):
         data = json.loads(record.read_text())

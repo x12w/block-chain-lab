@@ -14,6 +14,8 @@ SimpleStorage 验证。买家两笔创建、授权60个、两笔付款和卖家d
 
 2026-11-07增强合约已部署至POTOS：`0x917Dc833eadBa6544F1fd80498715da39Ac739f4`，部署块`2829547`。后端当前已加载增强合约。第一仲裁人为袁嘉骏的BE，第二仲裁人为魏琪霖现有买家钱包；链上回执、构造参数、两位仲裁地址和version=2均已独立核对。部署记录见`evidence/bonus/potos/`；后续付款、发货及双人投票仍待实际操作。
 
+买家准备已完成：增强合约的3个WQLToken授权在块`2830571`成功，交易`0x8849ad88eaf2dfdc94850a17c11a1cb7c9433467ce33a6f2b9af4af52b481003`。主对话独立核验回执、approve参数、Approval事件及当前allowance=3个；订单数仍为0，余额仍40/60/0。等待卖家准备好后再创建和付款，避免提前开始15分钟发货期限。记录见`evidence/bonus/potos/approval-verification.json`。
+
 - [实现、接口与验收说明](docs/路线A加分项说明.md)
 - [测试网协作步骤](docs/加分项测试网操作说明.md)
 - [24项测试与源码摘要](evidence/bonus/enhanced/summary.json)
