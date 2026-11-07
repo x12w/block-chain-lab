@@ -1,0 +1,41 @@
+{
+  "classification": "REAL_POTOS_FIRST_ARBITER_VOTE_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-07T16:09:05.395Z",
+  "chainId": 60600,
+  "contract": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "orderId": 2,
+  "transactionHash": "0x65b301fa30f296bab8dbecb80711771c05f37579ea210850999242dbff043cd3",
+  "blockNumber": 2835652,
+  "timeBeijing": "2026-11-08 00:07:23",
+  "status": "0x1",
+  "signer": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "method": "resolve(2,false)",
+  "gasUsed": "41819",
+  "effectiveGasPrice": "0",
+  "executionFeePOT": "0.0",
+  "events": [
+    "ArbitrationVoted"
+  ],
+  "transferEventCount": 0,
+  "current": {
+    "votes": {
+      "firstVoted": true,
+      "firstSellerWins": false,
+      "secondVoted": false,
+      "secondSellerWins": false
+    },
+    "orderStatus": "Disputed",
+    "balances": {
+      "buyer": "37.0",
+      "seller": "60.0",
+      "escrow": "3.0"
+    },
+    "readSemantics": "Separate latest calls, not an atomic snapshot"
+  },
+  "logQuery": {
+    "fromBlock": 2835619,
+    "toBlock": 2835665,
+    "windowSize": 10
+  },
+  "result": "First vote recorded; no settlement or token movement. Second arbiter has not voted."
+}

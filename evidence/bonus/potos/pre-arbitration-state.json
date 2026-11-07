@@ -1,0 +1,56 @@
+{
+  "classification": "REAL_POTOS_PRE_ARBITRATION_READ_ONLY_CHECK",
+  "checkedAt": "2026-11-07T16:03:23.899Z",
+  "contract": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "orderCount": 4,
+  "orders": [
+    {
+      "id": 1,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794072356",
+      "deadlineBeijing": "2026-11-08 01:25:56",
+      "status": 5,
+      "description": "bonus shipped confirm retry"
+    },
+    {
+      "id": 2,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794072788",
+      "deadlineBeijing": "2026-11-08 01:33:08",
+      "status": 4,
+      "description": "bonus shipped arbitration"
+    },
+    {
+      "id": 3,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794069586",
+      "deadlineBeijing": "2026-11-08 00:39:46",
+      "status": 1,
+      "description": "bonus unshipped refund"
+    }
+  ],
+  "votes2": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "allowance": "0",
+  "balances": {
+    "buyer": "37.0",
+    "seller": "60.0",
+    "escrow": "3.0"
+  },
+  "chainTimeBeijing": "2026-11-08 00:03:21",
+  "blockNumber": 2835619,
+  "readSemantics": "Sequential latest reads, not an atomic snapshot"
+}
