@@ -6,13 +6,13 @@
 
 | 项目 | 实现与已保存证据 | 验收范围 |
 |---|---|---|
-| 订单时间线 | `GET /api/escrow/orders/{id}/events`；原订单0有3条事件，订单1有4条事件 | 已通过真实POTOS只读HTTP验收，另复查运行中的8080服务 |
-| 卖家发货 | `Shipped=5`、`markShipped(id)`，仅卖家可在截止时间前将Paid订单改为Shipped | 本地EVM与真实HTTP验收通过；测试网协作记录待补 |
-| 双人仲裁 | 两个不同的非零地址各投一票，意见一致时执行一次结算 | 本地EVM与真实HTTP验收通过；测试网协作记录待补 |
+| 订单时间线 | `GET /api/escrow/orders/{id}/events`；原订单0有3条、1有4条事件；增强订单1/2/3分别4/7/3条 | 原订单及增强订单均已通过运行后端的真实POTOS只读HTTP验收 |
+| 卖家发货 | `Shipped=5`、`markShipped(id)`，仅卖家可在截止时间前将Paid订单改为Shipped | 本地验收通过；POTOS订单1发货后确认完成，订单3未发货超期退款；订单1的到期退款限制为模拟拒绝证据 |
+| 双人仲裁 | 两个不同的非零地址各投一票，意见一致时执行一次结算 | POTOS订单2第一票不结算、冲突票不结算、改为一致后退款，最后两票回执及转账已独立核验 |
 
 19项单元测试、5项本地集成测试通过，测试数按JUnit测试方法统计，每个集成方法内另含多笔交易和多条断言。本地随机账户、交易和余额均明确标为chainId31337，不能填入POTOS正式交易表。
 
-增强合约现已部署至POTOS：`0x917Dc833eadBa6544F1fd80498715da39Ac739f4`，部署块`2829547`，version=2。第一仲裁地址为袁嘉骏的BE，第二仲裁地址为魏琪霖现有买家钱包。本次为课程角色演示，魏琪霖兼任买家和第二仲裁人。部署通过不等于发货、退款和双人投票协作已验收；这些仍待钱包实际操作。
+增强合约已部署至POTOS：`0x917Dc833eadBa6544F1fd80498715da39Ac739f4`，部署块`2829547`，version=2。第一仲裁地址为袁嘉骏的BE，第二仲裁地址为魏琪霖现有买家钱包。本次为课程角色演示，魏琪霖兼任买家和第二仲裁人。2026-11-08有效订单1、2、3均已结算，最终余额39/61/0；独立记录见`evidence/bonus/potos/final-settlement-verification.json`。订单2实际Paid→Disputed、后续发货失败，未完成“发货后争议”这一组合场景；报告必须如实区分。
 
 2026-11-07首次增强订单0创建成功，付款却在截止后95秒入块而回滚，订单保持Created且过期；授权仍3个、余额40/60/0。真实失败回执和独立复核已归档于`evidence/bonus/potos/expired-order0-*`。这是操作时间安排不足，不计为发货或双人仲裁成功证据。接续方案使用更长时限及新的实际订单ID，详见协作步骤。
 
@@ -28,6 +28,8 @@
 | 1 | OrderCreated 2822524 → OrderPaid 2822676 → OrderDisputed 2823067 → OrderResolved 2823583 |
 
 订单1最后一条事件的 `sellerWins=false`，对应既有退款结果。每条响应包含完整交易哈希、区块哈希、合约地址和事件位置。接口从部署区块扫至查询开始时的最新区块，历史跨度较长时查询较慢；本版没有增量缓存。
+
+增强订单最终时间线已保存为`evidence/bonus/potos/final-order{1,2,3}-events.json`：订单1为Created→Paid→Shipped→Completed；订单2为Created→Paid→Disputed→三次ArbitrationVoted→Resolved；订单3为Created→Paid→Refunded。初次并行查询订单1、3时上游批次响应触发HTTP502，随后顺序重查均为HTTP200且事件完整，错误与恢复过程保留在`final-timeline-verification.json`，不把错误响应或空结果当作验收成功。
 
 ## 发货与退款
 
@@ -76,4 +78,4 @@ bash gradlew potosTimelineAcceptance --console=plain
 
 证据目录：`evidence/bonus/timeline/`保存真实HTTP响应；`evidence/bonus/enhanced/`保存JUnit报告、本地交易回执、HTTP请求与源码摘要；`evidence/bonus/screenshots/`保存注明来源的记录展示图。每类截图明确区分真实POTOS查询与本地自动化验证。
 
-测试网剩余协作见[加分项测试网操作说明](加分项测试网操作说明.md)。三人贡献百分比继续留空，由小组自行填写。得分由教师结合实现、证据及答辩评定。
+测试网最终记录与材料收尾见[当前协作交接](当前协作交接.md)；原[操作说明](加分项测试网操作说明.md)只作为方法说明，不重复执行已结算交易。浏览器最终21张原图尚未下载到主项目，Word和交付包待合并更新。三人贡献百分比继续留空，由小组自行填写。得分由教师结合实现、证据及答辩评定。

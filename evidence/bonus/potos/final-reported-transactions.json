@@ -1,0 +1,7 @@
+{
+  "source": "Browser conversation Remix环境状态摘要, 6aef511b-a004-83e8-b504-940168a71c43; hashes independently re-read by final verification script",
+  "conflictingVote": {"hash": "0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8", "method": "resolve", "args": [2, true]},
+  "agreedRefund": {"hash": "0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd", "method": "resolve", "args": [2, false]},
+  "timeoutRefund": {"hash": "0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe", "method": "refund", "args": [3]},
+  "shippedConfirm": {"hash": "0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029", "method": "confirm", "args": [1]}
+}

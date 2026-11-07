@@ -1,0 +1,500 @@
+{
+  "classification": "BROWSER_THREAD_REPORTED_LIVE_OBSERVATIONS",
+  "sourceThreadId": "6aef511b-a004-83e8-b504-940168a71c43",
+  "retrievedFrom": "read_thread command outputs; not a substitute for the original screenshot archive",
+  "originalArchiveReceivedLocally": false,
+  "observations": [
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "queryMode": "latest live reads; block timestamps bound observation window; historical block-state behavior not assumed",
+      "blockBefore": {
+        "number": "0x2b4784",
+        "hash": "0xf885bcc4890b369c4c2b16ea816fe88cc59d325135df812722ee8dcda5555593",
+        "timestamp": "0x6aef60a0"
+      },
+      "blockAfter": {
+        "number": "0x2b4785",
+        "hash": "0x01d8a255f2f638ea7ea20981ead6e900623009774eb1c5b19113898d7cdb02c6",
+        "timestamp": "0x6aef60a6"
+      },
+      "chainId": 60600,
+      "orders": [
+        {
+          "id": 0,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794062954,
+          "status": 0,
+          "description": "bonus shipped confirm"
+        },
+        {
+          "id": 1,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072356,
+          "status": 2,
+          "description": "bonus shipped confirm retry"
+        },
+        {
+          "id": 2,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072788,
+          "status": 3,
+          "description": "bonus shipped arbitration"
+        },
+        {
+          "id": 3,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794069586,
+          "status": 3,
+          "description": "bonus unshipped refund"
+        }
+      ],
+      "votes2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "balances": {
+        "buyer": "39000000000000000000",
+        "seller": "61000000000000000000",
+        "escrow": "0"
+      },
+      "allowance": "0",
+      "nonceLatest": 94,
+      "noncePending": 94
+    },
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "queryMode": "latest live reads; block timestamps bound observation window; historical block-state behavior not assumed",
+      "blockBefore": {
+        "number": "0x2b4756",
+        "hash": "0x6f32bccdcd63395cb673bc46d168bee0fbadaa86e657df02bc87ad45d6873553",
+        "timestamp": "0x6aef5f62"
+      },
+      "blockAfter": {
+        "number": "0x2b4758",
+        "hash": "0x35bc68a3243304165d99677fe9042cbf27fc361e4eb238b1d1a06c9bc25db6cc",
+        "timestamp": "0x6aef5f6f"
+      },
+      "chainId": 60600,
+      "orders": [
+        {
+          "id": 0,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794062954,
+          "status": 0,
+          "description": "bonus shipped confirm"
+        },
+        {
+          "id": 1,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072356,
+          "status": 5,
+          "description": "bonus shipped confirm retry"
+        },
+        {
+          "id": 2,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072788,
+          "status": 3,
+          "description": "bonus shipped arbitration"
+        },
+        {
+          "id": 3,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794069586,
+          "status": 3,
+          "description": "bonus unshipped refund"
+        }
+      ],
+      "votes2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "balances": {
+        "buyer": "39000000000000000000",
+        "seller": "60000000000000000000",
+        "escrow": "1000000000000000000"
+      },
+      "allowance": "0",
+      "nonceLatest": 93,
+      "noncePending": 93
+    },
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "simulationOnly": true,
+      "transactionSent": false,
+      "block": {
+        "number": "0x2b4764",
+        "hash": "0x50ddcd7feac86780e912f864e49677db26677a2790f9b013f7dc94d4db431b38",
+        "timestamp": "0x6aef5fbe"
+      },
+      "order1": {
+        "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+        "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+        "amount": "1000000000000000000",
+        "deadline": 1794072356,
+        "status": 5,
+        "description": "bonus shipped confirm retry"
+      },
+      "request": {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_estimateGas",
+        "params": [
+          {
+            "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "value": "0x0",
+            "data": "0x278ecde10000000000000000000000000000000000000000000000000000000000000001"
+          }
+        ]
+      },
+      "response": {
+        "error": {
+          "code": 16,
+          "data": "0x08c379a000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014457363726f773a2077726f6e6720737461747573000000000000000000000000",
+          "message": ""
+        },
+        "id": 1,
+        "jsonrpc": "2.0"
+      }
+    },
+    {
+      "method": "refund(1)",
+      "simulationOnly": true,
+      "transactionSent": false,
+      "transactionHash": null,
+      "receiptStatus": null,
+      "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+      "value": 0,
+      "chainId": 60600,
+      "order1Status": 5,
+      "deadline": 1794072356,
+      "block": 2836324,
+      "timestamp": 1794072510,
+      "beijingTime": "2026-11-08T01:28:30+08:00",
+      "rpcErrorCode": 16,
+      "decodedRevertReason": "Escrow: wrong status",
+      "finding": "After deadline, order1 remained Shipped and refund(1) gas estimation reverted for wrong status. This is not a failed on-chain transaction.",
+      "sources": [
+        "d_precheck_state.json",
+        "d_refund1_estimate_wallet.json",
+        "d_refund1_estimate_rpc.json",
+        "d_refund1_rejected.jpg"
+      ]
+    },
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "queryMode": "latest live reads; block timestamps bound observation window; historical block-state behavior not assumed",
+      "blockBefore": {
+        "number": "0x2b4769",
+        "hash": "0x82181fc3ad3149cc27419ec9c14a4b54f26146a407178e04907c671a4d57fe8b",
+        "timestamp": "0x6aef5fe5"
+      },
+      "blockAfter": {
+        "number": "0x2b476b",
+        "hash": "0x1bc43f6a1f72d767e5b74ce3692a2851bed2c5363bdc80fa6f5881be73299d64",
+        "timestamp": "0x6aef5ff0"
+      },
+      "chainId": 60600,
+      "orders": [
+        {
+          "id": 0,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794062954,
+          "status": 0,
+          "description": "bonus shipped confirm"
+        },
+        {
+          "id": 1,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072356,
+          "status": 5,
+          "description": "bonus shipped confirm retry"
+        },
+        {
+          "id": 2,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072788,
+          "status": 3,
+          "description": "bonus shipped arbitration"
+        },
+        {
+          "id": 3,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794069586,
+          "status": 3,
+          "description": "bonus unshipped refund"
+        }
+      ],
+      "votes2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "balances": {
+        "buyer": "39000000000000000000",
+        "seller": "60000000000000000000",
+        "escrow": "1000000000000000000"
+      },
+      "allowance": "0",
+      "nonceLatest": 93,
+      "noncePending": 93
+    },
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "queryMode": "latest live reads; block timestamps bound observation window; historical block-state behavior not assumed",
+      "blockBefore": {
+        "number": "0x2b46ab",
+        "hash": "0x7fb4f1695ff46429b84a643a9fc8be1d0ad7906152c0385b8c0860af2ddc1c0a",
+        "timestamp": "0x6aef5a6d"
+      },
+      "blockAfter": {
+        "number": "0x2b46ac",
+        "hash": "0x758b1b4d1d9f77baffcc15874c5dc8a9f077a3064e7b772e706cfd678b86f6d9",
+        "timestamp": "0x6aef5a74"
+      },
+      "chainId": 60600,
+      "orders": [
+        {
+          "id": 0,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794062954,
+          "status": 0,
+          "description": "bonus shipped confirm"
+        },
+        {
+          "id": 1,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072356,
+          "status": 5,
+          "description": "bonus shipped confirm retry"
+        },
+        {
+          "id": 2,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072788,
+          "status": 3,
+          "description": "bonus shipped arbitration"
+        },
+        {
+          "id": 3,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794069586,
+          "status": 3,
+          "description": "bonus unshipped refund"
+        }
+      ],
+      "votes2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "balances": {
+        "buyer": "39000000000000000000",
+        "seller": "60000000000000000000",
+        "escrow": "1000000000000000000"
+      },
+      "allowance": "0",
+      "nonceLatest": 93,
+      "noncePending": 93
+    },
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "queryMode": "latest live reads; block timestamps bound observation window; historical block-state behavior not assumed",
+      "blockBefore": {
+        "number": "0x2b4667",
+        "hash": "0xa0d58724002929c58ad12cf0a2b120fca22232ab105f5a4d662ffc8689f83af1",
+        "timestamp": "0x6aef5884"
+      },
+      "blockAfter": {
+        "number": "0x2b4669",
+        "hash": "0xa8abf24011225f76319ba84e57fedfccc5065a1a8e4a25088c5a82e55fce57bb",
+        "timestamp": "0x6aef5890"
+      },
+      "chainId": 60600,
+      "orders": [
+        {
+          "id": 0,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794062954,
+          "status": 0,
+          "description": "bonus shipped confirm"
+        },
+        {
+          "id": 1,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072356,
+          "status": 5,
+          "description": "bonus shipped confirm retry"
+        },
+        {
+          "id": 2,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072788,
+          "status": 3,
+          "description": "bonus shipped arbitration"
+        },
+        {
+          "id": 3,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794069586,
+          "status": 1,
+          "description": "bonus unshipped refund"
+        }
+      ],
+      "votes2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "balances": {
+        "buyer": "38000000000000000000",
+        "seller": "60000000000000000000",
+        "escrow": "2000000000000000000"
+      },
+      "allowance": "0",
+      "nonceLatest": 92,
+      "noncePending": 92
+    },
+    {
+      "source": "https://rpc-testnet.potos.hk",
+      "queryMode": "latest live reads; block timestamps bound observation window; historical block-state behavior not assumed",
+      "blockBefore": {
+        "number": "0x2b468c",
+        "hash": "0x200025df690b65d2d484c551469eb9c1cb49901ba1661a63412323f858b9e082",
+        "timestamp": "0x6aef5989"
+      },
+      "blockAfter": {
+        "number": "0x2b468d",
+        "hash": "0x6dfe25def4cc13818b94592522fa7276afc5e9aabb019585d64ddc97ceabdb00",
+        "timestamp": "0x6aef5991"
+      },
+      "chainId": 60600,
+      "orders": [
+        {
+          "id": 0,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794062954,
+          "status": 0,
+          "description": "bonus shipped confirm"
+        },
+        {
+          "id": 1,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072356,
+          "status": 5,
+          "description": "bonus shipped confirm retry"
+        },
+        {
+          "id": 2,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794072788,
+          "status": 3,
+          "description": "bonus shipped arbitration"
+        },
+        {
+          "id": 3,
+          "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+          "seller": "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+          "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+          "amount": "1000000000000000000",
+          "deadline": 1794069586,
+          "status": 1,
+          "description": "bonus unshipped refund"
+        }
+      ],
+      "votes2": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "balances": {
+        "buyer": "38000000000000000000",
+        "seller": "60000000000000000000",
+        "escrow": "2000000000000000000"
+      },
+      "allowance": "0",
+      "nonceLatest": 92,
+      "noncePending": 92
+    }
+  ]
+}

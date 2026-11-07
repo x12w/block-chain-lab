@@ -1,0 +1,54 @@
+{
+  "conflictingVote": {
+    "hash": "0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8",
+    "blockHash": "0x11cbe3b620937774e818d5527c9a197908a2786c51a530181b4dd879b58582e3",
+    "blockNumber": "0x2b45d7",
+    "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "input": "0x52a34b0500000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001",
+    "value": "0x0",
+    "gas": "0xa3a3",
+    "gasPrice": "0x0",
+    "nonce": "0x5a",
+    "chainId": "0xecb8"
+  },
+  "agreedRefund": {
+    "hash": "0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd",
+    "blockHash": "0xa8a0fd8df2c00f723a50a91ae767bd85ea380d412dc7774659568fee6e4322b7",
+    "blockNumber": "0x2b465a",
+    "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "input": "0x52a34b0500000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000",
+    "value": "0x0",
+    "gas": "0x13d86",
+    "gasPrice": "0x0",
+    "nonce": "0x5b",
+    "chainId": "0xecb8"
+  },
+  "timeoutRefund": {
+    "hash": "0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe",
+    "blockHash": "0x1c350cfac798c484870ec0c0dcfd7926681aadccebdca6fa641e8329c5e9c5e8",
+    "blockNumber": "0x2b46a6",
+    "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "input": "0x278ecde10000000000000000000000000000000000000000000000000000000000000003",
+    "value": "0x0",
+    "gas": "0x104e4",
+    "gasPrice": "0x0",
+    "nonce": "0x5c",
+    "chainId": "0xecb8"
+  },
+  "shippedConfirm": {
+    "hash": "0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029",
+    "blockHash": "0x5064790a1b25d0f8d39c78fab634a35239d474be6f4afd0aa779d367ac9b260f",
+    "blockNumber": "0x2b477e",
+    "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "input": "0xba0179b50000000000000000000000000000000000000000000000000000000000000001",
+    "value": "0x0",
+    "gas": "0x104de",
+    "gasPrice": "0x0",
+    "nonce": "0x5d",
+    "chainId": "0xecb8"
+  }
+}

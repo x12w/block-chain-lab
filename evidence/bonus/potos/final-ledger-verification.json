@@ -1,0 +1,423 @@
+{
+  "classification": "REAL_POTOS_ALL_THREE_ORDER_TIMELINES_AND_SELLER_DEVIATION_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-07T17:46:35.849Z",
+  "successfulTransactions": 13,
+  "failedTransactions": 1,
+  "transactions": [
+    {
+      "hash": "0x64c24b30d7afbc3f423da80358ece8ac1771f5761fcb00508907b8b7d7d97fe0",
+      "method": "createOrder",
+      "args": [
+        "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "1000000000000000000",
+        "1794072356",
+        "bonus shipped confirm retry"
+      ],
+      "orderId": 1,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835321,
+      "timeBeijing": "2026-11-07 23:27:54",
+      "gasUsed": "81109",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "OrderCreated",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "1",
+            "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+            "amount": "1000000000000000000",
+            "deadline": "1794072356"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xf2559557e9ba952abbf2456ccea321cb7cdfef53e23c9db81f871cad6ef816ee",
+      "method": "deposit",
+      "args": [
+        "1"
+      ],
+      "orderId": 1,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835351,
+      "timeBeijing": "2026-11-07 23:31:20",
+      "gasUsed": "74473",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderPaid",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "1"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xe9398d162f065e68ed3a2c109bfb2ca88183f1a3d077ed35f3fea148a27e8bb9",
+      "method": "createOrder",
+      "args": [
+        "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "1000000000000000000",
+        "1794072788",
+        "bonus shipped arbitration"
+      ],
+      "orderId": 2,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835388,
+      "timeBeijing": "2026-11-07 23:35:53",
+      "gasUsed": "81109",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "OrderCreated",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+            "amount": "1000000000000000000",
+            "deadline": "1794072788"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0x68fd629d80512648ab23d7ac2ef3c7319ec445b84df6bd28e1d84ad6f14c3df0",
+      "method": "markShipped",
+      "args": [
+        "1"
+      ],
+      "orderId": 1,
+      "signer": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "status": "0x1",
+      "block": 2835401,
+      "timeBeijing": "2026-11-07 23:37:06",
+      "gasUsed": "38563",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "OrderShipped",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "1",
+            "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xdd782dc5b16477873ca573808de496e647b2dd2e8ad44b231590086f5f384e5d",
+      "method": "deposit",
+      "args": [
+        "2"
+      ],
+      "orderId": 2,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835418,
+      "timeBeijing": "2026-11-07 23:38:46",
+      "gasUsed": "74473",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderPaid",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0x7d882fcb8b7b656ceda390bee1b3e666bf970478877ecff42264ccf9e8a1d9e6",
+      "method": "createOrder",
+      "args": [
+        "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "1000000000000000000",
+        "1794069586",
+        "bonus unshipped refund"
+      ],
+      "orderId": 3,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835440,
+      "timeBeijing": "2026-11-07 23:41:26",
+      "gasUsed": "81109",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "OrderCreated",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "3",
+            "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+            "amount": "1000000000000000000",
+            "deadline": "1794069586"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0x0140fb9818401908c054a9f9cb19ebf4cf5fa52d47f07c37ae87b941f74be9c0",
+      "method": "deposit",
+      "args": [
+        "3"
+      ],
+      "orderId": 3,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835507,
+      "timeBeijing": "2026-11-07 23:50:04",
+      "gasUsed": "74473",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderPaid",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "3"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xfe41250933e363cd280e8c77f221bc88a1a2d4453097433134e95ee352ed3e23",
+      "method": "dispute",
+      "args": [
+        "2"
+      ],
+      "orderId": 2,
+      "signer": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "status": "0x1",
+      "block": 2835515,
+      "timeBeijing": "2026-11-07 23:50:53",
+      "gasUsed": "38489",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "OrderDisputed",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "by": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xc6ee3ac58363428cd89bfe9285f7fc557c6a8ed293cc2dd44ee4add86bf8dcb9",
+      "method": "markShipped",
+      "args": [
+        "2"
+      ],
+      "orderId": 2,
+      "signer": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "status": "0x0",
+      "block": 2835525,
+      "timeBeijing": "2026-11-07 23:52:12",
+      "gasUsed": "25760",
+      "executionFeePOT": "0.0",
+      "events": []
+    },
+    {
+      "hash": "0x65b301fa30f296bab8dbecb80711771c05f37579ea210850999242dbff043cd3",
+      "method": "resolve",
+      "args": [
+        "2",
+        false
+      ],
+      "orderId": 2,
+      "signer": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+      "status": "0x1",
+      "block": 2835652,
+      "timeBeijing": "2026-11-08 00:07:23",
+      "gasUsed": "41819",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "ArbitrationVoted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "voter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+            "sellerWins": false
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8",
+      "method": "resolve",
+      "args": [
+        "2",
+        true
+      ],
+      "orderId": 2,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2835927,
+      "timeBeijing": "2026-11-08 00:40:19",
+      "gasUsed": "41891",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "ArbitrationVoted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "voter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "sellerWins": true
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd",
+      "method": "resolve",
+      "args": [
+        "2",
+        false
+      ],
+      "orderId": 2,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2836058,
+      "timeBeijing": "2026-11-08 00:56:06",
+      "gasUsed": "81286",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "ArbitrationVoted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "voter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "sellerWins": false
+          }
+        },
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "to": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderResolved",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "sellerWins": false
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe",
+      "method": "refund",
+      "args": [
+        "3"
+      ],
+      "orderId": 3,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2836134,
+      "timeBeijing": "2026-11-08 01:05:14",
+      "gasUsed": "66788",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "to": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderRefunded",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "3"
+          }
+        }
+      ]
+    },
+    {
+      "hash": "0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029",
+      "method": "confirm",
+      "args": [
+        "1"
+      ],
+      "orderId": 1,
+      "signer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "status": "0x1",
+      "block": 2836350,
+      "timeBeijing": "2026-11-08 01:31:41",
+      "gasUsed": "66782",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "to": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderCompleted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "1"
+          }
+        }
+      ]
+    }
+  ],
+  "result": "Every HTTP timeline event matched its mined receipt. Order 1 shipping succeeded; order 2 dispute succeeded before its failed shipping transaction."
+}

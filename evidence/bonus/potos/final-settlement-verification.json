@@ -1,0 +1,222 @@
+{
+  "classification": "REAL_POTOS_BONUS_FINAL_SETTLEMENT_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-07T17:41:11.590Z",
+  "chainId": 60600,
+  "rpc": "https://rpc-testnet.potos.hk",
+  "contractAddress": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "transactions": [
+    {
+      "stage": "conflictingVote",
+      "hash": "0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8",
+      "method": "resolve",
+      "args": [
+        2,
+        true
+      ],
+      "status": "0x1",
+      "blockNumber": 2835927,
+      "timeBeijing": "2026-11-08 00:40:19",
+      "gasUsed": "41891",
+      "effectiveGasPrice": "0",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "ArbitrationVoted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "voter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "sellerWins": true
+          }
+        }
+      ]
+    },
+    {
+      "stage": "agreedRefund",
+      "hash": "0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd",
+      "method": "resolve",
+      "args": [
+        2,
+        false
+      ],
+      "status": "0x1",
+      "blockNumber": 2836058,
+      "timeBeijing": "2026-11-08 00:56:06",
+      "gasUsed": "81286",
+      "effectiveGasPrice": "0",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "ArbitrationVoted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "voter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "sellerWins": false
+          }
+        },
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "to": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderResolved",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "2",
+            "sellerWins": false
+          }
+        }
+      ]
+    },
+    {
+      "stage": "timeoutRefund",
+      "hash": "0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe",
+      "method": "refund",
+      "args": [
+        3
+      ],
+      "status": "0x1",
+      "blockNumber": 2836134,
+      "timeBeijing": "2026-11-08 01:05:14",
+      "gasUsed": "66788",
+      "effectiveGasPrice": "0",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "to": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderRefunded",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "3"
+          }
+        }
+      ]
+    },
+    {
+      "stage": "shippedConfirm",
+      "hash": "0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029",
+      "method": "confirm",
+      "args": [
+        1
+      ],
+      "status": "0x1",
+      "blockNumber": 2836350,
+      "timeBeijing": "2026-11-08 01:31:41",
+      "gasUsed": "66782",
+      "effectiveGasPrice": "0",
+      "executionFeePOT": "0.0",
+      "events": [
+        {
+          "name": "Transfer",
+          "address": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "args": {
+            "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+            "to": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+            "value": "1000000000000000000"
+          }
+        },
+        {
+          "name": "OrderCompleted",
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "args": {
+            "id": "1"
+          }
+        }
+      ]
+    }
+  ],
+  "current": {
+    "startBlock": 2836425,
+    "finishBlock": 2836426,
+    "chainTimeBeijing": "2026-11-08 01:41:06",
+    "orders": [
+      {
+        "id": 0,
+        "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "amount": "1000000000000000000",
+        "deadline": "1794062954",
+        "deadlineBeijing": "2026-11-07 22:49:14",
+        "statusCode": 0,
+        "status": "Created",
+        "description": "bonus shipped confirm"
+      },
+      {
+        "id": 1,
+        "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "amount": "1000000000000000000",
+        "deadline": "1794072356",
+        "deadlineBeijing": "2026-11-08 01:25:56",
+        "statusCode": 2,
+        "status": "Completed",
+        "description": "bonus shipped confirm retry"
+      },
+      {
+        "id": 2,
+        "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "amount": "1000000000000000000",
+        "deadline": "1794072788",
+        "deadlineBeijing": "2026-11-08 01:33:08",
+        "statusCode": 3,
+        "status": "Refunded",
+        "description": "bonus shipped arbitration"
+      },
+      {
+        "id": 3,
+        "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+        "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+        "amount": "1000000000000000000",
+        "deadline": "1794069586",
+        "deadlineBeijing": "2026-11-08 00:39:46",
+        "statusCode": 3,
+        "status": "Refunded",
+        "description": "bonus unshipped refund"
+      }
+    ],
+    "votes2": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "orderCount": "4",
+    "balances": {
+      "buyer": "39.0",
+      "seller": "61.0",
+      "escrow": "0.0"
+    },
+    "allowance": "0",
+    "readSemantics": "Separate latest calls within the stated block range; not an atomic historical snapshot"
+  },
+  "evidenceLimits": [
+    "The conflicting-vote receipt independently contains only ArbitrationVoted and no token transfer or settlement; intermediate live balances and order status are separately preserved browser observations.",
+    "The post-deadline refund(1) rejection was a simulation, not a mined failed transaction; its prior Shipped-state observation cannot be recreated using this RPC historical blockTag.",
+    "Order 2 entered dispute before shipping; no shipped-then-disputed success is claimed."
+  ],
+  "browserEvidence": {
+    "threadId": "6aef511b-a004-83e8-b504-940168a71c43",
+    "archive": "route_a_acceptance_checkpoint.zip",
+    "reportedOriginalImages": 21,
+    "localOriginalArchiveReceived": false
+  }
+}

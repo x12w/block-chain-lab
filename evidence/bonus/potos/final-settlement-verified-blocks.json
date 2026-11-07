@@ -1,0 +1,22 @@
+{
+  "conflictingVote": {
+    "number": "0x2b45d7",
+    "hash": "0x11cbe3b620937774e818d5527c9a197908a2786c51a530181b4dd879b58582e3",
+    "timestamp": "0x6aef5473"
+  },
+  "agreedRefund": {
+    "number": "0x2b465a",
+    "hash": "0xa8a0fd8df2c00f723a50a91ae767bd85ea380d412dc7774659568fee6e4322b7",
+    "timestamp": "0x6aef5826"
+  },
+  "timeoutRefund": {
+    "number": "0x2b46a6",
+    "hash": "0x1c350cfac798c484870ec0c0dcfd7926681aadccebdca6fa641e8329c5e9c5e8",
+    "timestamp": "0x6aef5a4a"
+  },
+  "shippedConfirm": {
+    "number": "0x2b477e",
+    "hash": "0x5064790a1b25d0f8d39c78fab634a35239d474be6f4afd0aa779d367ac9b260f",
+    "timestamp": "0x6aef607d"
+  }
+}

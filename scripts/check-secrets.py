@@ -62,7 +62,8 @@ for folder in ('enhanced', 'timeline', 'potos'):
     for record in (bonus_evidence / folder).glob('*.json'):
         data = json.loads(record.read_text())
         collect_receipt_values(data)
-        for relative, recorded in data.get('sourceSha256', {}).items():
+        source_hashes = data.get('sourceSha256', {}) if isinstance(data, dict) else {}
+        for relative, recorded in source_hashes.items():
             source = (root / relative).resolve()
             if source.is_relative_to(root) and source.is_file():
                 actual = hashlib.sha256(source.read_bytes()).hexdigest()
