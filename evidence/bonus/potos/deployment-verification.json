@@ -1,0 +1,35 @@
+{
+  "classification": "REAL_POTOS_ENHANCED_DEPLOYMENT_INDEPENDENTLY_VERIFIED",
+  "verifiedAt": "2026-11-07T03:55:04.930Z",
+  "chainId": 60600,
+  "rpc": "https://rpc-testnet.potos.hk",
+  "contractAddress": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "transactionHash": "0x5d2ff55a0e549150d1cbd47e22072d60191747ed09e5f3c6b94d004abf0d78ce",
+  "deployBlock": 2829547,
+  "deployedAt": "2026-11-07T03:53:20.000Z",
+  "firstArbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "secondArbiter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "firstOperator": "袁嘉骏，通过现有后端BE",
+  "secondOperator": "魏琪霖，兼任买家",
+  "status": "0x1",
+  "gasUsed": "128063",
+  "effectiveGasPrice": "0",
+  "executionFeePOT": "0.0",
+  "constructorAndCompiledCreationBytecodeMatch": true,
+  "version": "2",
+  "deployedCodeBytes": 6306,
+  "current": {
+    "startBlock": 2829559,
+    "finishBlock": 2829562,
+    "orderCount": "0",
+    "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+    "balances": {
+      "buyer": "40.0",
+      "seller": "60.0",
+      "escrow": "0.0"
+    },
+    "buyerAllowance": "0",
+    "readSemantics": "Sequential latest reads, not an atomic historical snapshot"
+  },
+  "remaining": "Buyer orders/deposits, seller shipping/dispute, refund boundary and both arbitrator votes still require actual testnet execution"
+}

@@ -1,0 +1,31 @@
+{
+  "classification": "REAL_POTOS_ENHANCED_BACKEND_BINDING",
+  "chainId": 60600,
+  "httpExchanges": [
+    {
+      "method": "GET",
+      "path": "/address",
+      "startedAt": "2026-11-07T03:54:53.014264+00:00",
+      "httpStatus": 200,
+      "rawBody": "{\"arbiter\":\"0x4c688b060912faf95324a43c0190c59e7ce8ab3c\",\"contractAddress\":\"0x917Dc833eadBa6544F1fd80498715da39Ac739f4\"}",
+      "body": {
+        "arbiter": "0x4c688b060912faf95324a43c0190c59e7ce8ab3c",
+        "contractAddress": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/arbitrators",
+      "startedAt": "2026-11-07T03:54:53.393865+00:00",
+      "httpStatus": 200,
+      "rawBody": "{\"backendSigner\":\"0x4c688b060912faf95324a43c0190c59e7ce8ab3c\",\"requiredVotes\":\"2\",\"firstArbiter\":\"0x4c688b060912faf95324a43c0190c59e7ce8ab3c\",\"secondArbiter\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\",\"contractAddress\":\"0x917Dc833eadBa6544F1fd80498715da39Ac739f4\"}",
+      "body": {
+        "backendSigner": "0x4c688b060912faf95324a43c0190c59e7ce8ab3c",
+        "requiredVotes": "2",
+        "firstArbiter": "0x4c688b060912faf95324a43c0190c59e7ce8ab3c",
+        "secondArbiter": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+        "contractAddress": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4"
+      }
+    }
+  ]
+}

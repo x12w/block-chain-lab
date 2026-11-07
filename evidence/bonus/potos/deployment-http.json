@@ -1,0 +1,31 @@
+{
+  "classification": "REAL_POTOS_ENHANCED_DEPLOYMENT_HTTP",
+  "chainId": 60600,
+  "firstArbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "secondArbiter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "firstOperator": "袁嘉骏，通过现有后端BE",
+  "secondOperator": "魏琪霖，兼任买家",
+  "preflight": {
+    "loadedOriginalContract": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+    "rpcChainId": "0xecb8",
+    "backendPendingNonce": "0x5",
+    "headBlock": "0x2b2ce3",
+    "backendBalanceWei": "999995283295000"
+  },
+  "method": "POST",
+  "url": "http://127.0.0.1:8080/api/escrow/deploy-enhanced?secondArbiter=0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "startedAt": "2026-11-07T03:53:19.682785+00:00",
+  "attempts": 1,
+  "outcome": "HTTP received; independent receipt verification required",
+  "httpStatus": 200,
+  "rawBody": "{\"transactionHash\":\"0x5d2ff55a0e549150d1cbd47e22072d60191747ed09e5f3c6b94d004abf0d78ce\",\"blockNumber\":\"2829547\",\"status\":\"0x1\",\"contractAddress\":\"0x917Dc833eadBa6544F1fd80498715da39Ac739f4\",\"deployBlock\":\"2829547\",\"version\":\"2\"}",
+  "finishedAt": "2026-11-07T03:53:22.094144+00:00",
+  "body": {
+    "transactionHash": "0x5d2ff55a0e549150d1cbd47e22072d60191747ed09e5f3c6b94d004abf0d78ce",
+    "blockNumber": "2829547",
+    "status": "0x1",
+    "contractAddress": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "deployBlock": "2829547",
+    "version": "2"
+  }
+}

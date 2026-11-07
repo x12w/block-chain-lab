@@ -53,7 +53,7 @@ def collect_receipt_values(value):
             collect_receipt_values(item)
 
 bonus_evidence = root / 'evidence/bonus'
-for folder in ('enhanced', 'timeline'):
+for folder in ('enhanced', 'timeline', 'potos'):
     for record in (bonus_evidence / folder).glob('*.json'):
         data = json.loads(record.read_text())
         collect_receipt_values(data)
@@ -88,7 +88,8 @@ for path in sorted(root / name for name in tracked if name):
                 continue  # Actual local-chain receipt hashes, also present in the test output.
             if path.is_relative_to(integration_evidence) and match.group() in integration_hashes:
                 continue  # Recorded HTTP/service local-chain transaction receipts.
-            if path.is_relative_to(bonus_evidence) and match.group() in bonus_public_values:
+            if (path.is_relative_to(bonus_evidence) or path.is_relative_to(root / 'docs')
+                    or path == root / 'README.md') and match.group() in bonus_public_values:
                 continue  # Typed public receipt hashes and independently recomputed source digests.
             if (path.is_relative_to(potos_evidence) or path.is_relative_to(root / 'docs')
                     or path == root / 'README.md') and match.group() in potos_public_values:
