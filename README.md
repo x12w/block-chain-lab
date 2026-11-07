@@ -8,6 +8,17 @@ SimpleStorage 验证。买家两笔创建、授权60个、两笔付款和卖家d
 正式GET、成员3仲裁及买家confirm(0)均已完成并独立核验：订单0=Completed、订单1=Refunded，最终余额40/60/0。
 原实验项目不受影响。本项目基于课程 spring-boot-web3j 示例，合约复制自组长实验 3 源码。
 
+## 本次新增的三个加分项
+
+订单时间线、卖家发货状态、双人仲裁均已实现。时间线已通过真实POTOS只读HTTP验收，运行中的8080后端也已验证成功；发货和双仲裁通过本地EVM及真实HTTP测试，测试网协作记录尚待补齐。三项各3分，实际得分由教师评定。
+
+- [实现、接口与验收说明](docs/路线A加分项说明.md)
+- [测试网协作步骤](docs/加分项测试网操作说明.md)
+- [24项测试与源码摘要](evidence/bonus/enhanced/summary.json)
+- [运行后端的真实时间线响应](evidence/bonus/timeline/running-backend-acceptance.json)
+
+增强合约 `src/main/resources/contracts/EscrowEnhanced.sol` 需要独立部署。它保留原状态值，追加Shipped；两位不同仲裁人意见一致后才结算。原必做合约和已完成的两笔订单继续保留，查询原记录使用 `/load`，查询增强合约使用 `/load-enhanced`。
+
 ## 已完成
 
 - 生成 Escrow、IERC20、WQLToken、SimpleStorage 的 Java 封装。
@@ -18,6 +29,8 @@ SimpleStorage 验证。买家两笔创建、授权60个、两笔付款和卖家d
 - 12 个单元测试和 2 个本地链集成测试已通过；其中 HTTP 集成测试实际启动 Spring 服务，
   验证 25 次请求、六个接口、参数转换、失败回执、退款、结算和重新加载。
   本次合并联调证据见 [evidence/pr1-integration](evidence/pr1-integration)，早期成员 1 材料见 [evidence/member1](evidence/member1)。
+- 加分项扩展后重新执行全部验证：19个单元测试、5个本地集成测试通过，`bootJar`构建成功。
+  增强验证覆盖卖家权限、截止时间边界、已发货退款限制、双票冲突与修改、重复投票、成功退款及放款、错误加载不改变绑定。
 
 ## 环境与运行
 
@@ -77,6 +90,8 @@ bash gradlew integrationTest
 无需重新安装已有前端项目。本地链不会加载旧项目的部署脚本或钱包配置。
 结果见 build/reports/tests/、build/local-evidence/local-integration.json 和 http-integration.json。
 执行 `python3 scripts/summarize-validation.py` 汇总四个测试类与真实回执。
+加分项验证执行 `bash gradlew test integrationTest bootJar`，再运行
+`python3 scripts/summarize-bonus.py`，归档全部六个测试类、增强合约回执和源码摘要。
 如本机 Java 下载依赖偶发 TLS 错误，可重试时使用 `-Dhttps.protocols=TLSv1.2`；不要关闭证书校验。
 
 ## 合约资料与交易记录
@@ -147,7 +162,7 @@ curl -X POST 'http://127.0.0.1:8080/api/escrow/load?address=0xd7320d80b687766bA7
 ## 提交前
 
 链上流程及最终余额已核验；提交前核对 [报告草稿](docs/报告草稿.md)、[解释题与答辩准备](docs/成员1解释题准备.md)
-及 [55张已有截图索引](docs/截图索引.md)。教师模板报告已补齐8行交易、六道解释题及截图；贡献比例和各成员AI说明仍需本人核对。
+及 [60张已有截图索引](docs/截图索引.md)。教师模板报告已补齐8行交易、六道解释题及截图；贡献比例和各成员AI说明仍需本人核对。
 
 运行 `python3 scripts/check-secrets.py`；确认没有运行时密钥或 .env 入库。
 协作仓库：https://github.com/x12w/block-chain-lab 。教师模板已收到；[Word报告](docs/大作业报告.docx)已填入最终结算证据，贡献比例按要求留空。截止日期待教师通知。

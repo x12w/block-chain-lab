@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wetech.demo.web3j.service.OrderTimelineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-07T03:02:59.774Z" hostname="blockchain-course.x12w-nix" time="0.662">
+  <properties/>
+  <testcase name="incompleteBatchIsRejected()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.063"/>
+  <testcase name="rpcCannotMixAnotherOrdersEvents()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.052"/>
+  <testcase name="malformedEventIsAnError()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.138"/>
+  <testcase name="negativeOrOversizedIdRejectedBeforeNetwork()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.001"/>
+  <testcase name="noMatchingEventsReturnsEmptyList()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.132"/>
+  <testcase name="laterBatchErrorDoesNotReturnEarlierPartialEvents()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.135"/>
+  <testcase name="allSixEventsDecodedSortedAndDeduplicatedAcrossMultipleRpcBatches()" classname="com.wetech.demo.web3j.service.OrderTimelineTest" time="0.136"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

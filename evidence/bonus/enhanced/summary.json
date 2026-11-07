@@ -1,0 +1,81 @@
+{
+  "classification": "LOCAL_EVM_HTTP_ACCEPTANCE_NOT_POTOS",
+  "tests": [
+    {
+      "name": "com.wetech.demo.web3j.controller.EnhancedEscrowIntegrationTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-07T03:03:00.989Z"
+    },
+    {
+      "name": "com.wetech.demo.web3j.controller.EscrowHttpIntegrationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-07T03:03:04.922Z"
+    },
+    {
+      "name": "com.wetech.demo.web3j.service.EscrowServiceIntegrationTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-07T03:03:05.414Z"
+    },
+    {
+      "name": "com.wetech.demo.web3j.controller.EscrowControllerTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-07T03:02:59.103Z"
+    },
+    {
+      "name": "com.wetech.demo.web3j.service.EscrowServiceTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-07T03:02:59.143Z"
+    },
+    {
+      "name": "com.wetech.demo.web3j.service.OrderTimelineTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-07T03:02:59.774Z"
+    }
+  ],
+  "sourceSha256": {
+    "build.gradle": "b396c75d966a0104d107f18d30002c1ef21198285ca4ef90c2c80ec4b347d043",
+    "src/main/java/com/wetech/demo/web3j/Application.java": "f652ded8e449c496e5e44a4c958982cf8d472e109ecd203fc7fbe77194a4bb28",
+    "src/main/java/com/wetech/demo/web3j/config/Web3jConfig.java": "e523bb1ec6b2d64c0e1782561efc5a19c2bdd8f0f2c9c107e72f1a5407bc156f",
+    "src/main/java/com/wetech/demo/web3j/contracts/escrow/Escrow.java": "d67fcaac10018564d0c158284c83262df87047958e1e8991619e34e49dbe8609",
+    "src/main/java/com/wetech/demo/web3j/contracts/escrowenhanced/EscrowEnhanced.java": "6c9a29172fb334d518987339e0cec620efedcd3e4ef31e804e8581658e9d7189",
+    "src/main/java/com/wetech/demo/web3j/contracts/ierc20/IERC20.java": "4cc6e9029b41be5d924ed08cfd00002b7446933e6c0661ebf9715870144d9d51",
+    "src/main/java/com/wetech/demo/web3j/contracts/simplestorage/SimpleStorage.java": "1c71c3969e7e74f544032c2be80e08383378fb5dbafae8eeda6af15457068a5a",
+    "src/main/java/com/wetech/demo/web3j/contracts/wqltoken/WQLToken.java": "973bbb3605dff65fe0b382eb89c1e3928ee5fe8104dc4a6e08ff5a9fe0c89749",
+    "src/main/java/com/wetech/demo/web3j/controller/EscrowController.java": "aaca00c6e94d812e4aba49d15da335a1ff4dfa31bb64d4af6863287426430a10",
+    "src/main/java/com/wetech/demo/web3j/controller/SimpleStorageController.java": "070d023295f7cc510511e8481f3244ef0ebf0f14800bbd0f66ccda7714d58f28",
+    "src/main/java/com/wetech/demo/web3j/service/EscrowService.java": "98ff6cb307164526e19ffd4023a9dd577b4ebb20a65b3f282337fe39dc4a6000",
+    "src/main/java/com/wetech/demo/web3j/service/OrderTimeline.java": "db63d9e9f7dab897a5301db5cfa0d96dff14b1c556f51dedd9d7bca0829c279e",
+    "src/main/java/com/wetech/demo/web3j/service/SimpleStorageService.java": "61b100fe5305acdae067d3c0b6199fb250ad9fe28c6693608accf054f25831db",
+    "src/test/java/com/wetech/demo/web3j/controller/EnhancedEscrowIntegrationTest.java": "3fd4a491ade0b49aeb95542b965bb22b5d69cc651ca07d23201ebe33d77a1862",
+    "src/test/java/com/wetech/demo/web3j/controller/EscrowControllerTest.java": "93d370f96755df982aa00f565289c2efe4bf251adb9b56d8c296c6f8bb75aead",
+    "src/test/java/com/wetech/demo/web3j/controller/EscrowHttpIntegrationTest.java": "40f0fb80d4e456f15d9ced69db59f98bc93734300731ad0aa7d67ece55939452",
+    "src/test/java/com/wetech/demo/web3j/service/EscrowServiceIntegrationTest.java": "7674a36092e459c5e828b7ce776efab4d5cf7cd2234f5d28e4d7f11600530a93",
+    "src/test/java/com/wetech/demo/web3j/service/EscrowServiceTest.java": "297444b0d77d00dd09fcefe795d6a4be10d4eaa3b68b877882cf015db00080b4",
+    "src/test/java/com/wetech/demo/web3j/service/OrderTimelineTest.java": "db0759cab8340455241ee499ea227896661cdc214955c000d3bbf95d8116a5a0",
+    "src/test/java/com/wetech/demo/web3j/service/PotosTimelineAcceptance.java": "5cca9ec8763f9d536f23cfe46f2f514f83a6abbd2b79347316732f1238941a23",
+    "src/main/resources/contracts/Escrow.sol": "396d184fa2202300bc54028ba8f202583e78e9067ca2e60d3e6565fa1cb78a6d",
+    "src/main/resources/contracts/EscrowEnhanced.sol": "1aba595aa750320fcf13ad745514f3c69a9e62bd57d2812ff4bbcd182a55106f",
+    "src/main/resources/contracts/SimpleStorage.sol": "7607f64eb2b55963c0cfbee6ef1ae01b7a8463f294787646481bbd3ab00f237a",
+    "src/main/resources/contracts/WQLToken.sol": "7fa4cc39796ae48ebf0ec1307430a2443368c977ec1de851b86987316bef5460"
+  },
+  "totalTests": 24,
+  "failed": 0
+}

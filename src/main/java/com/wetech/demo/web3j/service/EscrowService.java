@@ -1,6 +1,7 @@
 package com.wetech.demo.web3j.service;
 
 import com.wetech.demo.web3j.contracts.escrow.Escrow;
+import com.wetech.demo.web3j.contracts.escrowenhanced.EscrowEnhanced;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.web3j.abi.EventEncoder;
@@ -26,7 +27,7 @@ import java.util.concurrent.CompletionException;
 /** Member 1: contract access; member 2 maps these methods to the six REST endpoints. */
 @Service
 public class EscrowService {
-    private static final String[] STATUS = {"Created", "Paid", "Completed", "Refunded", "Disputed"};
+    private static final String[] STATUS = {"Created", "Paid", "Completed", "Refunded", "Disputed", "Shipped"};
     private static final BigInteger LOG_BATCH_SIZE = BigInteger.TEN;
 
     private final Web3j web3j;
@@ -37,7 +38,7 @@ public class EscrowService {
     private final Object writeLock = new Object();
 
     // One immutable binding prevents a concurrent load from mixing address and deployment block.
-    private record Binding(Escrow contract, String address, BigInteger deployBlock) { }
+    private record Binding(Escrow contract, String address, BigInteger deployBlock, boolean enhanced) { }
     private volatile Binding binding;
 
     public EscrowService(Web3j web3j, Credentials credentials, ContractGasProvider gasProvider,
@@ -58,7 +59,7 @@ public class EscrowService {
                     Escrow deployed = Escrow.deploy(web3j, transactionManager, gasProvider,
                             credentials.getAddress()).send();
                     TransactionReceipt receipt = deployed.getTransactionReceipt().orElseThrow();
-                    binding = new Binding(deployed, deployed.getContractAddress(), receipt.getBlockNumber());
+                    binding = new Binding(deployed, deployed.getContractAddress(), receipt.getBlockNumber(), false);
                     return deployed;
                 } catch (Exception e) {
                     throw new CompletionException(e);
@@ -69,6 +70,11 @@ public class EscrowService {
 
     /** Restore the binding after a restart. Use the real deployment block to avoid missed events. */
     public void load(String address, BigInteger fromBlock) throws IOException {
+        validateLoad(address, fromBlock);
+        binding = new Binding(Escrow.load(address, web3j, transactionManager, gasProvider), address, fromBlock, false);
+    }
+
+    private void validateLoad(String address, BigInteger fromBlock) throws IOException {
         if (address == null || !address.matches("(?i)0x[0-9a-f]{40}")
                 || address.equalsIgnoreCase("0x" + "0".repeat(40))) {
             throw new IllegalArgumentException("address must be a nonzero 20-byte hex address");
@@ -80,7 +86,71 @@ public class EscrowService {
         if (code.getCode() == null || code.getCode().equals("0x") || code.getCode().equals("0x0")) {
             throw new IllegalArgumentException("No contract deployed at address");
         }
-        binding = new Binding(Escrow.load(address, web3j, transactionManager, gasProvider), address, fromBlock);
+    }
+
+    /** The second arbiter signs from a separate wallet/backend; this server never holds that key. */
+    public CompletableFuture<EscrowEnhanced> deployEnhanced(String secondArbiter) {
+        if (secondArbiter == null || !secondArbiter.matches("(?i)0x[0-9a-f]{40}")
+                || secondArbiter.equalsIgnoreCase("0x" + "0".repeat(40))
+                || secondArbiter.equalsIgnoreCase(credentials.getAddress())) {
+            throw new IllegalArgumentException("secondArbiter must be nonzero and differ from the backend");
+        }
+        return CompletableFuture.supplyAsync(() -> {
+            synchronized (writeLock) {
+                try {
+                    requireChain();
+                    EscrowEnhanced deployed = EscrowEnhanced.deploy(web3j, transactionManager, gasProvider,
+                            credentials.getAddress(), secondArbiter).send();
+                    TransactionReceipt receipt = deployed.getTransactionReceipt().orElseThrow();
+                    binding = new Binding(Escrow.load(deployed.getContractAddress(), web3j,
+                            transactionManager, gasProvider), deployed.getContractAddress(), receipt.getBlockNumber(), true);
+                    return deployed;
+                } catch (Exception e) { throw new CompletionException(e); }
+            }
+        });
+    }
+
+    public void loadEnhanced(String address, BigInteger fromBlock) throws Exception {
+        validateLoad(address, fromBlock);
+        EscrowEnhanced candidate = EscrowEnhanced.load(address, web3j, transactionManager, gasProvider);
+        if (!candidate.version().send().equals(BigInteger.TWO)) {
+            throw new IllegalArgumentException("Expected EscrowEnhanced version 2");
+        }
+        // Only publish the new binding after every check succeeds.
+        binding = new Binding(Escrow.load(address, web3j, transactionManager, gasProvider), address, fromBlock, true);
+    }
+
+    private EscrowEnhanced enhanced(Binding current) {
+        if (!current.enhanced()) throw new IllegalStateException("Load an enhanced contract with /load-enhanced first");
+        return EscrowEnhanced.load(current.address(), web3j, transactionManager, gasProvider);
+    }
+
+    public CompletableFuture<Map<String, String>> getArbitrators() {
+        Binding current = requireContract();
+        EscrowEnhanced contract = enhanced(current);
+        return contract.arbiter().sendAsync().thenCombine(contract.secondArbiter().sendAsync(),
+                (first, second) -> Map.of("contractAddress", current.address(), "firstArbiter", first,
+                        "secondArbiter", second, "backendSigner", credentials.getAddress(), "requiredVotes", "2"));
+    }
+
+    public CompletableFuture<Map<String, String>> getVotes(BigInteger id) {
+        requireNonNegative(id, "id");
+        EscrowEnhanced contract = enhanced(requireContract());
+        return contract.getVotes(id).sendAsync().thenApply(v -> Map.of("id", id.toString(),
+                "firstVoted", v.getValue1().toString(), "firstSellerWins", v.getValue2().toString(),
+                "secondVoted", v.getValue3().toString(), "secondSellerWins", v.getValue4().toString()));
+    }
+
+    /** Only a backend configured with the seller's own key can successfully sign this action. */
+    public CompletableFuture<TransactionReceipt> markShipped(BigInteger id) {
+        requireNonNegative(id, "id");
+        EscrowEnhanced contract = enhanced(requireContract());
+        return CompletableFuture.supplyAsync(() -> {
+            synchronized (writeLock) {
+                try { requireChain(); return contract.markShipped(id).send(); }
+                catch (Exception e) { throw new CompletionException(e); }
+            }
+        });
     }
 
     public String getContractAddress() { return requireContract().address(); }
@@ -155,6 +225,13 @@ public class EscrowService {
         });
     }
 
+    /** Bonus: ordered lifecycle events from the same immutable contract binding. */
+    public List<Map<String, String>> listOrderEvents(BigInteger id) throws IOException {
+        requireNonNegative(id, "id");
+        Binding current = requireContract();
+        return OrderTimeline.read(web3j, current.address(), current.deployBlock(), id);
+    }
+
     private void requireChain() throws IOException {
         var response = web3j.ethChainId().send();
         if (response.hasError()) throw new IOException("eth_chainId: " + response.getError().getMessage());
@@ -170,7 +247,8 @@ public class EscrowService {
     }
 
     private static void requireNonNegative(BigInteger value, String name) {
-        if (value == null || value.signum() < 0) throw new IllegalArgumentException(name + " must be nonnegative");
+        if (value == null || value.signum() < 0 || value.bitLength() > 256)
+            throw new IllegalArgumentException(name + " must be a uint256");
     }
 
     private static String statusName(BigInteger status) {

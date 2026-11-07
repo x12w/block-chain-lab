@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wetech.demo.web3j.service.EscrowServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-07T03:02:59.143Z" hostname="blockchain-course.x12w-nix" time="0.63">
+  <properties/>
+  <testcase name="futureDeploymentBlockIsRejected()" classname="com.wetech.demo.web3j.service.EscrowServiceTest" time="0.237"/>
+  <testcase name="eventQueryUsesInclusiveTenBlockBatchesAndDecodesEveryOrder()" classname="com.wetech.demo.web3j.service.EscrowServiceTest" time="0.249"/>
+  <testcase name="wrongChainIsRejected()" classname="com.wetech.demo.web3j.service.EscrowServiceTest" time="0.005"/>
+  <testcase name="rpcFailureIsAnErrorInsteadOfAnEmptyOrderList()" classname="com.wetech.demo.web3j.service.EscrowServiceTest" time="0.132"/>
+  <testcase name="invalidAddressAndNegativeBlockAreRejectedBeforeRpc()" classname="com.wetech.demo.web3j.service.EscrowServiceTest" time="0.002"/>
+  <testcase name="unloadedServiceExplainsWhatToDoNext()" classname="com.wetech.demo.web3j.service.EscrowServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

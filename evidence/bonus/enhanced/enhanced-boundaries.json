@@ -1,0 +1,212 @@
+{
+  "result" : {
+    "legacyCompatibility" : true,
+    "invalidLoadPreservesBinding" : true,
+    "boundaryRefund" : "passed"
+  },
+  "contract" : "0x189ece85d4fd33f68709a0766422c34885851699",
+  "recordedAt" : "2026-11-07T03:03:04.345659389Z",
+  "transactions" : [ {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "630003",
+    "block" : "222",
+    "operation" : "deploy local WQLToken",
+    "hash" : "0xbc5d958b3cc11134a5cf3ef1e987ca6c3ba3f091dfc5ee88a61fdd56176f6d5b",
+    "status" : "0x1"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "70607",
+    "block" : "223",
+    "operation" : "mint 300 test tokens",
+    "hash" : "0x49a2ed4fe13983f7c54898b247ab86f867e5e5705c3f47e565a27a77d2cd2a30",
+    "status" : "0x1"
+  }, {
+    "from" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+    "gasUsed" : "1420917",
+    "block" : "224",
+    "operation" : "deploy enhanced",
+    "hash" : "0xb0cc30fd3648cd8eefdb0b46f6e1c8c932133bf55c31edba42323606a8f62788",
+    "status" : "0x1"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "46163",
+    "block" : "225",
+    "operation" : "approve 300",
+    "hash" : "0xd2cf8b61002b9590160cae21b19bb72628dafee3f7118db2542568d64fb7a44c",
+    "status" : "0x1"
+  }, {
+    "from" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+    "gasUsed" : "158399",
+    "block" : "226",
+    "operation" : "same arbiter constructor rejected",
+    "hash" : "0xab6abe9a118a039347f41f6b8b0486b6a874735d8340f2635eab5c2bb646b6bc",
+    "status" : "0x0"
+  }, {
+    "from" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+    "gasUsed" : "158089",
+    "block" : "227",
+    "operation" : "zero arbiter constructor rejected",
+    "hash" : "0x2864c1fb73bd4371c228a8ee68aef81eeb9c5bbf19134f17abcd07d51b21b9cd",
+    "status" : "0x0"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "26203",
+    "block" : "228",
+    "operation" : "noncontract token rejected",
+    "hash" : "0x00a2564baa98bd1350439269b1b581b283593eee15cc5bce53001d72ae49c205",
+    "status" : "0x0"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "187185",
+    "block" : "229",
+    "operation" : "create 0 boundary refund",
+    "hash" : "0x947db68781d62026394015949112f200a0ce866f9854ab0743fd972d1a21e549",
+    "status" : "0x1"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "94456",
+    "block" : "230",
+    "operation" : "deposit 0",
+    "hash" : "0x65ad96b7313fc1d6518edd8d0335e0f4e7e1741765fa3949ea2c3536b86cb452",
+    "status" : "0x1"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "30333",
+    "block" : "231",
+    "operation" : "refund at exact deadline rejected",
+    "hash" : "0x0401876538966019dd8dda9a7a26032a36de9e3193bf80bc343fd7313e6de175",
+    "status" : "0x0"
+  }, {
+    "from" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "gasUsed" : "49869",
+    "block" : "232",
+    "operation" : "refund after deadline succeeds",
+    "hash" : "0xd542c79f51a61607e9cde8ecb02e943dd31844f9f1cc254a2191bb8ef0dd6a87",
+    "status" : "0x1"
+  }, {
+    "from" : "0x499275e8c19fc104ee3180b56111be8d714f9596",
+    "gasUsed" : "23720",
+    "block" : "233",
+    "operation" : "nonexistent shipment",
+    "hash" : "0x322cecc3646c4127b3051730d44f75abbb4ec4fc514a62bbae5113eaff9915cf",
+    "status" : "0x0"
+  }, {
+    "from" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+    "gasUsed" : "1112950",
+    "block" : "234",
+    "operation" : "deploy legacy compatibility",
+    "hash" : "0xc77dc6c6bda7f5d42247babc0a04425c61dec13ece7cfc003036d2a13e67133c",
+    "status" : "0x1"
+  }, {
+    "from" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+    "gasUsed" : "1420917",
+    "block" : "235",
+    "operation" : "HTTP /deploy-enhanced?secondArbiter=0xe1b43133b7454384e90f42d4899072853c76212a",
+    "hash" : "0xf05bed656d6c75718e57ff9b6359cf8e2e25cf67f563519976283b45a4fce1fd",
+    "status" : "0x1"
+  } ],
+  "classification" : "LOCAL_EVM_HTTP_ACCEPTANCE_NOT_POTOS",
+  "accounts" : {
+    "seller" : "0x499275e8c19fc104ee3180b56111be8d714f9596",
+    "firstArbiter" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+    "buyer" : "0xec40d88cc2590ef74e71161d014b9dab692d48ff",
+    "secondArbiter" : "0xe1b43133b7454384e90f42d4899072853c76212a"
+  },
+  "httpExchanges" : [ {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "version" : "2",
+      "contractAddress" : "0x189ece85d4fd33f68709a0766422c34885851699"
+    },
+    "path" : "/load-enhanced?address=0x189ece85d4fd33f68709a0766422c34885851699&fromBlock=224"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "secondArbiter must be nonzero and differ from the backend"
+    },
+    "path" : "/deploy-enhanced?secondArbiter=0x81f16b0516d7629052b29be7221b9980c03ff618"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "secondArbiter must be nonzero and differ from the backend"
+    },
+    "path" : "/deploy-enhanced?secondArbiter=bad"
+  }, {
+    "method" : "GET",
+    "status" : 400,
+    "body" : {
+      "message" : "id must be a uint256"
+    },
+    "path" : "/orders/-1/votes"
+  }, {
+    "method" : "POST",
+    "status" : 400,
+    "body" : {
+      "message" : "Invalid request parameter: Failed to convert value of type 'java.lang.String' to required type 'java.math.BigInteger'; Illegal embedded sign character"
+    },
+    "path" : "/orders/not-a-number/mark-shipped"
+  }, {
+    "method" : "POST",
+    "status" : 409,
+    "body" : {
+      "message" : "On-chain call reverted: Contract Call has been reverted by the EVM with the reason: 'Error: Transaction reverted without a reason string'."
+    },
+    "path" : "/load-enhanced?address=0xd6132ef762471d9b95c711801e3de5868d1774c2&fromBlock=0"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "arbiter" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+      "contractAddress" : "0x189ece85d4fd33f68709a0766422c34885851699"
+    },
+    "path" : "/address"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0xf05bed656d6c75718e57ff9b6359cf8e2e25cf67f563519976283b45a4fce1fd",
+      "blockNumber" : "235",
+      "status" : "0x1",
+      "contractAddress" : "0xd797f6cf636935df181e92eeae178aea0dd3fbc0",
+      "deployBlock" : "235",
+      "version" : "2"
+    },
+    "path" : "/deploy-enhanced?secondArbiter=0xe1b43133b7454384e90f42d4899072853c76212a"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "requiredVotes" : "2",
+      "firstArbiter" : "0x81f16b0516d7629052b29be7221b9980c03ff618",
+      "secondArbiter" : "0xe1b43133b7454384e90f42d4899072853c76212a",
+      "contractAddress" : "0xd797f6cf636935df181e92eeae178aea0dd3fbc0",
+      "backendSigner" : "0x81f16b0516d7629052b29be7221b9980c03ff618"
+    },
+    "path" : "/arbitrators"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "contractAddress" : "0xd6132ef762471d9b95c711801e3de5868d1774c2"
+    },
+    "path" : "/load?address=0xd6132ef762471d9b95c711801e3de5868d1774c2&fromBlock=0"
+  }, {
+    "method" : "GET",
+    "status" : 409,
+    "body" : {
+      "message" : "Load an enhanced contract with /load-enhanced first"
+    },
+    "path" : "/arbitrators"
+  }, {
+    "method" : "POST",
+    "status" : 409,
+    "body" : {
+      "message" : "Load an enhanced contract with /load-enhanced first"
+    },
+    "path" : "/orders/0/mark-shipped"
+  } ],
+  "chainId" : 31337
+}

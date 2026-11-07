@@ -64,6 +64,51 @@ public class EscrowController {
         });
     }
 
+    @PostMapping("/deploy-enhanced")
+    public CompletableFuture<ResponseEntity<Object>> deployEnhanced(@RequestParam String secondArbiter) {
+        try {
+            return escrowService.deployEnhanced(secondArbiter).handle((contract, error) -> {
+                if (error != null) return errorResponse(error);
+                TransactionReceipt receipt = contract.getTransactionReceipt().orElseThrow();
+                Map<String, Object> body = new LinkedHashMap<>(receiptBody(receipt));
+                body.put("contractAddress", contract.getContractAddress());
+                body.put("deployBlock", receipt.getBlockNumber().toString());
+                body.put("version", "2");
+                return ResponseEntity.ok(body);
+            });
+        } catch (RuntimeException error) {
+            return CompletableFuture.completedFuture(errorResponse(error));
+        }
+    }
+
+    @PostMapping("/load-enhanced")
+    public ResponseEntity<Object> loadEnhanced(@RequestParam String address, @RequestParam BigInteger fromBlock) {
+        try {
+            escrowService.loadEnhanced(address, fromBlock);
+            return ResponseEntity.ok(Map.of("contractAddress", address, "version", "2"));
+        } catch (Exception error) { return errorResponse(error); }
+    }
+
+    @GetMapping("/arbitrators")
+    public CompletableFuture<ResponseEntity<Object>> arbitrators() {
+        try { return escrowService.getArbitrators().handle(this::respond); }
+        catch (RuntimeException error) { return CompletableFuture.completedFuture(errorResponse(error)); }
+    }
+
+    @GetMapping("/orders/{id}/votes")
+    public CompletableFuture<ResponseEntity<Object>> votes(@PathVariable BigInteger id) {
+        try { return escrowService.getVotes(id).handle(this::respond); }
+        catch (RuntimeException error) { return CompletableFuture.completedFuture(errorResponse(error)); }
+    }
+
+    @PostMapping("/orders/{id}/mark-shipped")
+    public CompletableFuture<ResponseEntity<Object>> markShipped(@PathVariable BigInteger id) {
+        try {
+            return escrowService.markShipped(id).handle((receipt, error) ->
+                    error == null ? ResponseEntity.ok(receiptBody(receipt)) : errorResponse(error));
+        } catch (RuntimeException error) { return CompletableFuture.completedFuture(errorResponse(error)); }
+    }
+
     /** Restore an existing contract after a restart; fromBlock must be the real deployment block. */
     @PostMapping("/load")
     public ResponseEntity<Object> load(@RequestParam String address,
@@ -96,6 +141,16 @@ public class EscrowController {
             return escrowService.getOrder(id).handle(this::respond);
         } catch (RuntimeException error) {
             return CompletableFuture.completedFuture(errorResponse(error));
+        }
+    }
+
+    /** Bonus: all lifecycle events for one order, sorted by their on-chain position. */
+    @GetMapping("/orders/{id}/events")
+    public ResponseEntity<Object> events(@PathVariable BigInteger id) {
+        try {
+            return ResponseEntity.ok(escrowService.listOrderEvents(id));
+        } catch (IOException | RuntimeException error) {
+            return errorResponse(error);
         }
     }
 

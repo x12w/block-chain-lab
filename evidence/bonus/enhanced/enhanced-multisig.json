@@ -1,0 +1,409 @@
+{
+  "result" : {
+    "buyerTokens" : "270",
+    "escrowTokens" : "0",
+    "order0" : "Refunded",
+    "order1" : "Completed",
+    "sellerTokens" : "30"
+  },
+  "contract" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+  "recordedAt" : "2026-11-07T03:03:03.691641676Z",
+  "transactions" : [ {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "630003",
+    "block" : "204",
+    "operation" : "deploy local WQLToken",
+    "hash" : "0x856b7d5ca193ef7d017667f4197d2dc5dfcbaa4d025281202385d344c7b88fa5",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "70607",
+    "block" : "205",
+    "operation" : "mint 300 test tokens",
+    "hash" : "0xb972650cf18bcc627ce9d6664446eeeb8a61f7547c45e2291f6128da8cac8efb",
+    "status" : "0x1"
+  }, {
+    "from" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+    "gasUsed" : "1420917",
+    "block" : "206",
+    "operation" : "deploy enhanced",
+    "hash" : "0x2d81136fbb1d2e56a734dec28f3372a614eae2ea5b62532fb59e6f131d2419e0",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "46163",
+    "block" : "207",
+    "operation" : "approve 300",
+    "hash" : "0x5f99576da3251cc189e728d97238936567da1545cfe62a3f257fc1addf5671c9",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "187197",
+    "block" : "208",
+    "operation" : "create 0 refund by quorum",
+    "hash" : "0x478b80d082a1d4c1f119c3ecf46c73d9d2d16525dbee1d1be3cd371c0ddbdadb",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "94456",
+    "block" : "209",
+    "operation" : "deposit 0",
+    "hash" : "0x12071c69d77ad71395708706fb98b68b7dd180874ec81e8d302ddf28be364c64",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "170097",
+    "block" : "210",
+    "operation" : "create 1 seller by quorum",
+    "hash" : "0x403d8f332bc9a01e7c5a719756b5454f6c851bed8da1ed1deb70accb4ecc2e91",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "77368",
+    "block" : "211",
+    "operation" : "deposit 1",
+    "hash" : "0x076552b80d078f4657d648b8a35ea2bfe6bf084840cb2a392482f936cf33f6df",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740",
+    "gasUsed" : "34581",
+    "block" : "212",
+    "operation" : "dispute 0",
+    "hash" : "0x12a3ac94cbab473e6a964588af61c5434058856c180ea068b80ca3c7173e1bbf",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "gasUsed" : "32459",
+    "block" : "213",
+    "operation" : "dispute 1",
+    "hash" : "0x09bc1bada304cc6ff811d0137f9f208473a5ae646cd89923617849a2a9b278ae",
+    "status" : "0x1"
+  }, {
+    "from" : "0xc468186faa3111bc2754e493c598aa08e405744e",
+    "gasUsed" : "26279",
+    "block" : "214",
+    "operation" : "outsider vote rejected",
+    "hash" : "0x36b564c7c4a121d107215ee440cc9e67c36d3944a9a2d6cdc2441299f098297d",
+    "status" : "0x0"
+  }, {
+    "from" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+    "gasUsed" : "53139",
+    "block" : "215",
+    "operation" : "HTTP /orders/0/resolve?sellerWins=false",
+    "hash" : "0xba1099cf39bbe922ba936ec7da34eee51508c7b3e57d24c3710eb78933a10e10",
+    "status" : "0x1"
+  }, {
+    "from" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+    "gasUsed" : "28682",
+    "block" : "216",
+    "operation" : "HTTP /orders/0/resolve?sellerWins=false",
+    "hash" : "0x0b2a9815c46111a76187f66c5511f9e3d9756912695514955bb9f5e73f954cad",
+    "status" : "0x0"
+  }, {
+    "from" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21",
+    "gasUsed" : "53223",
+    "block" : "217",
+    "operation" : "HTTP /orders/0/resolve?sellerWins=true",
+    "hash" : "0x428c58a345b1a6ffa8f7256f1f67219256092c366a55efb1cf505e36111d27a8",
+    "status" : "0x1"
+  }, {
+    "from" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21",
+    "gasUsed" : "63195",
+    "block" : "218",
+    "operation" : "HTTP /orders/0/resolve?sellerWins=false",
+    "hash" : "0x15e420e7ee562d95e0c3348f2e31368514dc7f3cc643f79681deac59a380a8a3",
+    "status" : "0x1"
+  }, {
+    "from" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+    "gasUsed" : "26218",
+    "block" : "219",
+    "operation" : "HTTP /orders/0/resolve?sellerWins=false",
+    "hash" : "0x579d9a47ff4524dd669ab828a9036b45c9bbed8f09343c25874c230b8aae101d",
+    "status" : "0x0"
+  }, {
+    "from" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21",
+    "gasUsed" : "53180",
+    "block" : "220",
+    "operation" : "HTTP /orders/1/resolve?sellerWins=true",
+    "hash" : "0xcadf869bb225f42e7913f928ed01f0699d0beac47a43b96dffbe77f7c08341a6",
+    "status" : "0x1"
+  }, {
+    "from" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+    "gasUsed" : "92431",
+    "block" : "221",
+    "operation" : "HTTP /orders/1/resolve?sellerWins=true",
+    "hash" : "0xf9ed706e73a9df6c14405c3b06285cd6b39e1aa6aea34e6c49fbb31cbf4ebf44",
+    "status" : "0x1"
+  } ],
+  "classification" : "LOCAL_EVM_HTTP_ACCEPTANCE_NOT_POTOS",
+  "accounts" : {
+    "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740",
+    "firstArbiter" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+    "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+    "secondArbiter" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21"
+  },
+  "httpExchanges" : [ {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "version" : "2",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a"
+    },
+    "path" : "/load-enhanced?address=0x4c7c526d145a19bfb476f75df44c0435caff382a&fromBlock=206"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "version" : "2",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a"
+    },
+    "path" : "/load-enhanced?address=0x4c7c526d145a19bfb476f75df44c0435caff382a&fromBlock=206"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "requiredVotes" : "2",
+      "firstArbiter" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+      "secondArbiter" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "backendSigner" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a"
+    },
+    "path" : "/arbitrators"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0xba1099cf39bbe922ba936ec7da34eee51508c7b3e57d24c3710eb78933a10e10",
+      "blockNumber" : "215",
+      "status" : "0x1"
+    },
+    "path" : "/orders/0/resolve?sellerWins=false"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "status" : "Disputed",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+      "deadline" : "1794021118",
+      "description" : "refund by quorum",
+      "token" : "0x786bd67005ad4340b37838379be9181e345ed4bb",
+      "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740"
+    },
+    "path" : "/orders/0"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "firstVoted" : "true",
+      "secondVoted" : "false",
+      "firstSellerWins" : "false",
+      "secondSellerWins" : "false",
+      "id" : "0"
+    },
+    "path" : "/orders/0/votes"
+  }, {
+    "method" : "POST",
+    "status" : 409,
+    "body" : {
+      "message" : "Transaction 0x0b2a9815c46111a76187f66c5511f9e3d9756912695514955bb9f5e73f954cad has failed with status: 0x0. Gas used: 28682. Revert reason: 'Error: VM Exception while processing transaction: reverted with reason string 'Escrow: duplicate vote''.",
+      "transactionHash" : "0x0b2a9815c46111a76187f66c5511f9e3d9756912695514955bb9f5e73f954cad",
+      "blockNumber" : "216",
+      "status" : "0x0",
+      "gasUsed" : "28682"
+    },
+    "path" : "/orders/0/resolve?sellerWins=false"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0x428c58a345b1a6ffa8f7256f1f67219256092c366a55efb1cf505e36111d27a8",
+      "blockNumber" : "217",
+      "status" : "0x1"
+    },
+    "path" : "/orders/0/resolve?sellerWins=true"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "status" : "Disputed",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+      "deadline" : "1794021118",
+      "description" : "refund by quorum",
+      "token" : "0x786bd67005ad4340b37838379be9181e345ed4bb",
+      "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740"
+    },
+    "path" : "/orders/0"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "firstVoted" : "true",
+      "secondVoted" : "true",
+      "firstSellerWins" : "false",
+      "secondSellerWins" : "true",
+      "id" : "0"
+    },
+    "path" : "/orders/0/votes"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0x15e420e7ee562d95e0c3348f2e31368514dc7f3cc643f79681deac59a380a8a3",
+      "blockNumber" : "218",
+      "status" : "0x1"
+    },
+    "path" : "/orders/0/resolve?sellerWins=false"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "status" : "Refunded",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+      "deadline" : "1794021118",
+      "description" : "refund by quorum",
+      "token" : "0x786bd67005ad4340b37838379be9181e345ed4bb",
+      "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740"
+    },
+    "path" : "/orders/0"
+  }, {
+    "method" : "POST",
+    "status" : 409,
+    "body" : {
+      "message" : "Transaction 0x579d9a47ff4524dd669ab828a9036b45c9bbed8f09343c25874c230b8aae101d has failed with status: 0x0. Gas used: 26218. Revert reason: 'Error: VM Exception while processing transaction: reverted with reason string 'Escrow: wrong status''.",
+      "transactionHash" : "0x579d9a47ff4524dd669ab828a9036b45c9bbed8f09343c25874c230b8aae101d",
+      "blockNumber" : "219",
+      "status" : "0x0",
+      "gasUsed" : "26218"
+    },
+    "path" : "/orders/0/resolve?sellerWins=false"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0xcadf869bb225f42e7913f928ed01f0699d0beac47a43b96dffbe77f7c08341a6",
+      "blockNumber" : "220",
+      "status" : "0x1"
+    },
+    "path" : "/orders/1/resolve?sellerWins=true"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "status" : "Disputed",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+      "deadline" : "1794021118",
+      "description" : "seller by quorum",
+      "token" : "0x786bd67005ad4340b37838379be9181e345ed4bb",
+      "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740"
+    },
+    "path" : "/orders/1"
+  }, {
+    "method" : "POST",
+    "status" : 200,
+    "body" : {
+      "transactionHash" : "0xf9ed706e73a9df6c14405c3b06285cd6b39e1aa6aea34e6c49fbb31cbf4ebf44",
+      "blockNumber" : "221",
+      "status" : "0x1"
+    },
+    "path" : "/orders/1/resolve?sellerWins=true"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : {
+      "status" : "Completed",
+      "amount" : "30000000000000000000",
+      "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+      "deadline" : "1794021118",
+      "description" : "seller by quorum",
+      "token" : "0x786bd67005ad4340b37838379be9181e345ed4bb",
+      "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740"
+    },
+    "path" : "/orders/1"
+  }, {
+    "method" : "GET",
+    "status" : 200,
+    "body" : [ {
+      "id" : "0",
+      "event" : "OrderCreated",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "208",
+      "blockHash" : "0x9da4f28b94943669947aae8edb715725e1704d5fde5ee20e609a584bc96f23b5",
+      "transactionHash" : "0x478b80d082a1d4c1f119c3ecf46c73d9d2d16525dbee1d1be3cd371c0ddbdadb",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "buyer" : "0xc367df65d047f42f0bad260e19c08051b7afe2c4",
+      "seller" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740",
+      "token" : "0x786bd67005ad4340b37838379be9181e345ed4bb",
+      "amount" : "30000000000000000000",
+      "deadline" : "1794021118"
+    }, {
+      "id" : "0",
+      "event" : "OrderPaid",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "209",
+      "blockHash" : "0x982ee294686491017475fc1751fa4877a99adb6ef48070ad4faae9830a8703d8",
+      "transactionHash" : "0x12071c69d77ad71395708706fb98b68b7dd180874ec81e8d302ddf28be364c64",
+      "transactionIndex" : "0",
+      "logIndex" : "1"
+    }, {
+      "id" : "0",
+      "event" : "OrderDisputed",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "212",
+      "blockHash" : "0xfff14e7ffa17dd955d0fa4b91dcc8442ff0368526b673a65d766da13d67b3449",
+      "transactionHash" : "0x12a3ac94cbab473e6a964588af61c5434058856c180ea068b80ca3c7173e1bbf",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "by" : "0xc220b8da7ec7573c8d686c9dd47b69c08503e740"
+    }, {
+      "id" : "0",
+      "event" : "ArbitrationVoted",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "215",
+      "blockHash" : "0x9177823d7566b5b0a08a9b11d87cfd0f838f6f96932e4cdbcaa5028847c502f6",
+      "transactionHash" : "0xba1099cf39bbe922ba936ec7da34eee51508c7b3e57d24c3710eb78933a10e10",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "voter" : "0xa31229e993a707ee3fa9f6693b6d607ffcfbe66a",
+      "sellerWins" : "false"
+    }, {
+      "id" : "0",
+      "event" : "ArbitrationVoted",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "217",
+      "blockHash" : "0x5637acaaa06b6592bd2d06717b92a1c61edb3238c32b6edac46f5992af28144b",
+      "transactionHash" : "0x428c58a345b1a6ffa8f7256f1f67219256092c366a55efb1cf505e36111d27a8",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "voter" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21",
+      "sellerWins" : "true"
+    }, {
+      "id" : "0",
+      "event" : "ArbitrationVoted",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "218",
+      "blockHash" : "0x128927c07791df8265d306521aabf12b5a02971e1fdd963688533c14c20ad884",
+      "transactionHash" : "0x15e420e7ee562d95e0c3348f2e31368514dc7f3cc643f79681deac59a380a8a3",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "voter" : "0x83eff61980e8f84401d25b18bac73dd5cb6bbd21",
+      "sellerWins" : "false"
+    }, {
+      "id" : "0",
+      "event" : "OrderResolved",
+      "contractAddress" : "0x4c7c526d145a19bfb476f75df44c0435caff382a",
+      "blockNumber" : "218",
+      "blockHash" : "0x128927c07791df8265d306521aabf12b5a02971e1fdd963688533c14c20ad884",
+      "transactionHash" : "0x15e420e7ee562d95e0c3348f2e31368514dc7f3cc643f79681deac59a380a8a3",
+      "transactionIndex" : "0",
+      "logIndex" : "2",
+      "sellerWins" : "false"
+    } ],
+    "path" : "/orders/0/events"
+  } ],
+  "chainId" : 31337
+}

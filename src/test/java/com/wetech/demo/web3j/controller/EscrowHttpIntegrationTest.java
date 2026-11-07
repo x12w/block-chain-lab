@@ -78,6 +78,9 @@ class EscrowHttpIntegrationTest {
                 request("GET", "/orders", 409);
                 request("GET", "/orders/not-a-number", 400);
                 request("GET", "/orders/-1", 400);
+                request("GET", "/orders/0/events", 409);
+                request("GET", "/orders/not-a-number/events", 400);
+                request("GET", "/orders/-1/events", 400);
                 request("POST", "/load?address=bad&fromBlock=0", 400);
                 request("POST", "/load?address=bad", 400);
                 request("POST", "/orders/0/resolve", 400);
@@ -93,6 +96,8 @@ class EscrowHttpIntegrationTest {
                 assertEquals(backend.getAddress(), deployed.getFrom());
                 assertEquals(backend.getAddress(), request("GET", "/address", 200).get("arbiter").asText());
                 assertEquals(0, request("GET", "/orders", 200).size());
+                assertEquals(0, request("GET", "/orders/99/events", 200).size());
+                request("GET", "/orders/" + BigInteger.ONE.shiftLeft(256) + "/events", 400);
                 request("GET", "/orders/99", 409);
 
                 Escrow buyerEscrow = Escrow.load(escrowAddress, chain, buyerTx, gas);
@@ -151,14 +156,33 @@ class EscrowHttpIntegrationTest {
                 assertEquals(amount, token.balanceOf(seller.getAddress()).send());
                 assertEquals(BigInteger.ZERO, token.balanceOf(escrowAddress).send());
 
+                JsonNode normalEvents = request("GET", "/orders/0/events", 200);
+                JsonNode disputedEvents = request("GET", "/orders/1/events", 200);
+                assertEquals(List.of("OrderCreated", "OrderPaid", "OrderCompleted"), eventNames(normalEvents));
+                assertEquals(List.of("OrderCreated", "OrderPaid", "OrderDisputed", "OrderResolved"), eventNames(disputedEvents));
+                assertEquals("false", disputedEvents.get(3).get("sellerWins").asText());
+                assertEquals(seller.getAddress(), disputedEvents.get(2).get("by").asText());
+                assertEquals(refundedReceipt.getTransactionHash(), disputedEvents.get(3).get("transactionHash").asText());
+                for (JsonNode timeline : List.of(normalEvents, disputedEvents)) {
+                    BigInteger previous = BigInteger.ZERO;
+                    for (JsonNode event : timeline) {
+                        BigInteger block = new BigInteger(event.get("blockNumber").asText());
+                        assertTrue(block.compareTo(previous) >= 0);
+                        assertEquals(escrowAddress, event.get("contractAddress").asText());
+                        previous = block;
+                    }
+                }
+
                 // Clear the binding by deploying a second contract, then restore through HTTP /load.
                 JsonNode second = request("POST", "/deploy", 200);
                 record("HTTP deploy second Escrow for load test", receipt(chain, second));
                 assertNotEquals(escrowAddress, second.get("contractAddress").asText());
                 assertEquals(0, request("GET", "/orders", 200).size());
+                assertEquals(0, request("GET", "/orders/0/events", 200).size());
                 assertEquals(escrowAddress, request("POST", "/load?address=" + escrowAddress
                         + "&fromBlock=" + deployBlock, 200).get("contractAddress").asText());
                 assertEquals(orders, request("GET", "/orders", 200));
+                assertEquals(normalEvents, request("GET", "/orders/0/events", 200));
                 assertEquals("Refunded", request("GET", "/orders/1", 200).get("status").asText());
 
                 Path output = Path.of("build/local-evidence/http-integration.json");
@@ -186,6 +210,12 @@ class EscrowHttpIntegrationTest {
         System.out.println(method + " /api/escrow" + path + " -> " + response.statusCode());
         assertEquals(expectedStatus, response.statusCode(), response.body());
         return body;
+    }
+
+    private List<String> eventNames(JsonNode timeline) {
+        List<String> names = new ArrayList<>();
+        timeline.forEach(event -> names.add(event.get("event").asText()));
+        return names;
     }
 
     private TransactionReceipt receipt(Web3j chain, JsonNode response) throws Exception {

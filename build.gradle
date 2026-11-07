@@ -65,3 +65,11 @@ tasks.whenTaskAdded { task ->
         task.dependsOn(tasks.named('processResources'))
     }
 }
+
+// Separate localhost Spring process; calls only load and GET against the existing POTOS contract.
+tasks.register('potosTimelineAcceptance', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.wetech.demo.web3j.service.PotosTimelineAcceptance'
+    systemProperty 'https.protocols', 'TLSv1.2'
+}

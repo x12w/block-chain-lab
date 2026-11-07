@@ -1,0 +1,20 @@
+{
+  "classification": "RUNNING_BACKEND_ARTIFACT_VERIFICATION",
+  "checkedAt": "2026-11-07T03:11:49.210592+00:00",
+  "artifact": "build/libs/spring-boot-web3j-1.0-SNAPSHOT.jar",
+  "sourceSha256": {
+    "build/libs/spring-boot-web3j-1.0-SNAPSHOT.jar": "4c8621a1d8d62bb27f2a233955f1a9574b674e5c85fd19db4e250406e1d18e3b"
+  },
+  "process": {
+    "pid": 103729,
+    "openArtifactDescriptors": [
+      "4",
+      "5"
+    ],
+    "matchesCurrentBuild": true
+  },
+  "baseUrl": "http://127.0.0.1:8080/api/escrow",
+  "loadedContract": "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737",
+  "httpEvidence": "running-backend-acceptance.json",
+  "scope": "Compared the live Java process open JAR with the tested build; endpoint acceptance recorded separately. No runtime credential was read."
+}

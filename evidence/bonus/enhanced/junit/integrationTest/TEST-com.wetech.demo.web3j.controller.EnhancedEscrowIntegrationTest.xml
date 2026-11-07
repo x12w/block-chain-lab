@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wetech.demo.web3j.controller.EnhancedEscrowIntegrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-07T03:03:00.989Z" hostname="blockchain-course.x12w-nix" time="3.931">
+  <properties/>
+  <testcase name="twoDistinctMatchingVotesSettleOnceAndConflictsCanBeRevised()" classname="com.wetech.demo.web3j.controller.EnhancedEscrowIntegrationTest" time="2.724"/>
+  <testcase name="deadlineBoundaryAndInvalidDeploymentCannotChangeExistingBinding()" classname="com.wetech.demo.web3j.controller.EnhancedEscrowIntegrationTest" time="0.635"/>
+  <testcase name="shippedOrdersCannotTimeoutButCanSettleAndUnshippedOrdersCanRefund()" classname="com.wetech.demo.web3j.controller.EnhancedEscrowIntegrationTest" time="0.571"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2026-11-07T11:03:02.604+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-07T11:03:02.615+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T11:03:02.615+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T11:03:02.656+08:00  INFO 12793 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-07T11:03:02.656+08:00  INFO 12793 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 689 ms
+2026-11-07T11:03:02.757+08:00  INFO 12793 --- [    Test worker] c.wetech.demo.web3j.config.Web3jConfig   : Connecting to Ethereum client: http://127.0.0.1:18545
+2026-11-07T11:03:03.005+08:00  INFO 12793 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-11-07T11:03:03.039+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 33915 (http) with context path ''
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2026-11-07T11:03:03.259+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-07T11:03:03.260+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T11:03:03.260+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T11:03:03.274+08:00  INFO 12793 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-11-07T11:03:03.274+08:00  INFO 12793 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 160 ms
+2026-11-07T11:03:03.296+08:00  INFO 12793 --- [    Test worker] c.wetech.demo.web3j.config.Web3jConfig   : Connecting to Ethereum client: http://127.0.0.1:18545
+2026-11-07T11:03:03.367+08:00  INFO 12793 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-11-07T11:03:03.378+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 44455 (http) with context path ''
+2026-11-07T11:03:03.434+08:00  INFO 12793 --- [1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07T11:03:03.434+08:00  INFO 12793 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07T11:03:03.435+08:00  INFO 12793 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-07T11:03:03.489+08:00  INFO 12793 --- [1-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07T11:03:03.489+08:00  INFO 12793 --- [1-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07T11:03:03.489+08:00  INFO 12793 --- [1-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+PASS enhanced multisig {buyerTokens=270, escrowTokens=0, order0=Refunded, order1=Completed, sellerTokens=30}; 18 receipts, 18 HTTP requests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2026-11-07T11:03:04.110+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-07T11:03:04.111+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T11:03:04.111+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T11:03:04.125+08:00  INFO 12793 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-07T11:03:04.125+08:00  INFO 12793 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 115 ms
+2026-11-07T11:03:04.144+08:00  INFO 12793 --- [    Test worker] c.wetech.demo.web3j.config.Web3jConfig   : Connecting to Ethereum client: http://127.0.0.1:18545
+2026-11-07T11:03:04.184+08:00  INFO 12793 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-11-07T11:03:04.191+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 46413 (http) with context path ''
+2026-11-07T11:03:04.196+08:00  INFO 12793 --- [1-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07T11:03:04.197+08:00  INFO 12793 --- [1-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07T11:03:04.197+08:00  INFO 12793 --- [1-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+PASS enhanced boundaries {legacyCompatibility=true, invalidLoadPreservesBinding=true, boundaryRefund=passed}; 14 receipts, 12 HTTP requests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2026-11-07T11:03:04.525+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-07T11:03:04.526+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T11:03:04.526+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T11:03:04.540+08:00  INFO 12793 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-07T11:03:04.541+08:00  INFO 12793 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 98 ms
+2026-11-07T11:03:04.564+08:00  INFO 12793 --- [    Test worker] c.wetech.demo.web3j.config.Web3jConfig   : Connecting to Ethereum client: http://127.0.0.1:18545
+2026-11-07T11:03:04.606+08:00  INFO 12793 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-11-07T11:03:04.611+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 36475 (http) with context path ''
+2026-11-07T11:03:04.617+08:00  INFO 12793 --- [1-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07T11:03:04.617+08:00  INFO 12793 --- [1-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07T11:03:04.618+08:00  INFO 12793 --- [1-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2026-11-07T11:03:04.712+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-07T11:03:04.713+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-07T11:03:04.713+08:00  INFO 12793 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-11-07T11:03:04.722+08:00  INFO 12793 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-11-07T11:03:04.726+08:00  INFO 12793 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 91 ms
+2026-11-07T11:03:04.738+08:00  INFO 12793 --- [    Test worker] c.wetech.demo.web3j.config.Web3jConfig   : Connecting to Ethereum client: http://127.0.0.1:18545
+2026-11-07T11:03:04.779+08:00  INFO 12793 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-11-07T11:03:04.785+08:00  INFO 12793 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 38335 (http) with context path ''
+2026-11-07T11:03:04.791+08:00  INFO 12793 --- [1-auto-5-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-07T11:03:04.791+08:00  INFO 12793 --- [1-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-07T11:03:04.791+08:00  INFO 12793 --- [1-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+PASS enhanced shipping {sellerTokens=30, order0=Completed, order1=Refunded, order2=Disputed}; 20 receipts, 10 HTTP requests
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

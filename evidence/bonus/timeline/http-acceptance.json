@@ -1,0 +1,125 @@
+{
+  "chainId" : 60600,
+  "signing" : "Fresh unfunded in-memory credentials only to construct Spring beans; no transaction was sent and no real testnet private key was read.",
+  "classification" : "REAL_POTOS_READ_ONLY_HTTP_ACCEPTANCE",
+  "httpExchanges" : [ {
+    "finishedAt" : "2026-11-07T02:44:37.269278173Z",
+    "body" : {
+      "contractAddress" : "0xd7320d80b687766bA73997B97dAE61Ff1f9ed737"
+    },
+    "status" : 200,
+    "method" : "POST",
+    "headers" : {
+      "content-type" : [ "application/json" ],
+      "date" : [ "Sat, 07 Nov 2026 02:44:37 GMT" ],
+      "transfer-encoding" : [ "chunked" ]
+    },
+    "url" : "http://127.0.0.1:42247/api/escrow/load?address=0xd7320d80b687766bA73997B97dAE61Ff1f9ed737&fromBlock=2821876",
+    "startedAt" : "2026-11-07T02:44:33.247869291Z",
+    "elapsedMillis" : 4021,
+    "rawBody" : "{\"contractAddress\":\"0xd7320d80b687766bA73997B97dAE61Ff1f9ed737\"}"
+  }, {
+    "finishedAt" : "2026-11-07T02:45:16.339793018Z",
+    "body" : [ {
+      "id" : "0",
+      "event" : "OrderCreated",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2822499",
+      "blockHash" : "0x507af1ae7fa9e01dfb877186b3abec8d9fedcbf8e25a312adc99e50d93b1be09",
+      "transactionHash" : "0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "buyer" : "0x5a435c43ca006be1688d0d7b95194327528eab26",
+      "seller" : "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+      "token" : "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+      "amount" : "30000000000000000000",
+      "deadline" : "1793973724"
+    }, {
+      "id" : "0",
+      "event" : "OrderPaid",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2822648",
+      "blockHash" : "0x8d01c3ff23194f083dc6586254ad2fed4dd052c1cf7e2dac7fbfd25fbe25adb8",
+      "transactionHash" : "0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5",
+      "transactionIndex" : "0",
+      "logIndex" : "1"
+    }, {
+      "id" : "0",
+      "event" : "OrderCompleted",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2828331",
+      "blockHash" : "0x3fc56a6aa2cdf1f885b408fed0c1e8678bad6b7e3ec4dbf78e4c0f4035bc3f85",
+      "transactionHash" : "0x44db2d985fee8be415c46c35a8422840cb463691aeef9f95d5f12b66ca23ea20",
+      "transactionIndex" : "0",
+      "logIndex" : "1"
+    } ],
+    "status" : 200,
+    "method" : "GET",
+    "headers" : {
+      "content-type" : [ "application/json" ],
+      "date" : [ "Sat, 07 Nov 2026 02:45:16 GMT" ],
+      "transfer-encoding" : [ "chunked" ]
+    },
+    "url" : "http://127.0.0.1:42247/api/escrow/orders/0/events",
+    "startedAt" : "2026-11-07T02:44:37.274560783Z",
+    "elapsedMillis" : 39065,
+    "rawBody" : "[{\"id\":\"0\",\"event\":\"OrderCreated\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2822499\",\"blockHash\":\"0x507af1ae7fa9e01dfb877186b3abec8d9fedcbf8e25a312adc99e50d93b1be09\",\"transactionHash\":\"0x4f4ebf253000b7ad52e6da3d50fc98b65d9431f2f1f69946fe1d94d768920099\",\"transactionIndex\":\"0\",\"logIndex\":\"0\",\"buyer\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\",\"seller\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\",\"token\":\"0xb7da837f93a5448ca0762b80862d053daf9715b3\",\"amount\":\"30000000000000000000\",\"deadline\":\"1793973724\"},{\"id\":\"0\",\"event\":\"OrderPaid\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2822648\",\"blockHash\":\"0x8d01c3ff23194f083dc6586254ad2fed4dd052c1cf7e2dac7fbfd25fbe25adb8\",\"transactionHash\":\"0x1801f6112ae79e1987a59dd2c7799e7ed6c6a1ade52ef2e8e3ecdf60f0ffbed5\",\"transactionIndex\":\"0\",\"logIndex\":\"1\"},{\"id\":\"0\",\"event\":\"OrderCompleted\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2828331\",\"blockHash\":\"0x3fc56a6aa2cdf1f885b408fed0c1e8678bad6b7e3ec4dbf78e4c0f4035bc3f85\",\"transactionHash\":\"0x44db2d985fee8be415c46c35a8422840cb463691aeef9f95d5f12b66ca23ea20\",\"transactionIndex\":\"0\",\"logIndex\":\"1\"}]"
+  }, {
+    "finishedAt" : "2026-11-07T02:45:48.105412133Z",
+    "body" : [ {
+      "id" : "1",
+      "event" : "OrderCreated",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2822524",
+      "blockHash" : "0x81467ac4d3cc1c68c96dd2bc38f70441aa38db2292d9fb72cb06fad7f699e41a",
+      "transactionHash" : "0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "buyer" : "0x5a435c43ca006be1688d0d7b95194327528eab26",
+      "seller" : "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2",
+      "token" : "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+      "amount" : "30000000000000000000",
+      "deadline" : "1793973923"
+    }, {
+      "id" : "1",
+      "event" : "OrderPaid",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2822676",
+      "blockHash" : "0x99ceb4b8f3ae4fdeeadcc157c83a9dd499fd8e134b0fb077238feb6c7d8050c2",
+      "transactionHash" : "0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0",
+      "transactionIndex" : "0",
+      "logIndex" : "1"
+    }, {
+      "id" : "1",
+      "event" : "OrderDisputed",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2823067",
+      "blockHash" : "0xfcaae5635fabda563478fde7c47bfc2152569aea2275bfbdd0ac8e446a7bf917",
+      "transactionHash" : "0x38f57adcfd17adba8849eb8e66985bbefb38000ffe221b8ac1105cd991a90494",
+      "transactionIndex" : "0",
+      "logIndex" : "0",
+      "by" : "0xe0f0970f35ffe50db6a6ad25ba775674d24682d2"
+    }, {
+      "id" : "1",
+      "event" : "OrderResolved",
+      "contractAddress" : "0xd7320d80b687766ba73997b97dae61ff1f9ed737",
+      "blockNumber" : "2823583",
+      "blockHash" : "0xbc08cea213143f9ebca532375d0676d2c9464d61d15deb43e65c7da35f12aaa8",
+      "transactionHash" : "0x41346bdd3a5ce73aa5bf86cb2436fd0c149338f94d1a00cf23d161313e130a7f",
+      "transactionIndex" : "0",
+      "logIndex" : "1",
+      "sellerWins" : "false"
+    } ],
+    "status" : 200,
+    "method" : "GET",
+    "headers" : {
+      "content-type" : [ "application/json" ],
+      "date" : [ "Sat, 07 Nov 2026 02:45:48 GMT" ],
+      "transfer-encoding" : [ "chunked" ]
+    },
+    "url" : "http://127.0.0.1:42247/api/escrow/orders/1/events",
+    "startedAt" : "2026-11-07T02:45:16.340376016Z",
+    "elapsedMillis" : 31765,
+    "rawBody" : "[{\"id\":\"1\",\"event\":\"OrderCreated\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2822524\",\"blockHash\":\"0x81467ac4d3cc1c68c96dd2bc38f70441aa38db2292d9fb72cb06fad7f699e41a\",\"transactionHash\":\"0x6965468ab5104bf9c202d3f8c0e8c59b2fa6da24eb224c225c4b5b120d15ec6e\",\"transactionIndex\":\"0\",\"logIndex\":\"0\",\"buyer\":\"0x5a435c43ca006be1688d0d7b95194327528eab26\",\"seller\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\",\"token\":\"0xb7da837f93a5448ca0762b80862d053daf9715b3\",\"amount\":\"30000000000000000000\",\"deadline\":\"1793973923\"},{\"id\":\"1\",\"event\":\"OrderPaid\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2822676\",\"blockHash\":\"0x99ceb4b8f3ae4fdeeadcc157c83a9dd499fd8e134b0fb077238feb6c7d8050c2\",\"transactionHash\":\"0x24dc8f81f69ff0c3183fb79169d951a93b30e7c2e9cf7d08f124e95ab5c949c0\",\"transactionIndex\":\"0\",\"logIndex\":\"1\"},{\"id\":\"1\",\"event\":\"OrderDisputed\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2823067\",\"blockHash\":\"0xfcaae5635fabda563478fde7c47bfc2152569aea2275bfbdd0ac8e446a7bf917\",\"transactionHash\":\"0x38f57adcfd17adba8849eb8e66985bbefb38000ffe221b8ac1105cd991a90494\",\"transactionIndex\":\"0\",\"logIndex\":\"0\",\"by\":\"0xe0f0970f35ffe50db6a6ad25ba775674d24682d2\"},{\"id\":\"1\",\"event\":\"OrderResolved\",\"contractAddress\":\"0xd7320d80b687766ba73997b97dae61ff1f9ed737\",\"blockNumber\":\"2823583\",\"blockHash\":\"0xbc08cea213143f9ebca532375d0676d2c9464d61d15deb43e65c7da35f12aaa8\",\"transactionHash\":\"0x41346bdd3a5ce73aa5bf86cb2436fd0c149338f94d1a00cf23d161313e130a7f\",\"transactionIndex\":\"0\",\"logIndex\":\"1\",\"sellerWins\":\"false\"}]"
+  } ]
+}

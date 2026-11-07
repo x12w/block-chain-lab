@@ -4,6 +4,7 @@ import json
 import hashlib
 from pathlib import Path
 import re
+import subprocess
 import sys
 
 root = Path(__file__).resolve().parents[1]
@@ -38,7 +39,35 @@ for manifest in potos_evidence.rglob('source-manifest.json'):
     verified_manifest_digests[manifest] = digests
 findings = []
 checked = 0
-for path in sorted(root.rglob('*')):
+bonus_public_values = set()
+
+def collect_receipt_values(value):
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if key in {'hash', 'transactionHash', 'blockHash'} and isinstance(item, str):
+                if re.fullmatch(r'0x[0-9a-fA-F]{64}', item):
+                    bonus_public_values.add(item)
+            collect_receipt_values(item)
+    elif isinstance(value, list):
+        for item in value:
+            collect_receipt_values(item)
+
+bonus_evidence = root / 'evidence/bonus'
+for folder in ('enhanced', 'timeline'):
+    for record in (bonus_evidence / folder).glob('*.json'):
+        data = json.loads(record.read_text())
+        collect_receipt_values(data)
+        for relative, recorded in data.get('sourceSha256', {}).items():
+            source = (root / relative).resolve()
+            if source.is_relative_to(root) and source.is_file():
+                actual = hashlib.sha256(source.read_bytes()).hexdigest()
+                if actual == recorded:
+                    bonus_public_values.add(actual)
+
+# Scan the same tracked/staged file set that is included in the delivery archive.
+# Local untracked work is not published or silently included in this check.
+tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\0')
+for path in sorted(root / name for name in tracked if name):
     if not path.is_file() or any(p in {'.git', '.gradle', 'build', 'node_modules'} for p in path.relative_to(root).parts):
         continue
     if path.name == '.env' or (path.name.startswith('.env.') and path.name != '.env.example'):
@@ -59,6 +88,8 @@ for path in sorted(root.rglob('*')):
                 continue  # Actual local-chain receipt hashes, also present in the test output.
             if path.is_relative_to(integration_evidence) and match.group() in integration_hashes:
                 continue  # Recorded HTTP/service local-chain transaction receipts.
+            if path.is_relative_to(bonus_evidence) and match.group() in bonus_public_values:
+                continue  # Typed public receipt hashes and independently recomputed source digests.
             if (path.is_relative_to(potos_evidence) or path.is_relative_to(root / 'docs')
                     or path == root / 'README.md') and match.group() in potos_public_values:
                 continue  # Public RPC receipt fields; exact values, not a blanket JSON exemption.
@@ -67,11 +98,12 @@ for path in sorted(root.rglob('*')):
             if line.split('=', 1)[1].strip() != '${WEB3J_PRIVATE_KEY}':
                 findings.append(f'{path.relative_to(root)}:{line_no}: private key must be an environment placeholder')
 
-print(f'Source files checked: {checked}')
+print(f'Tracked/staged submission text files checked: {checked}')
 print('Public historical transaction hashes: explicitly classified in docs/lab3-reference.json')
 print('Local transaction hashes: explicitly classified in evidence/member1/records/06-local-integration.json')
 print('PR integration hashes: explicitly classified in evidence/pr1-integration/records/*integration.json')
 print('POTOS public receipt fields: explicitly classified in evidence/potos/records/*verified-receipts.json')
+print('Bonus public receipt hashes and source digests: classified from archived JSON and actual source bytes')
 if findings:
     print('\n'.join(findings))
     sys.exit(1)

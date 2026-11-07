@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wetech.demo.web3j.service.EscrowServiceIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-07T03:03:05.414Z" hostname="blockchain-course.x12w-nix" time="0.121">
+  <properties/>
+  <testcase name="completeEscrowLifecycleAndReceiptFailuresOnLocalChain()" classname="com.wetech.demo.web3j.service.EscrowServiceIntegrationTest" time="0.121"/>
+  <system-out><![CDATA[LOCAL ONLY | chainId=31337 | all three roles simulated by one test process
+backend=0x6f6cd8c3080c59071679455f2f40645756989d3f
+buyer=0x8daf2260bf75e2873de87a0f60bce471adc698c6
+seller=0x9bf1c8e533b3968a532b1c5162a6bfacd123aef7
+deploy token (local only) | block=281 status=0x1 gas=630003 tx=0xded5db86318752e44ac48f377905000e52d10af22d2182a2f83720f611e3baf2
+mint 100 tokens | block=282 status=0x1 gas=70607 tx=0xe1f56f034d82f8d16f8f4c9d3a1c48a835f7b21c3aac5f9f0ea8beea88d5fec3
+deploy Escrow | block=283 status=0x1 gas=1112950 tx=0x3f058783717ea870982ab0410b20ac65c34da221400974f391a8b798ff92c0d5
+createOrder 0 | block=284 status=0x1 gas=184716 tx=0x7f1c1ecb5a06b63872629ca76aba51a5d02ef398078d1828a4d37d0b2ad95d5f
+createOrder 1 | block=296 status=0x1 gas=167640 tx=0xa2a23910f83265585ca55966717c8e12a9797f30c0eae189e31636f3d718bf75
+approve 60 tokens | block=297 status=0x1 gas=46163 tx=0xbbb7d3616952245ac7416ef62c6cc3c48a7e76c402f3754af3a1fee9a759961a
+deposit 0 | block=298 status=0x1 gas=90188 tx=0xf2f6c308d728d3553cb62e5237f3fdf2c34f666d1a692def24f76e7a49c672b2
+deposit 1 | block=299 status=0x1 gas=68300 tx=0x72858d923af4a6a3eb74cb1b4a361df722e321d3f6232a15d3bfc08ec8b90230
+seller dispute 1 | block=300 status=0x1 gas=32489 tx=0xae33e8d4aadb894f95685cd7a2e83a49582e17a2e6da8901f91c14cd587b8fdc
+resolve 0 rejected: wrong status | block=301 status=0x0 gas=26216 tx=0x803f5808875ebb56caf65d2f7d90493ad3c49ab3bff3b6dbf8dbaec77bde84a0
+seller resolve 1 rejected: not arbiter | block=302 status=0x0 gas=23981 tx=0x18dac0d8fe08b037e62ed63bbbdc2c3570dd8c9809e8a7c1db82ab820cfdbeee
+resolve 1 refund | block=303 status=0x1 gas=52913 tx=0xccdfe576b0b50648d355393b2cc26948ae7c1e53fd68181952083c8c9b473e6c
+confirm 0 | block=304 status=0x1 gas=64722 tx=0x5e302265429404e584b9540d682160d7d0cf5dde0869495d00dc20247f6cb52b
+SimpleStorage deploy (local only) | block=305 status=0x1 gas=101643 tx=0x4140546853e1b26a3250c3288e1e6756d7ce962636a92c9c0825a9b6dc76cc15
+SimpleStorage set 100 (local only) | block=306 status=0x1 gas=44568 tx=0xb6aabd4dc1445c2c4a18422bbc9bf799ab7754663749c4c849fcf660b946beba
+PASS: real local transactions, >10-block event scan, state/role failures, refunds, settlement, reload, SimpleStorage=100
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
