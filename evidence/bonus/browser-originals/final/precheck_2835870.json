@@ -1,0 +1,71 @@
+{
+  "source": "Remix terminal via connected MetaMask provider: read-only RPC",
+  "chainId": 60600,
+  "account": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "contract": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "block": 2835870,
+  "blockHash": "0x7b8ec63710fd6a793d102d411b008dd3572de922e8e709e2bab82e384bbbd7ea",
+  "timestamp": 1794069203,
+  "version": "2",
+  "arbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "secondArbiter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "votes2": [
+    true,
+    false,
+    false,
+    false
+  ],
+  "orders": [
+    {
+      "id": 0,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794062954",
+      "status": 0,
+      "description": "bonus shipped confirm"
+    },
+    {
+      "id": 1,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794072356",
+      "status": 5,
+      "description": "bonus shipped confirm retry"
+    },
+    {
+      "id": 2,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794072788",
+      "status": 4,
+      "description": "bonus shipped arbitration"
+    },
+    {
+      "id": 3,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794069586",
+      "status": 1,
+      "description": "bonus unshipped refund"
+    }
+  ],
+  "decimals": 18,
+  "balances": {
+    "buyer": "37000000000000000000",
+    "seller": "60000000000000000000",
+    "escrow": "3000000000000000000"
+  },
+  "allowance": "0",
+  "nonceLatest": 90,
+  "noncePending": 90,
+  "beijingTime": "2026-11-08 00:33:23 +08:00"
+}
+

@@ -1,0 +1,64 @@
+{
+  "phase": "Buyer stage complete: six authorized transactions successfully mined",
+  "chainId": 60600,
+  "contract": "0x917dc833eadba6544f1fd80498715da39ac739f4",
+  "buyer": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+  "token": "0xb7da837f93a5448ca0762b80862d053daf9715b3",
+  "transactionsRequestedThisBatch": 6,
+  "transactionsConfirmedSuccessful": 6,
+  "pendingRequest": null,
+  "orders": [
+    {
+      "id": 1,
+      "purpose": "正常发货确认",
+      "status": "Shipped (5)",
+      "amountWQL": 1,
+      "deadline": 1794072356,
+      "deadlineBeijing": "2026-11-08 01:25:56",
+      "createHash": "0x64c24b30d7afbc3f423da80358ece8ac1771f5761fcb00508907b8b7d7d97fe0",
+      "depositHash": "0xf2559557e9ba952abbf2456ccea321cb7cdfef53e23c9db81f871cad6ef816ee",
+      "paidEventVerified": true,
+      "tokenTransferVerified": true
+    },
+    {
+      "id": 2,
+      "purpose": "双人仲裁退款；实际为未发货即争议",
+      "status": "Disputed (4)",
+      "amountWQL": 1,
+      "deadline": 1794072788,
+      "deadlineBeijing": "2026-11-08 01:33:08",
+      "createHash": "0xe9398d162f065e68ed3a2c109bfb2ca88183f1a3d077ed35f3fea148a27e8bb9",
+      "depositHash": "0xdd782dc5b16477873ca573808de496e647b2dd2e8ad44b231590086f5f384e5d",
+      "paidEventVerified": true,
+      "tokenTransferVerified": true
+    },
+    {
+      "id": 3,
+      "purpose": "未发货超期退款",
+      "status": "Paid (1)",
+      "amountWQL": 1,
+      "deadline": 1794069586,
+      "deadlineBeijing": "2026-11-08 00:39:46",
+      "createHash": "0x7d882fcb8b7b656ceda390bee1b3e666bf970478877ecff42264ccf9e8a1d9e6",
+      "depositHash": "0x0140fb9818401908c054a9f9cb19ebf4cf5fa52d47f07c37ae87b941f74be9c0",
+      "paidEventVerified": true,
+      "tokenTransferVerified": true
+    }
+  ],
+  "allowanceWQL": 0,
+  "balancesWQL": {
+    "buyerBalance": 37,
+    "sellerBalance": 60,
+    "escrowBalance": 3
+  },
+  "order2Votes": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "order2SequenceDeviation": "dispute succeeded before markShipped; later markShipped reverted with Escrow: wrong status; shipped-then-disputed path NOT demonstrated",
+  "lastBalanceAndOrder2CheckBeijing": "2026-11-07 23:53:36",
+  "noFurtherTransactionsSent": true,
+  "updatedAt": "2026-11-07T15:56:49.786610+00:00"
+}

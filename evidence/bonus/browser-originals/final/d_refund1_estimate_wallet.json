@@ -1,0 +1,19 @@
+{
+  "source": "Remix terminal: connected MetaMask provider eth_estimateGas, simulation only",
+  "chainId": 60600,
+  "account": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "block": 2836321,
+  "timestamp": 1794072489,
+  "order1Status": 5,
+  "deadline": "1794072356",
+  "request": {
+    "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+    "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+    "value": "0x0",
+    "data": "0x278ecde10000000000000000000000000000000000000000000000000000000000000001"
+  },
+  "result": "simulation_rejected",
+  "error": {
+    "message": "Internal JSON-RPC error."
+  }
+}

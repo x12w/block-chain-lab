@@ -1,0 +1,37 @@
+[
+  {
+    "id": "version()",
+    "jsonrpc": "2.0",
+    "result": "0x54fd4d50fce680dbc2593d9e893064bfa880e5642d0036394e1a1849f7fc0749"
+  },
+  {
+    "id": "arbiter()",
+    "jsonrpc": "2.0",
+    "result": "0xfe25e00ae418b61efdb2e5d354e7e4d1c1df90edfcb3c6cdd135ae6092ea54dd"
+  },
+  {
+    "id": "secondArbiter()",
+    "jsonrpc": "2.0",
+    "result": "0x4e3dbe43e6f9f11b17e9e3b413ad10108180e520c327a688b02671fd8212821f"
+  },
+  {
+    "id": "orderCount()",
+    "jsonrpc": "2.0",
+    "result": "0x2453ffa8895918e37096ec06f8749182e95d257ad6df6c098f51f54909be6a03"
+  },
+  {
+    "id": "getOrder(uint256)",
+    "jsonrpc": "2.0",
+    "result": "0xd09ef241fccc19643667e86373419dddadc60f6a733f5ce387e44901137c674e"
+  },
+  {
+    "id": "allowance(address,address)",
+    "jsonrpc": "2.0",
+    "result": "0xdd62ed3e90e97b3d417db9c0c7522647811bafca5afc6694f143588d255fdfb4"
+  },
+  {
+    "id": "balanceOf(address)",
+    "jsonrpc": "2.0",
+    "result": "0x70a08231b98ef4ca268c9cc3f6b4590e4bfec28280db06bb5d45e689f2a360be"
+  }
+]

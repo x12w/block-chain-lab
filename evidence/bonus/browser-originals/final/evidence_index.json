@@ -1,0 +1,290 @@
+{
+  "note": "Screenshots and RPC results are distinct evidence sources. Derived files do not replace raw originals. Historical state was not fabricated.",
+  "files": [
+    {
+      "file": "BonusAcceptanceInterfaces.sol",
+      "kind": "ABI/interface only; never deployed",
+      "source": "User-provided interface"
+    },
+    {
+      "file": "IRouteABonusToken.abi",
+      "kind": "ABI/interface only; never deployed",
+      "source": "User-provided interface"
+    },
+    {
+      "file": "a_balance.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "a_balances_after.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "a_conflicting_votes.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "a_details.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: POTOS Blockscout explorer"
+    },
+    {
+      "file": "a_discovery_logs_rpc.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "a_frontend_error.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "a_live_trace_2835940.json",
+      "kind": "read-only provider observation or query source",
+      "source": "Remix terminal connected MetaMask provider"
+    },
+    {
+      "file": "a_logs.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: POTOS Blockscout explorer"
+    },
+    {
+      "file": "a_order.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "a_resolve_2_true_request.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "a_transaction_raw.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "a_verified_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "acceptance_progress_table.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "b_after_state.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "b_after_transaction_raw.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "b_escrow_balance_2.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "b_order2_refunded.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "b_precheck_2836033.json",
+      "kind": "read-only provider observation or query source",
+      "source": "Remix terminal connected MetaMask provider"
+    },
+    {
+      "file": "b_resolve_2_false_request.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "b_verified_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "b_votes_false_false.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "c_after_state.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "c_after_transaction_raw.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "c_escrow_balance_1.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "c_order3_refunded.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "c_precheck_state.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "c_refund_3_request.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "c_verified_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "c_wallet_check.json",
+      "kind": "read-only provider observation or query source",
+      "source": "Remix terminal connected MetaMask provider"
+    },
+    {
+      "file": "d_after_state.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "d_after_transaction_raw.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "d_before_confirm_state.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "d_confirm_1_request.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "d_order1_completed.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "d_order1_shipped_waiting.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "d_precheck_state.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "d_refund1_estimate_rpc.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "d_refund1_estimate_wallet.json",
+      "kind": "read-only provider observation or query source",
+      "source": "Remix terminal connected MetaMask provider"
+    },
+    {
+      "file": "d_refund1_rejected.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "d_refund1_simulation_command.js",
+      "kind": "audit utility/source",
+      "source": "Audit code created in this conversation"
+    },
+    {
+      "file": "d_refund1_simulation_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "d_verified_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "final_acceptance_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "final_buyer_balance_39.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "final_escrow_balance_0.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "final_seller_balance_61.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "first_arbiter_transaction_raw.json",
+      "kind": "read-only RPC evidence",
+      "source": "https://rpc-testnet.potos.hk"
+    },
+    {
+      "file": "first_arbiter_verified_summary.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "precheck_2835870.json",
+      "kind": "read-only provider observation or query source",
+      "source": "Remix terminal connected MetaMask provider"
+    },
+    {
+      "file": "precheck_command.js",
+      "kind": "read-only provider observation or query source",
+      "source": "Remix terminal connected MetaMask provider"
+    },
+    {
+      "file": "precheck_votes.jpg",
+      "kind": "original screenshot, not altered",
+      "source": "Original browser screenshot: connected Remix UI"
+    },
+    {
+      "file": "progress.html",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "progress.json",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "progress.txt",
+      "kind": "summary, index or diagnostic",
+      "source": "Derived from stored evidence; inspect named raw source files"
+    },
+    {
+      "file": "rpc_audit.py",
+      "kind": "audit utility/source",
+      "source": "Audit code created in this conversation"
+    }
+  ]
+}

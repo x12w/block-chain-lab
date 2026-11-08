@@ -1,0 +1,58 @@
+{
+  "hash": "0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8",
+  "method": "resolve(2,true)",
+  "status": "0x1",
+  "block": 2835927,
+  "gasUsed": 41891,
+  "effectiveGasPrice": 0,
+  "timestamp": 1794069619,
+  "beijingTime": "2026-11-08T00:40:19+08:00",
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "nonce": 90,
+  "value": 0,
+  "events": [
+    {
+      "name": "ArbitrationVoted",
+      "id": 2,
+      "voter": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+      "sellerWins": true
+    }
+  ],
+  "logCount": 1,
+  "noTransfer": true,
+  "noOrderResolved": true,
+  "before": {
+    "source": "precheck_2835870.json, observed before submission; not reconstructed historical state",
+    "votes2": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "order2Status": 4,
+    "balances": [
+      "37",
+      "60",
+      "3"
+    ]
+  },
+  "after": {
+    "source": "b_precheck_2836033.json and a_balances_after.json; live observations before B",
+    "votes2": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "order2Status": 4,
+    "balances": [
+      "37",
+      "60",
+      "3"
+    ]
+  },
+  "frontendError": "Remix displayed _context7.t3.error.indexOf is not a function; direct transaction receipt confirms status=0x1",
+  "rpcLimitations": "eth_getLogs returned empty despite receipt log. Historical nonce reads returned current nonce, so historical nonce binary search was discarded. RPC batches support at most 8 requests.",
+  "eventTopicVerification": "Matches ethers.utils.id(ArbitrationVoted(uint256,address,bool)) from Remix ethers/5.8.0; saved in b_precheck_2836033.json"
+}

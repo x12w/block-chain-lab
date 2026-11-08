@@ -1,0 +1,115 @@
+{
+  "observedAt": "2026-11-07T15:29:14.546788+00:00",
+  "request": [
+    {
+      "jsonrpc": "2.0",
+      "id": "count",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "data": "0x2453ffa8"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "logs",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "fromBlock": "0x2b436a",
+          "toBlock": "latest"
+        }
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "latestBlock",
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "latest",
+        false
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "nonceLatest",
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "noncePending",
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "pending"
+      ]
+    }
+  ],
+  "response": [
+    {
+      "id": "count",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "error": {
+        "code": -32000,
+        "message": "topics is null"
+      },
+      "id": "logs",
+      "jsonrpc": "2.0"
+    },
+    {
+      "id": "latestBlock",
+      "jsonrpc": "2.0",
+      "result": {
+        "baseFeePerGas": "0x0",
+        "blobGasUsed": "0x0",
+        "difficulty": "0x0",
+        "excessBlobGas": "0x0",
+        "extraData": "0x",
+        "gasLimit": "0x1c9c380",
+        "gasUsed": "0x5208",
+        "hash": "0x704332b18da0da8ea9526565affab85f4472f07ebfc1c01b87d9494f18e6fc36",
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "miner": "0xDf85F75202BFf9B82EED26F05aE4Fa2426817Ffe",
+        "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "nonce": "0x0000000000000000",
+        "number": "0x2b4386",
+        "parentBeaconBlockRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "parentHash": "0x46830dc9d61841d0bac9b718f2e3f545ce38fab0ee841aa8d3b4dd84ab54874f",
+        "receiptsRoot": "0x396616bd2bb1859ffe523b0b4a0c6e032f7b6e7b497895266d9b3cb74e6e7d45",
+        "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+        "size": "0x60",
+        "stateRoot": "0x5224c21158f63bd3f8817159ef7b7ef6bc2184eedeabf9057bc6bcce7bbff9c9",
+        "timestamp": "0x6aef43c9",
+        "totalDifficulty": "0x0",
+        "transactions": [
+          "0xb49da4ab02033d0ef42a8c9b7995a5235caa9a3115336517adb341391f60c31f"
+        ],
+        "transactionsRoot": "0xb49da4ab02033d0ef42a8c9b7995a5235caa9a3115336517adb341391f60c31f",
+        "uncles": [],
+        "withdrawals": [],
+        "withdrawalsRoot": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "nonceLatest",
+      "jsonrpc": "2.0",
+      "result": "0x55"
+    },
+    {
+      "id": "noncePending",
+      "jsonrpc": "2.0",
+      "result": "0x55"
+    }
+  ]
+}

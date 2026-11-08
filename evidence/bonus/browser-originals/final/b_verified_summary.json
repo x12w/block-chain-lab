@@ -1,0 +1,73 @@
+{
+  "hash": "0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd",
+  "method": "resolve(2,false)",
+  "status": "0x1",
+  "block": 2836058,
+  "gasUsed": 81286,
+  "effectiveGasPrice": 0,
+  "timestamp": 1794070566,
+  "beijingTime": "2026-11-08T00:56:06+08:00",
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "nonce": 91,
+  "value": 0,
+  "events": [
+    {
+      "name": "ArbitrationVoted",
+      "id": 2,
+      "voter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "sellerWins": false
+    },
+    {
+      "name": "Transfer",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "from": "0x917dc833eadba6544f1fd80498715da39ac739f4",
+      "to": "0x5a435c43ca006be1688d0d7b95194327528eab26",
+      "amountBaseUnits": "1000000000000000000",
+      "amountWQL": "1"
+    },
+    {
+      "name": "OrderResolved",
+      "id": 2,
+      "sellerWins": false
+    }
+  ],
+  "before": {
+    "source": "b_precheck_2836033.json, observed before submission",
+    "votes2": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "order2Status": 4,
+    "balances": {
+      "buyer": "37000000000000000000",
+      "seller": "60000000000000000000",
+      "escrow": "3000000000000000000"
+    }
+  },
+  "after": {
+    "source": "b_after_state.json, live reads after receipt",
+    "votes2": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "order2Status": 3,
+    "balances": {
+      "buyer": "38000000000000000000",
+      "seller": "60000000000000000000",
+      "escrow": "2000000000000000000"
+    },
+    "allowance": "0"
+  },
+  "frontendError": "Remix again displayed _context7.t3.error.indexOf is not a function; actual receipt success. No resend.",
+  "screenshots": [
+    "b_votes_false_false.jpg",
+    "b_order2_refunded.jpg",
+    "b_escrow_balance_2.jpg"
+  ],
+  "source": "Decoded from direct RPC transaction/receipt/block; original raw preserved in b_after_transaction_raw.json"
+}

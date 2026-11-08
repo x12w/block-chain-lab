@@ -1,0 +1,54 @@
+{
+  "hash": "0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe",
+  "method": "refund(3)",
+  "status": "0x1",
+  "block": 2836134,
+  "gasUsed": 66788,
+  "effectiveGasPrice": 0,
+  "timestamp": 1794071114,
+  "beijingTime": "2026-11-08T01:05:14+08:00",
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "nonce": 92,
+  "value": 0,
+  "events": [
+    {
+      "name": "Transfer",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+      "to": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "amountBaseUnits": "1000000000000000000",
+      "amountWQL": "1"
+    },
+    {
+      "name": "OrderRefunded",
+      "id": 3
+    }
+  ],
+  "before": {
+    "source": "c_precheck_state.json, live reads before submission",
+    "order3Status": 1,
+    "balances": {
+      "buyer": "38000000000000000000",
+      "seller": "60000000000000000000",
+      "escrow": "2000000000000000000"
+    },
+    "chainTimestamp": 1794070929
+  },
+  "after": {
+    "source": "c_after_state.json, live reads after receipt",
+    "order3Status": 3,
+    "balances": {
+      "buyer": "39000000000000000000",
+      "seller": "60000000000000000000",
+      "escrow": "1000000000000000000"
+    },
+    "allowance": "0"
+  },
+  "frontendError": "Remix displayed _context7.t3.error.indexOf is not a function; transaction receipt shows success. No resend.",
+  "screenshots": [
+    "c_order3_refunded.jpg",
+    "c_escrow_balance_1.jpg"
+  ],
+  "source": "Direct RPC transaction/receipt/block; original preserved in c_after_transaction_raw.json"
+}

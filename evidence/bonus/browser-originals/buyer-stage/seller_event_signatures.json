@@ -1,0 +1,22 @@
+[
+  {
+    "id": "getVotes(uint256)",
+    "jsonrpc": "2.0",
+    "result": "0xff981099fe2db733233446d224185a6663560f52f853d560e3400f528093597e"
+  },
+  {
+    "id": "dispute(uint256)",
+    "jsonrpc": "2.0",
+    "result": "0x86d6282c9c4a01ef1f5c5c583641ca378ba8cd5ba6de49a911003d086980f4c2"
+  },
+  {
+    "id": "OrderShipped(uint256,address)",
+    "jsonrpc": "2.0",
+    "result": "0x1a66e0c7d5d7422838f4f916462f11609026cbe8fb5d43ec23c45d04ddfcfca9"
+  },
+  {
+    "id": "OrderDisputed(uint256,address)",
+    "jsonrpc": "2.0",
+    "result": "0xde481be1936299e9233634e9f3cd92028f797634de15defa790fb2d7a013c95a"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "source": "Read-only RPC through Remix connected MetaMask provider",
+  "chainId": 60600,
+  "account": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "block": 2835940,
+  "timestamp": 1794069709,
+  "votes2": [
+    true,
+    false,
+    true,
+    true
+  ],
+  "order2Status": 4,
+  "nonceLatest": 91,
+  "noncePending": 91,
+  "txs": []
+}

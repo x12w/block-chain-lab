@@ -28,7 +28,7 @@ for potos_receipts in (potos_evidence / 'records').glob('*verified-receipts.json
             potos_public_values.update(log[field] for field in ('transactionHash', 'blockHash', 'data'))
 hex_value = re.compile(r'(?<![a-zA-Z0-9])(?:0x)?[0-9a-fA-F]{64}(?![a-zA-Z0-9])')
 verified_manifest_digests = {}
-for manifest in potos_evidence.rglob('source-manifest.json'):
+for manifest in (root / 'evidence').rglob('source-manifest.json'):
     digests = set()
     for entry in json.loads(manifest.read_text()).get('files', []):
         source = (manifest.parent / entry['file']).resolve()
@@ -36,10 +36,19 @@ for manifest in potos_evidence.rglob('source-manifest.json'):
             digest = hashlib.sha256(source.read_bytes()).hexdigest()
             if digest == entry.get('sha256'):
                 digests.add(digest)
+    info = json.loads(manifest.read_text())
+    if info.get('archiveFile'):
+        archive = (manifest.parent / info['archiveFile']).resolve()
+        if archive.is_relative_to((root / 'evidence').resolve()) and archive.is_file():
+            digest = hashlib.sha256(archive.read_bytes()).hexdigest()
+            if digest == info.get('archiveSha256'):
+                digests.add(digest)
     verified_manifest_digests[manifest] = digests
 findings = []
 checked = 0
 bonus_public_values = set()
+for digests in verified_manifest_digests.values():
+    bonus_public_values.update(digests)
 
 def collect_receipt_values(value):
     if isinstance(value, dict):
@@ -69,6 +78,41 @@ for folder in ('enhanced', 'timeline', 'potos'):
                 actual = hashlib.sha256(source.read_bytes()).hexdigest()
                 if actual == recorded:
                     bonus_public_values.add(actual)
+
+def collect_browser_public_values(value):
+    """Recognize public RPC schemas; never exempt an entire imported file."""
+    if isinstance(value, dict):
+        collect_receipt_values(value)
+        if {'number', 'timestamp', 'parentHash', 'hash'} <= value.keys():
+            for field in ('mixHash', 'parentBeaconBlockRoot', 'parentHash',
+                          'receiptsRoot', 'sha3Uncles', 'stateRoot',
+                          'transactionsRoot', 'withdrawalsRoot'):
+                if isinstance(value.get(field), str):
+                    bonus_public_values.add(value[field])
+            bonus_public_values.update(x for x in value.get('transactions', []) if isinstance(x, str))
+        if {'hash', 'from', 'input', 'nonce'} <= value.keys():
+            # r and s are public transaction signatures, not signing keys.
+            for field in ('r', 's'):
+                if isinstance(value.get(field), str):
+                    bonus_public_values.add(value[field])
+        if value.get('jsonrpc') == '2.0' and isinstance(value.get('result'), str):
+            # Public read-only RPC return bytes preserved in the browser archive.
+            bonus_public_values.add(value['result'])
+        for item in value.values():
+            collect_browser_public_values(item)
+    elif isinstance(value, list):
+        for item in value:
+            collect_browser_public_values(item)
+
+for record in (bonus_evidence / 'browser-originals').rglob('*.json'):
+    data = json.loads(record.read_text())
+    collect_browser_public_values(data)
+    if isinstance(data, dict) and 'rawQueries' in data and 'rawResults' in data:
+        queries = data['rawQueries']
+        if isinstance(queries, list) and all(isinstance(q, dict) and q.get('method') in {
+                'eth_call', 'eth_getBalance', 'eth_getTransactionCount', 'eth_chainId',
+                'eth_getBlockByNumber', 'eth_blockNumber'} for q in queries):
+            bonus_public_values.update(x for x in data['rawResults'] if isinstance(x, str))
 
 # Scan the same tracked/staged file set that is included in the delivery archive.
 # Local untracked work is not published or silently included in this check.

@@ -1,0 +1,85 @@
+{
+  "source": "Remix terminal via connected MetaMask provider: read-only RPC",
+  "chainId": 60600,
+  "account": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "contract": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "block": 2836033,
+  "blockHash": "0xc4f4b2f18e027cdaf0ff248cb192fe0dbc1290422b6d8427c4ad807f97a7edd1",
+  "timestamp": 1794070389,
+  "version": "2",
+  "arbiter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "secondArbiter": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "votes2": [
+    true,
+    false,
+    true,
+    true
+  ],
+  "orders": [
+    {
+      "id": 0,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794062954",
+      "status": 0,
+      "description": "bonus shipped confirm"
+    },
+    {
+      "id": 1,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794072356",
+      "status": 5,
+      "description": "bonus shipped confirm retry"
+    },
+    {
+      "id": 2,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794072788",
+      "status": 4,
+      "description": "bonus shipped arbitration"
+    },
+    {
+      "id": 3,
+      "buyer": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+      "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "amount": "1000000000000000000",
+      "deadline": "1794069586",
+      "status": 1,
+      "description": "bonus unshipped refund"
+    }
+  ],
+  "decimals": 18,
+  "balances": {
+    "buyer": "37000000000000000000",
+    "seller": "60000000000000000000",
+    "escrow": "3000000000000000000"
+  },
+  "allowance": "0",
+  "selectors": {
+    "getOrder(uint256)": "0xd09ef241",
+    "getVotes(uint256)": "0xff981099",
+    "version()": "0x54fd4d50",
+    "arbiter()": "0xfe25e00a",
+    "secondArbiter()": "0x4e3dbe43",
+    "refund(uint256)": "0x278ecde1",
+    "confirm(uint256)": "0xba0179b5"
+  },
+  "eventTopics": {
+    "ArbitrationVoted(uint256,address,bool)": "0x73bb411c27e6a5f5f63204cf0bf3013ddf33f08d73f1a4a497e47e10557dd951",
+    "OrderResolved(uint256,bool)": "0x649ff37700d4eb8a5bc86ef06a55183597fa5c3c6b53ec4b9ee510cb2089ee26",
+    "OrderRefunded(uint256)": "0x303a31648d19f17852cf82657162c4bdd4a06ab3f36f1e7ae1118f4ca6473e11",
+    "OrderCompleted(uint256)": "0x02a7d4d9472af7118644884b9a0ee443540c0027e938dd0aa35be8ecbe946c0a",
+    "Transfer(address,address,uint256)": "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+  },
+  "nonceLatest": 91,
+  "noncePending": 91
+}

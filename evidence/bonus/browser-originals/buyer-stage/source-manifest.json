@@ -1,0 +1,234 @@
+{
+  "archive": "POTOS_routeA_buyer_stage_verified.zip",
+  "archiveSha256": "148840e8468e10860d5d74697ccd398b0a6e187c65521eb86895212ca7f5736c",
+  "archiveBytes": 1971906,
+  "originalManifestEntriesVerified": 0,
+  "files": [
+    {
+      "file": "transactions.json",
+      "bytes": 2399,
+      "sha256": "edb59f7910b090dc1ca0ca60f097b4a7073d192eefed3ae97323d388f8b22df2"
+    },
+    {
+      "file": "seller_order2_sequence_and_votes.json",
+      "bytes": 9560,
+      "sha256": "7c70eed4f107b50853633ad78479f42742355263d27e2ad149177f08ce9a605a"
+    },
+    {
+      "file": "create2_receipt_and_deposit_preflight.json",
+      "bytes": 10159,
+      "sha256": "79e9961b8ab4ddb9460577e19bae4b58ae2b8b6dbe4a0bfc6aa0868bc399d662"
+    },
+    {
+      "file": "order1_paid.png",
+      "bytes": 175187,
+      "sha256": "2cdf617ea6d380d4ea4a8c40f14913f76cd1d5fc3ebd7f720d9d8e4609092eac"
+    },
+    {
+      "file": "create3_parameters.png",
+      "bytes": 168648,
+      "sha256": "4a66668f05379f112ae15a8e3834126827aaeb221dc2d23a633f592af740d733"
+    },
+    {
+      "file": "create1_postconfirm.json",
+      "bytes": 3706,
+      "sha256": "dd3f8bf168ed06cd62c9ba9b9ba10630a83d525a881aa8b12da328a921dedcd7"
+    },
+    {
+      "file": "deposit2_parameters.png",
+      "bytes": 162966,
+      "sha256": "3ba41c36ae0c58d603ef59ab06f85077201da4204cef29e843ab9203ad7a97c5"
+    },
+    {
+      "file": "create2_postconfirm.json",
+      "bytes": 4302,
+      "sha256": "5ab06d54b0b64737b18c09beb0710a00f83e5751d94e3f73e5fb402f33d8f198"
+    },
+    {
+      "file": "orders1paid2created_deposit2_pending_status.json",
+      "bytes": 2007,
+      "sha256": "39840cff1a3a8928aa7709e224c71e7d905cbd9c128d03f108e8bbeb183ca2e0"
+    },
+    {
+      "file": "buyer_explorer_transactions.json",
+      "bytes": 2399,
+      "sha256": "954e5f36a45513d3b2b68efb79c61d271f51cd42a8c4f98e4384f0d79e36e85c"
+    },
+    {
+      "file": "create1_timing.json",
+      "bytes": 2225,
+      "sha256": "ce93a83c560181f0692c7c72f2d15665f9faed57abc8902ccac0fe6a263dbd82"
+    },
+    {
+      "file": "seller_event_signatures.json",
+      "bytes": 606,
+      "sha256": "73116b2384393ed06aad621f2c566ea52502e38a3567a6c03daafc8f46939320"
+    },
+    {
+      "file": "order1_created_deposit_pending_status.json",
+      "bytes": 1047,
+      "sha256": "6bea505a79f8700fb43f339110d5d155300bde88af3df71dd14d570a50b29d92"
+    },
+    {
+      "file": "create3_receipt_and_deposit_preflight.json",
+      "bytes": 10744,
+      "sha256": "a920b0c4b523783b92cc928819049fb90f589bd6c9f04d9453426f7a0949e0d7"
+    },
+    {
+      "file": "order2_paid.png",
+      "bytes": 173790,
+      "sha256": "796b97eccee68bcf58d27e5a636e8324545feaa179e5ea16acb2e4a4ef038042"
+    },
+    {
+      "file": "seller_bonus_transactions.json",
+      "bytes": 6726,
+      "sha256": "57dae91d11fc263e1c70470888f99ded62eadb642e4385604309edf73831bb31"
+    },
+    {
+      "file": "order1_paid_create2_pending_status.json",
+      "bytes": 1667,
+      "sha256": "3fa38987adb3fe6aca6e384e1b11c6649cdbb20ed6bc8c759eb38b58bcbc02df"
+    },
+    {
+      "file": "deposit2_postconfirm.json",
+      "bytes": 4848,
+      "sha256": "16b0311c4eafa643afb016e0395fc3edacfa25e29a7123163dffa48dab56e569"
+    },
+    {
+      "file": "selectors.json",
+      "bytes": 1004,
+      "sha256": "24a6062dfdc65fea09ae2dd0414a9b78d47101643da2643173efdd087632331b"
+    },
+    {
+      "file": "create1_receipt_and_deposit_preflight.json",
+      "bytes": 10158,
+      "sha256": "e5ca89ce2c3c00e220936b9d104e31684e2a29fcc8f767cb3e7f40ea2a7b4b66"
+    },
+    {
+      "file": "deposit3_postconfirm_all_orders.json",
+      "bytes": 6904,
+      "sha256": "d34e460960779a91a692921f4f712c343d487e6c44db7b0ef5ce3ba1169dd6d7"
+    },
+    {
+      "file": "order2_disputed.png",
+      "bytes": 177709,
+      "sha256": "b22b544fdbaa2b0ccd759c437cf1f8bb26bb512b335d21c083a3af1ffc14f77e"
+    },
+    {
+      "file": "deposit3_paid_event_lookup.json",
+      "bytes": 535,
+      "sha256": "472984d058e6fabcc3f248209978146362cdfeccab7e4de020fb291249a13586"
+    },
+    {
+      "file": "create1_request_status.json",
+      "bytes": 760,
+      "sha256": "16c9427da2ea5cb8bc7bc418e94586bb757be7263cb6832e1e63cf6bc965013e"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 4522,
+      "sha256": "1a88a5de8271e5058cf39169dfff733a09e1ffd28bd01f8f491b424b9e492b77"
+    },
+    {
+      "file": "create2_parameters.png",
+      "bytes": 170682,
+      "sha256": "69d3d74db006e85d85742ef8849b0fda699f3075d87e0e0c3ea1feb641443e53"
+    },
+    {
+      "file": "deposit1_postconfirm.json",
+      "bytes": 6208,
+      "sha256": "1f27059db8c5c05c8bf15df98ffffbc23fd6907171700a811179d702564bb0fe"
+    },
+    {
+      "file": "deposit3_receipt_final_balances.json",
+      "bytes": 11095,
+      "sha256": "27017e6a7a818e1229e49f065a8f8deb75e3f2f9d77f869b36dca90e6bf4c23d"
+    },
+    {
+      "file": "deposit2_receipt_create3_timing.json",
+      "bytes": 10154,
+      "sha256": "d81e6060c90023096eaad538a3de633cade4003c3abaa3f9381029b535bd0df8"
+    },
+    {
+      "file": "deposit1_parameters.png",
+      "bytes": 162952,
+      "sha256": "4b9cea69d729dce80af4d9db811efac741bc1cb01d35f5b916f31bf67fcfce6a"
+    },
+    {
+      "file": "status.json",
+      "bytes": 2278,
+      "sha256": "174f3feff907d19da0ee337907e69321ea3de827fe1f785777a9165aa3b8b81a"
+    },
+    {
+      "file": "seller_order1_shipped_verification.json",
+      "bytes": 8132,
+      "sha256": "cbd40f1373db78cde42dc5984085e78800a6b843be79a5004bc75f074834384c"
+    },
+    {
+      "file": "deposit1_receipt_create2_timing.json",
+      "bytes": 10154,
+      "sha256": "e4d614a22b9d895a36602551cafdd3042456f617e298470b7e8f671665106fc3"
+    },
+    {
+      "file": "preflight.json",
+      "bytes": 7631,
+      "sha256": "ec548e71533755e86973f36d6b9c1ab7eb1e0c7dbb9c3271a60663442d457207"
+    },
+    {
+      "file": "deposit3_pending_status.json",
+      "bytes": 3044,
+      "sha256": "c6caeab70ee59da164c00b28c1542f38d0d698b872dbb37af6186abc5b911f05"
+    },
+    {
+      "file": "create1_parameters.png",
+      "bytes": 172108,
+      "sha256": "35854d32bc366695dea53c671c0ec0ac201768a4d8a16071e899de1ca5c44fa3"
+    },
+    {
+      "file": "order3_paid.png",
+      "bytes": 174774,
+      "sha256": "387ce628d3d432a9e9a6505fe555156cf364f96ebbaf95be52ecedcdedec8c0a"
+    },
+    {
+      "file": "deposit3_parameters.png",
+      "bytes": 162891,
+      "sha256": "28b52d53b589ff7a23c089a747e442f0fdf457292694dd04cc0d34a0dfb8f967"
+    },
+    {
+      "file": "seller_provided/5b97080bd2da46ec0578b1187bbbe997.png",
+      "bytes": 54213,
+      "sha256": "c2314d08cbeba51710a44948385a97595b8fa7676c8ce21bc40123a153baefb9"
+    },
+    {
+      "file": "seller_provided/0.png",
+      "bytes": 36075,
+      "sha256": "5f91722a8ae1560df014ec88ae45d93887e6f73249342224e2d625244c8b7368"
+    },
+    {
+      "file": "seller_provided/370bf16805d4c755a1746f0bb3820969.png",
+      "bytes": 230685,
+      "sha256": "240269bc073ef49be571d5f8c1df31d7165ec05d34b81aadaf08157a2e81427d"
+    },
+    {
+      "file": "seller_provided/87b692538287f31dd2e8ef4f70af8a75.png",
+      "bytes": 12507,
+      "sha256": "b752e90eddec54b2dad866d0b71a5a7c3da7b9e5318a2dcc611be957fa62073e"
+    },
+    {
+      "file": "seller_provided/e519e956b0405c48464b699282e48002.png",
+      "bytes": 36075,
+      "sha256": "880fe97754e4ccbc2b7a645c322faa78bf70f051735f6f079d11b0df018ec969"
+    },
+    {
+      "file": "seller_provided/0bb630570fe1964a5a4e8a203422ce85.png",
+      "bytes": 116964,
+      "sha256": "9aa18be8a7a51b0e637936748bf6eda5ad0ad3400c18721999fb4a984c5a9664"
+    },
+    {
+      "file": "seller_provided/bc7931e8987bfb088a104710799078d3.png",
+      "bytes": 4502,
+      "sha256": "4a2a396053a6fe201c3f23694f5ff29c0256182607920db94ee97986f60bf1d8"
+    }
+  ],
+  "archiveFile": "../archives/POTOS_routeA_buyer_stage_verified.zip"
+}

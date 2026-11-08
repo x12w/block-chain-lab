@@ -1,0 +1,25 @@
+{
+  "method": "refund(1)",
+  "simulationOnly": true,
+  "transactionSent": false,
+  "transactionHash": null,
+  "receiptStatus": null,
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "value": 0,
+  "chainId": 60600,
+  "order1Status": 5,
+  "deadline": 1794072356,
+  "block": 2836324,
+  "timestamp": 1794072510,
+  "beijingTime": "2026-11-08T01:28:30+08:00",
+  "rpcErrorCode": 16,
+  "decodedRevertReason": "Escrow: wrong status",
+  "finding": "After deadline, order1 remained Shipped and refund(1) gas estimation reverted for wrong status. This is not a failed on-chain transaction.",
+  "sources": [
+    "d_precheck_state.json",
+    "d_refund1_estimate_wallet.json",
+    "d_refund1_estimate_rpc.json",
+    "d_refund1_rejected.jpg"
+  ]
+}

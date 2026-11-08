@@ -1,0 +1,23 @@
+{
+  "request": {
+    "jsonrpc": "2.0",
+    "id": "paid3Logs",
+    "method": "eth_getLogs",
+    "params": [
+      {
+        "address": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+        "fromBlock": "0x2b43f0",
+        "toBlock": "0x2b4438",
+        "topics": [
+          "0x15e33efda35e5da2fb096ba49585307ba468af144aea691da964aaff1a7f3a57",
+          "0x0000000000000000000000000000000000000000000000000000000000000003"
+        ]
+      }
+    ]
+  },
+  "response": {
+    "id": "paid3Logs",
+    "jsonrpc": "2.0",
+    "result": []
+  }
+}

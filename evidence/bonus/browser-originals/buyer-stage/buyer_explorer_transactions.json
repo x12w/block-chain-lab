@@ -1,0 +1,85 @@
+{
+  "source": "https://scan-testnet.potos.hk/api/v2/addresses/0x5a435c43ca006be1688d0d7b95194327528eab26/transactions",
+  "filter": "enhanced contract, nonce 89",
+  "items": [
+    {
+      "priority_fee": "1563933000",
+      "tx_burnt_fee": "0",
+      "raw_input": "0xb6b55f250000000000000000000000000000000000000000000000000000000000000003",
+      "result": "success",
+      "hash": "0x0140fb9818401908c054a9f9cb19ebf4cf5fa52d47f07c37ae87b941f74be9c0",
+      "max_fee_per_gas": "21000",
+      "revert_reason": null,
+      "confirmation_duration": [
+        0,
+        7374.0
+      ],
+      "type": 2,
+      "token_transfers_overflow": null,
+      "confirmations": 25,
+      "position": 0,
+      "max_priority_fee_per_gas": "21000",
+      "transaction_tag": null,
+      "created_contract": null,
+      "value": "0",
+      "tx_types": [
+        "contract_call",
+        "token_transfer"
+      ],
+      "from": {
+        "ens_domain_name": null,
+        "hash": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "watchlist_names": []
+      },
+      "gas_used": "74473",
+      "status": "ok",
+      "to": {
+        "ens_domain_name": null,
+        "hash": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+        "implementations": [],
+        "is_contract": true,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "watchlist_names": []
+      },
+      "authorization_list": [],
+      "method": "0xb6b55f25",
+      "fee": {
+        "type": "actual",
+        "value": "0"
+      },
+      "tx_tag": null,
+      "actions": [],
+      "gas_limit": "74473",
+      "gas_price": "0",
+      "decoded_input": null,
+      "has_error_in_internal_txs": null,
+      "token_transfers": null,
+      "base_fee_per_gas": "0",
+      "timestamp": "2026-11-07T15:50:04.000000Z",
+      "nonce": "89",
+      "block": 2835507,
+      "transaction_types": [
+        "contract_call",
+        "token_transfer"
+      ],
+      "exchange_rate": null,
+      "block_number": 2835507,
+      "has_error_in_internal_transactions": null
+    }
+  ]
+}

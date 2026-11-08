@@ -1,0 +1,29 @@
+路线A剩余测试网验收：已完成
+网络：POTOS Testnet，chainId 60600
+增强合约：0x917Dc833eadBa6544F1fd80498715da39Ac739f4（version 2）
+最终订单0/1/2/3：Created / Completed / Refunded / Refunded
+最终买家/卖家/托管余额：39 / 61 / 0 WQLToken；allowance 0
+最终实时读取时间：2026-11-08T01:32:22+08:00
+
+步骤及回执：
+第一仲裁 | resolve(2,false) | 2026-11-08T00:07:23+08:00 | 仅记录退款票；无代币转移或裁决结算
+hash=0x65b301fa30f296bab8dbecb80711771c05f37579ea210850999242dbff043cd3；status=0x1；block=2835652；gasUsed=41819；effectiveGasPrice=0
+A 冲突票 | resolve(2,true) | 2026-11-08T00:40:19+08:00 | 两票 false/true；订单2保持 Disputed；余额37/60/3
+hash=0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8；status=0x1；block=2835927；gasUsed=41891；effectiveGasPrice=0
+B 改票退款 | resolve(2,false) | 2026-11-08T00:56:06+08:00 | 两票 false/false；订单2 Refunded；买家收到1 WQL
+hash=0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd；status=0x1；block=2836058；gasUsed=81286；effectiveGasPrice=0
+C 超期退款 | refund(3) | 2026-11-08T01:05:14+08:00 | 订单3 Refunded；买家收到1 WQL
+hash=0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe；status=0x1；block=2836134；gasUsed=66788；effectiveGasPrice=0
+D 退款限制 | refund(1) | 2026-11-08T01:28:30+08:00 | 估算拒绝：Escrow: wrong status；未上链
+仅eth_estimateGas模拟；没有交易hash或失败回执。
+D 确认收货 | confirm(1) | 2026-11-08T01:31:41+08:00 | 订单1 Completed；卖家收到1 WQL
+hash=0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029；status=0x1；block=2836350；gasUsed=66782；effectiveGasPrice=0
+
+来源与偏差：
+全部JPG为原始浏览器截图，未修饰；*_transaction_raw.json和*_state.json来自只读RPC。
+d_refund1_estimate_wallet.json来自Remix连接的钱包provider，显示Internal JSON-RPC error；d_refund1_estimate_rpc.json保存直接RPC的revert数据，解码为Escrow: wrong status。
+A/B/C/D均出现Remix前端error.indexOf错误，但实际交易receipt.status均为0x1；没有因此重发。
+订单2实际Paid→Disputed，卖家后续markShipped失败（来源：用户交接）；不能写成发货后争议成功。原失败交易截图/哈希未在本会话提供，不补造。
+订单0保持Created且已过期；本会话只读核验，未对其发送交易。
+历史nonce查询曾返回当前值，eth_getLogs曾空返回而receipt包含日志；全部结论使用真实receipt及提交前后实时观测，原始诊断保留。
+progress.html为简洁进度表；详细字段见各summary与原始JSON；sha256.json记录文件校验值。

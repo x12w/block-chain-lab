@@ -1,0 +1,51 @@
+{
+  "chainId": 60600,
+  "contract": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "transactionsRequestedThisBatch": 3,
+  "walletSignature": "user only",
+  "orders": [
+    {
+      "id": 0,
+      "status": "Created, expired",
+      "escrowedAmount": 0,
+      "source": "user handoff and initial preflight",
+      "action": "do not retry"
+    },
+    {
+      "id": 1,
+      "purpose": "normal shipped confirm",
+      "status": "Paid (1) verified",
+      "amount": "1000000000000000000",
+      "deadline": 1794072356,
+      "deadlineBeijing": "2026-11-08 01:25:56 +08:00",
+      "createHash": "0x64c24b30d7afbc3f423da80358ece8ac1771f5761fcb00508907b8b7d7d97fe0",
+      "createBlock": 2835321,
+      "depositHash": "0xf2559557e9ba952abbf2456ccea321cb7cdfef53e23c9db81f871cad6ef816ee",
+      "depositBlock": 2835351,
+      "depositBeijing": "2026-11-07 23:31:20 +08:00",
+      "depositReceiptStatus": "0x1",
+      "paidEventVerified": true,
+      "tokenTransferVerified": true
+    }
+  ],
+  "pendingRequest": {
+    "method": "createOrder",
+    "actualOrderId": null,
+    "transactionHash": null,
+    "seller": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+    "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+    "amount": "1000000000000000000",
+    "nativeValue": 0,
+    "description": "bonus shipped arbitration",
+    "deadline": 1794072788,
+    "deadlineBeijing": "2026-11-08 01:33:08 +08:00",
+    "state": "requested once; wallet signature and receipt not yet verified"
+  },
+  "allowanceAtPreflight": "2000000000000000000",
+  "tokenBalancesAtPreflight": {
+    "buyer": 39,
+    "seller": 60,
+    "escrow": 1
+  },
+  "updatedAt": "2026-11-07T15:34:49.405185+00:00"
+}

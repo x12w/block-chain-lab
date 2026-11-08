@@ -1,0 +1,7 @@
+{
+  "source": "Remix terminal rendered text",
+  "messages": [
+    "transact to IRouteABonus.resolve errored: Error occurred: _context7.t3.error.indexOf is not a function.\n\n_context7.t3.error.indexOf is not a function\n\nIf the transaction failed for not having enough gas, try increasing the gas limit gently."
+  ],
+  "classification": "Frontend reporting error; not an on-chain failed transaction. A receipt independently confirmed status 0x1."
+}

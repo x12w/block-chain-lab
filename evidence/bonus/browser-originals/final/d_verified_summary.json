@@ -1,0 +1,61 @@
+{
+  "hash": "0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029",
+  "method": "confirm(1)",
+  "status": "0x1",
+  "block": 2836350,
+  "gasUsed": 66782,
+  "effectiveGasPrice": 0,
+  "timestamp": 1794072701,
+  "beijingTime": "2026-11-08T01:31:41+08:00",
+  "from": "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+  "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "nonce": 93,
+  "value": 0,
+  "events": [
+    {
+      "name": "Transfer",
+      "token": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+      "from": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+      "to": "0xE0F0970f35FFE50dB6a6AD25ba775674D24682D2",
+      "amountBaseUnits": "1000000000000000000",
+      "amountWQL": "1"
+    },
+    {
+      "name": "OrderCompleted",
+      "id": 1
+    }
+  ],
+  "before": {
+    "source": "d_before_confirm_state.json, observed after refund simulation and before confirm request",
+    "order1Status": 5,
+    "balances": {
+      "buyer": "39000000000000000000",
+      "seller": "60000000000000000000",
+      "escrow": "1000000000000000000"
+    }
+  },
+  "after": {
+    "source": "d_after_state.json, live reads after receipt",
+    "order1Status": 2,
+    "allOrderStatuses": [
+      0,
+      2,
+      3,
+      3
+    ],
+    "balances": {
+      "buyer": "39000000000000000000",
+      "seller": "61000000000000000000",
+      "escrow": "0"
+    },
+    "allowance": "0"
+  },
+  "frontendError": "Remix again displayed _context7.t3.error.indexOf is not a function; on-chain receipt confirms success. No resend.",
+  "source": "Direct RPC transaction, receipt and block. Raw in d_after_transaction_raw.json",
+  "screenshots": [
+    "d_order1_completed.jpg",
+    "final_escrow_balance_0.jpg",
+    "final_seller_balance_61.jpg",
+    "final_buyer_balance_39.jpg"
+  ]
+}

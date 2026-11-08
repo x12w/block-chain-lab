@@ -1,0 +1,38 @@
+{
+  "hash": "0x65b301fa30f296bab8dbecb80711771c05f37579ea210850999242dbff043cd3",
+  "method": "resolve(2,false)",
+  "status": "0x1",
+  "block": 2835652,
+  "timestamp": 1794067643,
+  "beijingTime": "2026-11-08T00:07:23+08:00",
+  "gasUsed": 41819,
+  "effectiveGasPrice": 0,
+  "from": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+  "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+  "nonce": 6,
+  "value": 0,
+  "events": [
+    {
+      "name": "ArbitrationVoted",
+      "id": 2,
+      "voter": "0x4c688b060912faf95324a43C0190C59E7cE8aB3c",
+      "sellerWins": false
+    }
+  ],
+  "noTransfer": true,
+  "noOrderResolved": true,
+  "before": {
+    "source": "Not captured in this conversation; no historical state invented"
+  },
+  "after": {
+    "source": "Later live precheck_2835870.json before A",
+    "votes2": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "order2Status": 4
+  },
+  "source": "first_arbiter_transaction_raw.json independently fetched receipt in this conversation; no new transaction sent"
+}

@@ -1,0 +1,242 @@
+{
+  "observedAt": "2026-11-07T15:25:17.136263+00:00",
+  "request": [
+    {
+      "jsonrpc": "2.0",
+      "id": "chainId",
+      "method": "eth_chainId",
+      "params": []
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "latestBlock",
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "latest",
+        false
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "nonceLatest",
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "noncePending",
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x5a435c43Ca006bE1688d0D7B95194327528EAB26",
+        "pending"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "version",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "data": "0x54fd4d50"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "arbiter",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "data": "0xfe25e00a"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "secondArbiter",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "data": "0x4e3dbe43"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "orderCount",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "data": "0x2453ffa8"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "allowance",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "data": "0xdd62ed3e0000000000000000000000005a435c43ca006be1688d0d7b95194327528eab26000000000000000000000000917dc833eadba6544f1fd80498715da39ac739f4"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "order0",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x917Dc833eadBa6544F1fd80498715da39Ac739f4",
+          "data": "0xd09ef2410000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "buyerBalance",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "data": "0x70a082310000000000000000000000005a435c43ca006be1688d0d7b95194327528eab26"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "sellerBalance",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "data": "0x70a08231000000000000000000000000e0f0970f35ffe50db6a6ad25ba775674d24682d2"
+        },
+        "latest"
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "escrowBalance",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0xB7dA837F93A5448ca0762B80862d053daf9715B3",
+          "data": "0x70a08231000000000000000000000000917dc833eadba6544f1fd80498715da39ac739f4"
+        },
+        "latest"
+      ]
+    }
+  ],
+  "response": [
+    {
+      "id": "chainId",
+      "jsonrpc": "2.0",
+      "result": "0xecb8"
+    },
+    {
+      "id": "latestBlock",
+      "jsonrpc": "2.0",
+      "result": {
+        "baseFeePerGas": "0x0",
+        "blobGasUsed": "0x0",
+        "difficulty": "0x0",
+        "excessBlobGas": "0x0",
+        "extraData": "0x",
+        "gasLimit": "0x1c9c380",
+        "gasUsed": "0x5208",
+        "hash": "0x4b3f3d5df48593da6021e2c9fe23cd14f9d6dd42b1a65951dbf98eb7fea181ab",
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "miner": "0xb2637c2C90128156c1DAB7d5e05939E46cF9e352",
+        "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "nonce": "0x0000000000000000",
+        "number": "0x2b4363",
+        "parentBeaconBlockRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "parentHash": "0x5d16f924a28d591c919561bf250fb268939db190cec6a3cd7ce2185290530c89",
+        "receiptsRoot": "0x80629dd03ed34ba573c23cd72d2b824b828c4ca25efe95a9a9aa684d07f96303",
+        "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+        "size": "0x60",
+        "stateRoot": "0x8b5ed24f4574756d2410b3cfd62a32d17495cfa291aabb92b241ab8e88258a5a",
+        "timestamp": "0x6aef42d7",
+        "totalDifficulty": "0x0",
+        "transactions": [
+          "0x3ff3af93b028258667b0c9a9dc627f702901da357cdc603bde1ca5756c0c51aa"
+        ],
+        "transactionsRoot": "0x3ff3af93b028258667b0c9a9dc627f702901da357cdc603bde1ca5756c0c51aa",
+        "uncles": [],
+        "withdrawals": [],
+        "withdrawalsRoot": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "id": "nonceLatest",
+      "jsonrpc": "2.0",
+      "result": "0x54"
+    },
+    {
+      "id": "noncePending",
+      "jsonrpc": "2.0",
+      "result": "0x54"
+    },
+    {
+      "id": "version",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "id": "arbiter",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000004c688b060912faf95324a43c0190c59e7ce8ab3c"
+    },
+    {
+      "id": "secondArbiter",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000005a435c43ca006be1688d0d7b95194327528eab26"
+    },
+    {
+      "id": "orderCount",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "id": "allowance",
+      "jsonrpc": "2.0",
+      "result": "0x00000000000000000000000000000000000000000000000029a2241af62c0000"
+    },
+    {
+      "id": "order0",
+      "jsonrpc": "2.0",
+      "result": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000005a435c43ca006be1688d0d7b95194327528eab26000000000000000000000000e0f0970f35ffe50db6a6ad25ba775674d24682d2000000000000000000000000b7da837f93a5448ca0762b80862d053daf9715b30000000000000000000000000000000000000000000000000de0b6b3a7640000000000000000000000000000000000000000000000000000000000006aef3a6a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000015626f6e7573207368697070656420636f6e6669726d0000000000000000000000"
+    },
+    {
+      "id": "buyerBalance",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000000000000000000000000000022b1c8c1227a00000"
+    },
+    {
+      "id": "sellerBalance",
+      "jsonrpc": "2.0",
+      "result": "0x00000000000000000000000000000000000000000000000340aad21b3b700000"
+    },
+    {
+      "id": "escrowBalance",
+      "jsonrpc": "2.0",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

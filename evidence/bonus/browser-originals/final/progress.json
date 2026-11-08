@@ -1,0 +1,77 @@
+{
+  "A": {
+    "status": "verified complete",
+    "hash": "0x168165613a66fe43746b5fa0b39e023a9770c6746583a8e9af37adb4e96208e8",
+    "receiptStatus": "0x1",
+    "votes": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "order2Status": 4,
+    "balances": [
+      "37",
+      "60",
+      "3"
+    ],
+    "receiptFile": "a_transaction_raw.json",
+    "summaryFile": "a_verified_summary.json"
+  },
+  "B": {
+    "status": "verified complete",
+    "hash": "0xb1f6f2cfbd929685eec808e8eca87170eac78ef84a1389090a21cbb0f50f98cd",
+    "receiptStatus": "0x1",
+    "votes": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "order2Status": 3,
+    "balances": [
+      "38",
+      "60",
+      "2"
+    ],
+    "receiptFile": "b_after_transaction_raw.json",
+    "summaryFile": "b_verified_summary.json"
+  },
+  "C": {
+    "status": "verified complete",
+    "hash": "0xa99d0c6e0fd7cfaae17193e74590061a46a0fb0689c4f02258675821bd4c3bfe",
+    "receiptStatus": "0x1",
+    "order3Status": 3,
+    "balances": [
+      "39",
+      "60",
+      "1"
+    ],
+    "receiptFile": "c_after_transaction_raw.json",
+    "summaryFile": "c_verified_summary.json"
+  },
+  "D": {
+    "status": "verified complete",
+    "refundSimulation": {
+      "status": "rejected",
+      "reason": "Escrow: wrong status",
+      "transactionSent": false,
+      "summaryFile": "d_refund1_simulation_summary.json"
+    },
+    "confirm": {
+      "status": "verified complete",
+      "hash": "0x17517f0e3e713a7bb9d1a05a15764f4c57a9afd66a77453e9c72b178797f2029",
+      "receiptStatus": "0x1",
+      "order1Status": 2,
+      "balances": [
+        "39",
+        "61",
+        "0"
+      ],
+      "summaryFile": "d_verified_summary.json"
+    }
+  },
+  "preservedDeviation": "Order2 Paid->Disputed, later seller markShipped failed. Do not claim shipped-then-disputed success.",
+  "overallStatus": "verified complete",
+  "finalSummaryFile": "final_acceptance_summary.json"
+}
